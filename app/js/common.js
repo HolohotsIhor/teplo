@@ -11,7 +11,10 @@ $(document).ready(function() {
 		heightDetect();
 	});
   */
-  
+
+  /* Menu animate */
+  $(".horizontal .sub-menu").addClass("fadeInLeft animated");
+
   /* Burger */
   $(".toggle_mnu").click(function() {
     $(".sandwich").toggleClass("active");
@@ -39,6 +42,6 @@ $(document).ready(function() {
 
   /* Carousel */
   $('.carousel').carousel({
-      interval: 2000
+      interval: 98000
   })
 });
