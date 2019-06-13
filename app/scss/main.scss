@@ -14,8 +14,8 @@
 12. Map
 13. Footer
 
-
 */
+
 
 /* 1.  Fonts including */
 @font-face {
@@ -148,6 +148,24 @@ p{
         box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.4);
         color: $white;
         text-decoration: none;
+    }
+}
+
+.article-lines{
+    margin-top: -35px;
+    margin-bottom: 35px;
+    opacity: 0;
+
+    img{
+        width: 450px;
+
+        @media only screen and (max-device-width: 1199px) {
+            width: 300px;
+        }
+
+        @media only screen and (max-device-width: 767px) {
+            width: 200px;
+        }
     }
 }
 
@@ -358,7 +376,7 @@ header {
         border: none;
         right: 20px;
         top: 5px;
-        background: $dark;
+        background: $red;
         display: none;
         z-index: 999;
 
@@ -483,7 +501,7 @@ header {
         }
 
         ul {
-            margin-top: 25px;
+            margin-top: 55px;
             text-align: center;
             -webkit-animation-duration: 0.01s;
             animation-duration: 0.01s;
@@ -804,6 +822,8 @@ textarea {
 
     @media only screen and (max-device-width: 991px) {
         margin-bottom: 30px;
+        float: unset;
+        margin: 0 auto;
     }
 
     @media only screen and (max-device-width: 767px) {
@@ -1155,6 +1175,7 @@ textarea {
 
     @media only screen and (max-device-width: 991px) {
         padding: 80px 0 0 0;
+        overflow: hidden;
     }
 
     h3{
@@ -1596,7 +1617,6 @@ textarea {
 
             h4 {
                 color: $red;
-                margin-bottom: 20px;
                 opacity: 0;
             }
 
@@ -1695,7 +1715,7 @@ textarea {
 
             .name {
                 margin-bottom: 0;
-                color: $dark;
+                color: $red;
                 text-transform: uppercase;
             }
 
@@ -1716,11 +1736,19 @@ textarea {
 .about-our {
     padding-bottom: 0;
 
+    @media only screen and (max-device-width: 991px) {
+        overflow: hidden;
+    }
+
     @media only screen and (max-device-width: 767px) {
         padding-top: 0;
     }
 
     .text-box{
+
+        @media only screen and (max-device-width: 991px) {
+            margin-bottom: 25px;
+        }
 
         h2, p{
             opacity: 0;
@@ -1750,9 +1778,13 @@ textarea {
 
 /* 10. Constructor */
 .constructor{
-    background-image: linear-gradient(rgba(251, 209, 214, .4), rgba(251, 209, 214, 1)), url("../img/bg-constract.jpg");
+    background-image: linear-gradient(rgba(251, 209, 214, .5), rgba(251, 209, 214, .9)), url("../img/bg-constract.jpg");
     background-repeat: repeat;
     background-attachment: fixed;
+
+    @media only screen and (max-device-width: 991px) {
+        overflow: hidden;
+    }
 
 
     .help-box {
@@ -1773,6 +1805,8 @@ textarea {
     .img-box{
         opacity: 0;
 
+
+
         @media only screen and (max-device-width: 991px) {
             display: none;
         }
@@ -1780,6 +1814,10 @@ textarea {
         img{
             margin-top: -377px;
             max-width: 100%;
+
+            @media only screen and (max-device-width: 1199px) {
+                margin-top: -260px;
+            }
         }
     }
 
@@ -1871,12 +1909,12 @@ textarea {
     .help-box {
         width: 100%;
         height: 161px;
-        background: url("../img/slide_layer_white.png");
+        background: url("../img/slide_layer_reverse_white.png");
         background-size: cover;
         position: relative;
         top:0;
         left:0;
-        transform: rotate(180deg);
+        // transform: rotate(180deg);
 
         @media only screen and (max-device-width: 767px) {
 
@@ -1895,6 +1933,11 @@ footer{
     color: $white;
     padding: 40px 0 25px 0;
     font-size: 13px;
+
+    @media only screen and (max-device-width: 767px) {
+        font-size: 11px;
+        padding: 35px 0 20px 0;
+    }
 
     a{
        color: $light-red;
