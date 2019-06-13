@@ -54,7 +54,7 @@ $(document).ready(function() {
     $('.mov').each(function() {
       var imagePos = $(this).offset().top;
       var topOfWindow = $(window).scrollTop();
-      if (imagePos < topOfWindow + 500) {
+      if (imagePos < topOfWindow + 600) {
         $(this).addClass('fadeIn animated');
         $(this).css('opacity', '1');
       }
@@ -63,7 +63,7 @@ $(document).ready(function() {
     $('.mov-left').each(function() {
       var imagePos = $(this).offset().top;
       var topOfWindow = $(window).scrollTop();
-      if (imagePos < topOfWindow + 500) {
+      if (imagePos < topOfWindow + 600) {
         $(this).addClass('fadeInLeft animated');
         $(this).css('opacity', '1');
       }
@@ -72,7 +72,7 @@ $(document).ready(function() {
     $('.mov-right').each(function() {
       var imagePos = $(this).offset().top;
       var topOfWindow = $(window).scrollTop();
-      if (imagePos < topOfWindow + 500) {
+      if (imagePos < topOfWindow + 600) {
         $(this).addClass('fadeInRight animated');
         $(this).css('opacity', '1');
       }
