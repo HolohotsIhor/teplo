@@ -160,6 +160,14 @@ header {
     header .top-bar .adress,
     header .top-bar .social {
       float: right; }
+    header .top-bar .lozung {
+      float: left; }
+      header .top-bar .lozung p {
+        font-size: 14px;
+        text-transform: uppercase; }
+        @media only screen and (max-device-width: 991px) {
+          header .top-bar .lozung p {
+            display: none; } }
     header .top-bar .phones,
     header .top-bar .adress {
       margin-right: 25px;
@@ -418,6 +426,9 @@ header {
       header .top_mnu ul li:nth-child(12) a {
         -webkit-animation-delay: 1.1s;
                 animation-delay: 1.1s; }
+      header .top_mnu ul li:nth-child(13) a {
+        -webkit-animation-delay: 1.2s;
+                animation-delay: 1.2s; }
       header .top_mnu ul a {
         color: #fff;
         display: block;
@@ -1069,10 +1080,7 @@ textarea {
     padding: 35% 20px;
     text-align: center;
     /*background dotted*/
-    background-color: rgba(0, 0, 0, 0.5);
-    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 1px, transparent 1px, transparent 100%);
-    background-image: -o-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 1px, transparent 1px, transparent 100%);
-    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 1px, transparent 1px, transparent 100%);
+    background-color: rgba(0, 0, 0, 0.2);
     -webkit-background-size: 3px 3px;
     background-size: 3px 3px;
     -webkit-transition: all 0.5s linear;
@@ -1080,19 +1088,24 @@ textarea {
     transition: all 0.5s linear;
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
-    opacity: 0;
-    color: #fbd1d6; }
+    opacity: 1;
+    color: #fff; }
+    @media only screen and (max-device-width: 767px) {
+      .services .hover-blur a h3 {
+        background-color: rgba(0, 0, 0, 0); } }
     .services .hover-blur a h3 span {
-      word-break: break-all;
       font-size: 24px;
-      line-height: 28px; }
+      line-height: 24px; }
       @media only screen and (max-device-width: 767px) {
         .services .hover-blur a h3 span {
           display: none; } }
   .services .hover-blur:hover a h3 {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
     filter: alpha(opacity=100);
-    opacity: 1; }
+    opacity: 1;
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 1px, transparent 1px, transparent 100%);
+    background-image: -o-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 1px, transparent 1px, transparent 100%); }
   .services .hover-blur .text-white {
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
@@ -1299,7 +1312,8 @@ textarea {
   @media only screen and (max-device-width: 991px) {
     .about-our .text-box {
       margin-bottom: 25px; } }
-  .about-our .text-box h2, .about-our .text-box p {
+  .about-our .text-box h2,
+  .about-our .text-box p {
     opacity: 0; }
   .about-our .text-box p:nth-child(2) {
     -webkit-animation-delay: .2s;
