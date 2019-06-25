@@ -15,6 +15,7 @@
 13. Footer
 14. Breadcrmabs
 15. Work zone
+16. Constract
 
 */
 /* 1.  Fonts including */
@@ -111,7 +112,8 @@ p {
   -o-transition: .3s;
   transition: .3s;
   font-size: 18px;
-  font-family: "Open-Sans-Light", sans-serif, Arial; }
+  font-family: "Open-Sans-Light", sans-serif, Arial;
+  cursor: pointer; }
   @media only screen and (max-device-width: 767px) {
     ._button_push {
       font-size: 14px; } }
@@ -119,7 +121,8 @@ p {
     -webkit-box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.6);
             box-shadow: 1.563px 8.863px 20px 0 rgba(0, 0, 0, 0.6);
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    background-color: #e61f35; }
 
 .article-lines {
   margin-top: -35px;
@@ -471,6 +474,17 @@ header.inner {
   height: auto !important; }
 
 /* 4.  Form */
+.form-control {
+  color: #e40a22; }
+
+.form-control:focus {
+  color: #e40a22;
+  background-color: #fff;
+  border-color: #fbd1d6;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(251, 209, 214, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(251, 209, 214, 0.25); }
+
 input,
 textarea {
   -webkit-border-radius: 5px;
@@ -1479,10 +1493,16 @@ footer {
 /* 15. Work zone */
 .work-zone {
   padding-bottom: 0; }
-  .work-zone h1, .work-zone h2, .work-zone h3, .work-zone h4 {
+  .work-zone h1,
+  .work-zone h2,
+  .work-zone h3,
+  .work-zone h4 {
     text-align: left; }
     @media only screen and (max-device-width: 991px) {
-      .work-zone h1, .work-zone h2, .work-zone h3, .work-zone h4 {
+      .work-zone h1,
+      .work-zone h2,
+      .work-zone h3,
+      .work-zone h4 {
         text-align: center; } }
   .work-zone .wrapper-info {
     background-color: #fff;
@@ -1506,3 +1526,185 @@ footer {
 
 .work-zone.feedback-form {
   padding-bottom: 0; }
+
+/* 16. Constract */
+.constract .text-box .table-box ._button_push {
+  margin-top: 15px;
+  float: left;
+  padding: 17px 45px;
+  font-size: 14px; }
+
+.constract .text-box .table-box table {
+  width: 100%;
+  margin-top: 50px; }
+  .constract .text-box .table-box table th,
+  .constract .text-box .table-box table tr,
+  .constract .text-box .table-box table td {
+    text-align: left;
+    line-height: 38px;
+    font-size: 14px;
+    letter-spacing: 0; }
+    .constract .text-box .table-box table th option,
+    .constract .text-box .table-box table th select,
+    .constract .text-box .table-box table tr option,
+    .constract .text-box .table-box table tr select,
+    .constract .text-box .table-box table td option,
+    .constract .text-box .table-box table td select {
+      font-size: 13px;
+      border: 1px solid #fbd1d6; }
+  .constract .text-box .table-box table tr th:first-child {
+    font-family: "Open-Sans-Bold", sans-serif, Arial;
+    width: 60%;
+    padding-right: 0;
+    color: #e40a22; }
+  .constract .text-box .table-box table tr th:nth-child(2) {
+    padding-left: 0; }
+  .constract .text-box .table-box table tr td:first-child {
+    width: 60%;
+    font-family: "Open-Sans-Bold", sans-serif, Arial;
+    padding-right: 0;
+    color: #e40a22; }
+  .constract .text-box .table-box table tr td:nth-child(2) {
+    padding-left: 0; }
+
+.constract .text-box .tab-pane h5 {
+  padding-top: 20px;
+  text-transform: uppercase;
+  color: #e40a22;
+  text-align: left;
+  font-family: "Open-Sans-Bold", sans-serif, Arial;
+  letter-spacing: 0; }
+
+.constract .text-box .tab-pane p {
+  font-size: 14px;
+  line-height: 16px;
+  color: #e40a22; }
+
+.constract .text-box .tab-pane .stage-builder-wrapeer {
+  margin-top: 30px; }
+  .constract .text-box .tab-pane .stage-builder-wrapeer h6 {
+    color: #e40a22;
+    text-align: left;
+    font-family: "Open-Sans-Bold", sans-serif, Arial;
+    letter-spacing: 0; }
+  .constract .text-box .tab-pane .stage-builder-wrapeer .type-select-box {
+    text-align: left; }
+    .constract .text-box .tab-pane .stage-builder-wrapeer .type-select-box .selectedItem {
+      border-color: #e40a22; }
+    .constract .text-box .tab-pane .stage-builder-wrapeer .type-select-box img {
+      width: 30%;
+      border: solid 3px #fbd1d6;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      margin-top: 2%;
+      margin-right: 2%;
+      -webkit-border-radius: 3px;
+              border-radius: 3px; }
+      .constract .text-box .tab-pane .stage-builder-wrapeer .type-select-box img:hover {
+        border-color: #e40a22; }
+  .constract .text-box .tab-pane .stage-builder-wrapeer .first-stage .type-select-box img:nth-child(3) {
+    margin-right: 0; }
+  .constract .text-box .tab-pane .stage-builder-wrapeer .second-stage {
+    margin-top: 25px;
+    display: none; }
+  .constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box {
+    margin-top: 25px;
+    display: none; }
+    .constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box .type-select-box img {
+      display: none; }
+
+.constract .text-box #nav-tab a {
+  color: #fbd1d6;
+  font-weight: bold;
+  padding: .5rem .8rem;
+  border-bottom: solid 1px #fbd1d6;
+  font-family: "Open-Sans-Bold", sans-serif, Arial; }
+  .constract .text-box #nav-tab a.active {
+    color: #e40a22;
+    border: none;
+    border-bottom: solid 1px #fbd1d6; }
+
+.constract .calculator-wrapper .calculator-final-look .main-layer {
+  z-index: 0; }
+  .constract .calculator-wrapper .calculator-final-look .main-layer.one-stage {
+    background: url("../img/calculator/1-stage.jpg") center no-repeat;
+    width: 640px;
+    height: 480px; }
+  .constract .calculator-wrapper .calculator-final-look .main-layer.two-stage {
+    background: url("../img/calculator/2-stage.jpg");
+    width: 640px;
+    height: 692px; }
+  .constract .calculator-wrapper .calculator-final-look .main-layer.three-stage {
+    background: url("../img/calculator/3-stage.jpg");
+    width: 640px;
+    height: 895px; }
+
+.constract .calculator-wrapper .calculator-final-look .first-stage-type {
+  z-index: 1;
+  width: 640px;
+  height: 480px;
+  visibility: unset; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type.first-type {
+    background: url("../img/calculator/1-stage-1-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type.second-type {
+    background: url("../img/calculator/1-stage-2-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type.third-type {
+    background: url("../img/calculator/1-stage-3-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type.fourth-type {
+    background: url("../img/calculator/1-stage-4-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type.fifth-type {
+    background: url("../img/calculator/1-stage-5-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type.sixth-type {
+    background: url("../img/calculator/1-stage-6-type-1look.png") center no-repeat; }
+
+.constract .calculator-wrapper .calculator-final-look .first-stage-type-hover {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  height: 480px;
+  width: 640px; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type-hover.first-type {
+    background: url("../img/calculator/1-stage-1-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type-hover.second-type {
+    background: url("../img/calculator/1-stage-2-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type-hover.third-type {
+    background: url("../img/calculator/1-stage-3-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type-hover.fourth-type {
+    background: url("../img/calculator/1-stage-4-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type-hover.fifth-type {
+    background: url("../img/calculator/1-stage-5-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .first-stage-type-hover.sixth-type {
+    background: url("../img/calculator/1-stage-6-type-1look.png") center no-repeat; }
+
+.constract .calculator-wrapper .calculator-final-look .krisha-stage-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 15px;
+  width: 640px;
+  height: 480px; }
+  .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.first-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.first-type {
+    background: url("../img/calculator/1-stage-krisha-1-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.second-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.second-type {
+    background: url("../img/calculator/1-stage-krisha-2-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.third-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.third-type {
+    background: url("../img/calculator/1-stage-krisha-3-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.fourth-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.fourth-type {
+    background: url("../img/calculator/1-stage-krisha-4-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.fiveth-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.fiveth-type {
+    background: url("../img/calculator/1-stage-krisha-5-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.sixth-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.sixth-type {
+    background: url("../img/calculator/1-stage-krisha-6-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.seventh-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.seventh-type {
+    background: url("../img/calculator/1-stage-krisha-7-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.eighth-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.eighth-type {
+    background: url("../img/calculator/1-stage-krisha-8-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.ninth-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.ninth-type {
+    background: url("../img/calculator/1-stage-krisha-9-type-1look.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.tenth-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.tenth-type {
+    background: url("../img/calculator/1-stage-krisha-10-type-1look.png") center no-repeat; }
