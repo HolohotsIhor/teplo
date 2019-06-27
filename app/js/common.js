@@ -79,31 +79,72 @@ $(document).ready(function() {
     });
   });
 
-  /* Calculator */
-  var stage = 1;
-  var diametr = "не выбрано";
-  var typeOfDymohod = "не выбрано";
-  var typeOfPech = "не выбрано";
+////////////////////////////////////////////////////////////////////////////////////////
+/* Calculator controllers */
+var stage = 1;
+var diametr = "не выбрано";
+var typeOfDymohod = "не выбрано";
+var typeOfPech = "не выбрано";
+var vihodNaKrishuType = 0;
 
-  /*********** ШАГ 1 **********/
-    // Количество этажей
+
+/*********** ШАГ 1 **********/
+    //Почистить переменную выхода дымохода
+    function vihodNaKrishuTypeDeleted(){
+      var vihodNaKrishuType = 0;
+    }
+
+    //Очистка интерфейса вывода
+    function interfaceVivodDeleted(){
+      $(".zont-select-box .type-select-box img").css("display", "none");
+    }
+
+    //Очитска зонта 
+    function zontDeleted() {
+      $(".zont-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom");
+      $(".zont-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom");
+    }
+
+    //Очистка выдиления с элемента
+    function selectDeleted() {
+      $(".first-stage .type-select-box img").removeClass("selectedItem");
+    }
+
+    // Удаление классов вывода на крышу
+    function vivodDeleted() {
+      $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
+    }
+
+    // Функция удаления всех типов дымоходов для первого этажа
+    function typeDimohodDeleted() {
+      $(".calculator-final-look .main-layer .first-stage-type").removeClass("first-type second-type third-type fourth-type fifth-type sixth-type");
+    }
+
+    // Функция вычисления количество этажей
+    function stageNumbers() {
+      stage = $('#exampleFormControlSelect1 option:selected').val();
+      return stage;
+    }
+
+    // Изминения начальных данных для ввода пользователем
     $('#exampleFormControlSelect1').change(function() {
       $(".calculator-final-look .main-layer .first-stage-type").removeClass("first-type second-type third-type fourth-type fifth-type sixth-type");
       $(".calculator-final-look .main-layer .krisha-stage-type").removeClass("first-type second-type third-type fourth-type fifth-type sixth-type");
-      stage = $('#exampleFormControlSelect1 option:selected').val();
+      stage = stageNumbers();
 
       if (stage == "1") {
+        $(".first-stage-type").removeClass("two-stage-build");
+        $(".first-stage-type-hover").removeClass("two-stage-build");
         $(".main-layer").removeClass("two-stage three-stage");
         $(".main-layer").addClass("one-stage");
       }
+
       if (stage == "2") {
         $(".main-layer").removeClass("one-stage three-stage");
         $(".main-layer").addClass("two-stage");
-        $(".second-stage").css("display", "block");
-      }
-      if (stage == "3") {
-        $(".main-layer").removeClass("one-stage two-stage");
-        $(".main-layer").addClass("three-stage");
+        $(".first-stage-type").addClass("two-stage-build");
+        $(".first-stage-type-hover").addClass("two-stage-build");
+        $(".first-stage .type-select-box img:nth-child(1)").css("display", "none");
       }
     });
 
@@ -131,277 +172,458 @@ $(document).ready(function() {
     });
 
 
-
     /********** ШАГ 2 **********/
 
-    // Этаж 1
-    if (stage == "1") {
-      // Типдымохода 1
-      $(".first-stage .type-select-box img:nth-child(1)").click(function() {
-        $(".first-stage .type-select-box img").removeClass("selectedItem");
+    ///////////////// Типдымохода 1 /////////////////
+    $(".first-stage .type-select-box img:nth-child(1)").click(function() {
+        // Этаж 1
+        vivodDeleted();
+        zontDeleted();
+        typeDimohodDeleted();
+        selectDeleted();
+        interfaceVivodDeleted();
         $(".first-stage .type-select-box img:nth-child(1)").addClass("selectedItem");
-        $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-        $(".calculator-final-look .main-layer .first-stage-type").removeClass("second-type third-type fourth-type fifth-type sixth-type");
-        $(".calculator-final-look .main-layer .first-stage-type").addClass("first-type");
-        $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
         $(".krisha-select-box img").css("display", "none");
-        $(".krisha-select-box img:nth-child(1), .krisha-select-box img:nth-child(2), .krisha-select-box img:nth-child(3)").css("display", "unset");
+
+        if (stage == "1") {
+          $(".krisha-select-box").css("display", "none");
+          $(".calculator-final-look .main-layer .first-stage-type").addClass("first-type");
+          $(".constract .text-box .tab-pane .stage-builder-wrapeer .zont-select-box").css("display", "block");
+          $(".zont-select-box").css("display", "block");
+          $(".zont-select-box img:nth-child(1), .zont-select-box img:nth-child(2), .zont-select-box img:nth-child(3)").css("display", "unset");
+        }
       });
 
-      $(".first-stage .type-select-box img:nth-child(1)").mouseover(function() {
+    $(".first-stage .type-select-box img:nth-child(1)").mouseover(function() {
+      $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("first-type");
+    })
+    .mouseout(function() {
+      $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("first-type");
+    });
+
+    ///////////////// Тип дымохода 2 /////////////////
+    $(".first-stage .type-select-box img:nth-child(2)").click(function() {
+      typeDimohodDeleted();
+      vivodDeleted();
+      selectDeleted();
+      interfaceVivodDeleted();
+      zontDeleted();
+      vihodNaKrishuType = 0;
+      $(".first-stage .type-select-box img:nth-child(2)").addClass("selectedItem");
+      $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
+      $(".krisha-select-box img").css("display", "none");
+
+      /* Этаж 1 */
+      if (stage == "1") {
+        $(".krisha-select-box").css("display", "none");
+        $(".calculator-final-look .main-layer .first-stage-type").addClass("second-type");
+        $(".constract .text-box .tab-pane .stage-builder-wrapeer .zont-select-box").css("display", "block");
+        $(".zont-select-box img").css("display", "none");
+        $(".zont-select-box img:nth-child(4), .zont-select-box img:nth-child(5), .zont-select-box img:nth-child(6)").css("display", "unset");
+      }
+      /* Этаж 2 */
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type").addClass("first-type");
+      }
+    });
+
+    $(".first-stage .type-select-box img:nth-child(2)").mouseover(function() {
+      if (stage == "1") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("second-type");
+      }
+      if (stage == "2") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("first-type");
-      })
-      .mouseout(function() {
+      }
+    })
+    .mouseout(function() {
+      if (stage == "1") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("second-type");
+      }
+      if (stage == "2") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("first-type");
-      });
-
-        // Типдымохода 2
-        $(".first-stage .type-select-box img:nth-child(2)").click(function() {
-          $(".first-stage .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".first-stage .type-select-box img:nth-child(2)").addClass("selectedItem");
-          $(".calculator-final-look .main-layer .first-stage-type").removeClass("first-type third-type fourth-type fifth-type sixth-type");
-          $(".calculator-final-look .main-layer .first-stage-type").addClass("second-type");
-          $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
-          $(".krisha-select-box img").css("display", "none");
-          $(".krisha-select-box img:nth-child(4), .krisha-select-box img:nth-child(5), .krisha-select-box img:nth-child(6)").css("display", "unset");
-        });
-
-        $(".first-stage .type-select-box img:nth-child(2)").mouseover(function() {
-          $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("second-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("second-type");
-        });
-
-        // Типдымохода 3
-        $(".first-stage .type-select-box img:nth-child(3)").click(function() {
-          $(".first-stage .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".first-stage .type-select-box img:nth-child(3)").addClass("selectedItem");
-          $(".calculator-final-look .main-layer .first-stage-type").removeClass("first-type second-type fourth-type fifth-type sixth-type");
-          $(".calculator-final-look .main-layer .first-stage-type").addClass("third-type");
-          $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
-          $(".krisha-select-box img").css("display", "none");
-          $(".krisha-select-box img:nth-child(4), .krisha-select-box img:nth-child(5), .krisha-select-box img:nth-child(6)").css("display", "unset");
-        });
-
-        $(".first-stage .type-select-box img:nth-child(3)").mouseover(function() {
-          $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("third-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("third-type");
-        });
-
-        // Типдымохода 4
-        $(".first-stage .type-select-box img:nth-child(4)").click(function() {
-          $(".first-stage .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".first-stage .type-select-box img:nth-child(4)").addClass("selectedItem");
-          $(".calculator-final-look .main-layer .first-stage-type").removeClass("first-type second-type third-type fifth-type sixth-type");
-          $(".calculator-final-look .main-layer .first-stage-type").addClass("fourth-type");
-          $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
-          $(".krisha-select-box img").css("display", "none");
-          $(".krisha-select-box img:nth-child(7), .krisha-select-box img:nth-child(8), .krisha-select-box img:nth-child(9)").css("display", "unset");
-        });
-
-        $(".first-stage .type-select-box img:nth-child(4)").mouseover(function() {
-          $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fourth-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fourth-type");
-        });
-
-        // Типдымохода 5
-        $(".first-stage .type-select-box img:nth-child(5)").click(function() {
-          $(".first-stage .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".first-stage .type-select-box img:nth-child(5)").addClass("selectedItem");
-          $(".calculator-final-look .main-layer .first-stage-type").removeClass("first-type second-type third-type fourth-type sixth-type");
-          $(".calculator-final-look .main-layer .first-stage-type").addClass("fifth-type");
-          $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
-          $(".krisha-select-box img").css("display", "none");
-          $(".krisha-select-box img:nth-child(7), .krisha-select-box img:nth-child(8), .krisha-select-box img:nth-child(9)").css("display", "unset");
-        });
-
-        $(".first-stage .type-select-box img:nth-child(5)").mouseover(function() {
-          $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fifth-type");
-        });
-
-        // Типдымохода 6
-        $(".first-stage .type-select-box img:nth-child(6)").click(function() {
-          $(".first-stage .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".first-stage .type-select-box img:nth-child(6)").addClass("selectedItem");
-          $(".calculator-final-look .main-layer .first-stage-type").removeClass("first-type second-type third-type fourth-type fifth-type");
-          $(".calculator-final-look .main-layer .first-stage-type").addClass("sixth-type");
-          $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
-          $(".krisha-select-box img").css("display", "none");
-          $(".krisha-select-box img:nth-child(10)").css("display", "unset");
-        });
-
-        $(".first-stage .type-select-box img:nth-child(6)").mouseover(function() {
-          $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("sixth-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("sixth-type");
-        });
-
-        // Вывод на крышу 1 
-        $(".krisha-select-box .type-select-box img:nth-child(1)").click(function(){
-          $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".krisha-select-box .type-select-box img:nth-child(1)").addClass("selectedItem");
-          $(".krisha-stage-type").addClass("first-type");
-        });
-
-        $(".krisha-select-box .type-select-box img:nth-child(1)").mouseover(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("first-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("first-type");
-        });
-
-        // Вывод на крышу 2 
-        $(".krisha-select-box .type-select-box img:nth-child(2)").click(function(){
-          $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".krisha-select-box .type-select-box img:nth-child(2)").addClass("selectedItem");
-          $(".krisha-stage-type").addClass("second-type");
-        });
-
-        $(".krisha-select-box .type-select-box img:nth-child(2)").mouseover(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("second-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("second-type");
-        });
-
-        // Вывод на крышу 3 
-        $(".krisha-select-box .type-select-box img:nth-child(3)").click(function(){
-          $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".krisha-select-box .type-select-box img:nth-child(3)").addClass("selectedItem");
-          $(".krisha-stage-type").addClass("third-type");
-        });
-
-        $(".krisha-select-box .type-select-box img:nth-child(3)").mouseover(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("third-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("third-type");
-        });
-
-        // Вывод на крышу 4 
-        $(".krisha-select-box .type-select-box img:nth-child(4)").click(function(){
-          $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".krisha-select-box .type-select-box img:nth-child(4)").addClass("selectedItem");
-          $(".krisha-stage-type").addClass("fourth-type");
-        });
-
-        $(".krisha-select-box .type-select-box img:nth-child(4)").mouseover(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("fourth-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fourth-type");
-        });
-
-        // Вывод на крышу 5 
-        $(".krisha-select-box .type-select-box img:nth-child(5)").click(function(){
-          $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".krisha-select-box .type-select-box img:nth-child(5)").addClass("selectedItem");
-          $(".krisha-stage-type").addClass("fiveth-type");
-        });
-
-        $(".krisha-select-box .type-select-box img:nth-child(5)").mouseover(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("fiveth-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-type");
-        });
-
-        // Вывод на крышу 6 
-        $(".krisha-select-box .type-select-box img:nth-child(6)").click(function(){
-          $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".krisha-select-box .type-select-box img:nth-child(6)").addClass("selectedItem");
-          $(".krisha-stage-type").addClass("sixth-type");
-        });
-
-        $(".krisha-select-box .type-select-box img:nth-child(6)").mouseover(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("sixth-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type");
-        });
-
-        // Вывод на крышу 7 
-        $(".krisha-select-box .type-select-box img:nth-child(7)").click(function(){
-          $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".krisha-select-box .type-select-box img:nth-child(7)").addClass("selectedItem");
-          $(".krisha-stage-type").addClass("seventh-type");
-        });
-
-        $(".krisha-select-box .type-select-box img:nth-child(7)").mouseover(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("seventh-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type");
-        });
-
-        // Вывод на крышу 8 
-        $(".krisha-select-box .type-select-box img:nth-child(8)").click(function(){
-          $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".krisha-select-box .type-select-box img:nth-child(8)").addClass("selectedItem");
-          $(".krisha-stage-type").addClass("eighth-type");
-        });
-
-        $(".krisha-select-box .type-select-box img:nth-child(8)").mouseover(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("eighth-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("eighth-type");
-        });
-
-        // Вывод на крышу 9 
-        $(".krisha-select-box .type-select-box img:nth-child(9)").click(function(){
-          $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".krisha-select-box .type-select-box img:nth-child(9)").addClass("selectedItem");
-          $(".krisha-stage-type").addClass("ninth-type");
-        });
-
-        $(".krisha-select-box .type-select-box img:nth-child(9)").mouseover(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("ninth-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("ninth-type");
-        });
-
-        // Вывод на крышу 10 
-        $(".krisha-select-box .type-select-box img:nth-child(10)").click(function(){
-          $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
-          $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type");
-          $(".krisha-select-box .type-select-box img:nth-child(10)").addClass("selectedItem");
-          $(".krisha-stage-type").addClass("tenth-type");
-        });
-
-        $(".krisha-select-box .type-select-box img:nth-child(10)").mouseover(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("tenth-type");
-        })
-        .mouseout(function() {
-          $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("tenth-type");
-        });
-
-
       }
 
-      // Этаж 2
     });
+
+    // Типдымохода 3
+    $(".first-stage .type-select-box img:nth-child(3)").click(function() {
+      typeDimohodDeleted();
+      vivodDeleted();
+      zontDeleted();
+      selectDeleted();
+      interfaceVivodDeleted();
+      $(".first-stage .type-select-box img:nth-child(3)").addClass("selectedItem");
+      $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
+      $(".krisha-select-box img").css("display", "none");
+
+      /* Этаж 1 */
+      if (stage == "1") {
+        $(".krisha-select-box").css("display", "none");
+        $(".calculator-final-look .main-layer .first-stage-type").addClass("third-type");
+        $(".constract .text-box .tab-pane .stage-builder-wrapeer .zont-select-box").css("display", "block");
+        $(".zont-select-box img").css("display", "none");
+        $(".zont-select-box img:nth-child(4), .zont-select-box img:nth-child(5), .zont-select-box img:nth-child(6)").css("display", "unset");
+      }
+
+      /* Этаж 2 */
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type").addClass("second-type");
+      }
+    });
+
+    $(".first-stage .type-select-box img:nth-child(3)").mouseover(function() {
+      if (stage == "1") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("third-type");
+      }
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("second-type");
+      }
+    })
+    .mouseout(function() {
+      if (stage == "1") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("third-type");
+      }
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("second-type");
+      }
+    });
+
+    // Типдымохода 4
+    $(".first-stage .type-select-box img:nth-child(4)").click(function() {
+      typeDimohodDeleted();
+      vivodDeleted();
+      zontDeleted();
+      selectDeleted();
+      interfaceVivodDeleted();
+      $(".first-stage .type-select-box img:nth-child(4)").addClass("selectedItem");
+      $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
+      $(".krisha-select-box img").css("display", "none");
+
+      /* Этаж 1 */
+      if (stage == "1") {
+        $(".zont-select-box").css("display", "none");
+        $(".krisha-select-box img:nth-child(1), .krisha-select-box img:nth-child(2), .krisha-select-box img:nth-child(3)").css("display", "unset");
+        $(".calculator-final-look .main-layer .first-stage-type").addClass("fourth-type");
+      }
+
+      /* Этаж 2 */
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type").addClass("third-type");
+      }
+    });
+
+    $(".first-stage .type-select-box img:nth-child(4)").mouseover(function() {
+      if (stage == "1") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fourth-type");
+      }
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("third-type");
+      }
+
+    })
+    .mouseout(function() {
+      if (stage == "1") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fourth-type");
+      }
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("third-type");
+      }
+
+    });
+
+    // Типдымохода 5
+    $(".first-stage .type-select-box img:nth-child(5)").click(function() {
+      typeDimohodDeleted();
+      vivodDeleted();
+      zontDeleted();
+      selectDeleted();
+      interfaceVivodDeleted();
+      $(".first-stage .type-select-box img:nth-child(5)").addClass("selectedItem");
+      $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
+      $(".krisha-select-box img").css("display", "none");
+
+      /* Этаж 1 */
+      if (stage == "1") {
+        $(".zont-select-box").css("display", "none");
+        $(".krisha-select-box img:nth-child(1), .krisha-select-box img:nth-child(2), .krisha-select-box img:nth-child(3)").css("display", "unset");
+        $(".calculator-final-look .main-layer .first-stage-type").addClass("fifth-type");
+      }
+
+      /* Этаж 2 */
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type").addClass("fourth-type");
+      }
+    });
+
+    $(".first-stage .type-select-box img:nth-child(5)").mouseover(function() {
+      if (stage == "1") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
+      }
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fourth-type");
+      }
+    })
+    .mouseout(function() {
+      if (stage == "1") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fifth-type");
+      }
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fourth-type");
+      }
+
+    });
+
+    // Типдымохода 6
+    $(".first-stage .type-select-box img:nth-child(6)").click(function() {
+      typeDimohodDeleted();
+      vivodDeleted();
+      zontDeleted();
+      selectDeleted();
+      interfaceVivodDeleted();
+      $(".first-stage .type-select-box img:nth-child(6)").addClass("selectedItem");
+      $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
+      $(".krisha-select-box img").css("display", "none");
+
+      /* Этаж 1 */
+      if (stage == "1") {
+        $(".zont-select-box").css("display", "none");
+        $(".krisha-select-box img:nth-child(4)").css("display", "unset");
+        $(".calculator-final-look .main-layer .first-stage-type").addClass("sixth-type");
+      }
+
+      /* Этаж 2 */
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type").addClass("fifth-type");
+      }
+    });
+
+    $(".first-stage .type-select-box img:nth-child(6)").mouseover(function() {
+      if (stage == "1") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("sixth-type");
+      }
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
+      }
+    })
+    .mouseout(function() {
+
+      if (stage == "1") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("sixth-type");
+      }
+      if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fifth-type");
+      }
+    });
+//////////////////////////////////////////////////////////////////////////////
+
+// Вывод на крышу 1 
+$(".krisha-select-box .type-select-box img:nth-child(1)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  interfaceVivodDeleted();
+  vihodNaKrishuType = 1;
+  $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
+  $(".krisha-select-box .type-select-box img:nth-child(1)").addClass("selectedItem");
+  $(".krisha-stage-type").addClass("first-type");
+
+  if(stage == "1"){
+    $(".zont-select-box").css("display", "block");
+    $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
+  }
+});
+
+$(".krisha-select-box .type-select-box img:nth-child(1)").mouseover(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("first-type");
+})
+.mouseout(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("first-type");
+});
+//////////////////////////////////////////////////////////////////////////////
+
+// Вывод на крышу 2 
+$(".krisha-select-box .type-select-box img:nth-child(2)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  interfaceVivodDeleted();
+  vihodNaKrishuType = 2;
+  $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
+  $(".krisha-select-box .type-select-box img:nth-child(2)").addClass("selectedItem");
+  $(".krisha-stage-type").addClass("second-type");
+
+  if(stage == "1"){
+    $(".zont-select-box").css("display", "block");
+    $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
+  }
+});
+
+$(".krisha-select-box .type-select-box img:nth-child(2)").mouseover(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("second-type");
+})
+.mouseout(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("second-type");
+});
+//////////////////////////////////////////////////////////////////////////////
+
+// Вывод на крышу 3 
+$(".krisha-select-box .type-select-box img:nth-child(3)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  interfaceVivodDeleted();
+  vihodNaKrishuType = 3;
+  $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
+  $(".krisha-select-box .type-select-box img:nth-child(3)").addClass("selectedItem");
+  $(".krisha-stage-type").addClass("third-type");
+
+  if(stage == "1"){
+    $(".zont-select-box").css("display", "block");
+    $(".zont-select-box .type-select-box img:nth-child(7), .zont-select-box .type-select-box img:nth-child(8), .zont-select-box .type-select-box img:nth-child(9)").css("display", "unset");
+  }
+});
+
+$(".krisha-select-box .type-select-box img:nth-child(3)").mouseover(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("third-type");
+})
+.mouseout(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("third-type");
+});
+//////////////////////////////////////////////////////////////////////////////
+
+// Вывод на крышу 4 
+$(".krisha-select-box .type-select-box img:nth-child(4)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  interfaceVivodDeleted();
+  vihodNaKrishuType = 4;
+  $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
+  $(".krisha-select-box .type-select-box img:nth-child(4)").addClass("selectedItem");
+  $(".krisha-stage-type").addClass("fourth-type");
+
+  if(stage == "1"){
+    $(".zont-select-box").css("display", "block");
+    $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
+  }
+});
+
+$(".krisha-select-box .type-select-box img:nth-child(4)").mouseover(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("fourth-type");
+})
+.mouseout(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fourth-type");
+});
+
+//////////////////////////////////////////////////////////////////////////////
+
+// Зонт 1 
+$(".zont-select-box .type-select-box img:nth-child(1)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  $(".zont-select-box .type-select-box img").removeClass("selectedItem");
+  $(".zont-select-box .type-select-box img:nth-child(1)").addClass("selectedItem");
+  $(".zont-stage-type").addClass("first-type");
+});
+
+$(".zont-select-box .type-select-box img:nth-child(1)").mouseover(function() {
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("first-type");
+})
+.mouseout(function() {
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("first-type");
+});
+//////////////////////////////////////////////////////////////////////////////
+
+// Зонт 2
+$(".zont-select-box .type-select-box img:nth-child(2)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  $(".zont-select-box .type-select-box img").removeClass("selectedItem");
+  $(".zont-select-box .type-select-box img:nth-child(2)").addClass("selectedItem");
+  $(".zont-stage-type").addClass("second-type");
+});
+
+$(".zont-select-box .type-select-box img:nth-child(2)").mouseover(function() {
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("second-type");
+})
+.mouseout(function() {
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-type");
+});
+//////////////////////////////////////////////////////////////////////////////
+
+// Зонт 3
+$(".zont-select-box .type-select-box img:nth-child(3)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  $(".zont-select-box .type-select-box img").removeClass("selectedItem");
+  $(".zont-select-box .type-select-box img:nth-child(3)").addClass("selectedItem");
+  $(".zont-stage-type").addClass("third-type");
+});
+
+$(".zont-select-box .type-select-box img:nth-child(3)").mouseover(function() {
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("third-type");
+})
+.mouseout(function() {
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("third-type");
+});
+//////////////////////////////////////////////////////////////////////////////
+
+// Зонт 4
+$(".zont-select-box .type-select-box img:nth-child(4)").click(function() {
+  // vivodDeleted();
+  zontDeleted();
+  $(".zont-select-box .type-select-box img").removeClass("selectedItem");
+  $(".zont-select-box .type-select-box img:nth-child(4)").addClass("selectedItem");
+  $(".zont-stage-type").addClass("fourth-type");
+
+  if(vihodNaKrishuType == "1"){
+    $(".zont-stage-type").removeClass("fourth-type");
+    $(".zont-stage-type").addClass("fourth-type-svihodom");
+  }
+});
+
+$(".zont-select-box .type-select-box img:nth-child(4)").mouseover(function() {
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type");  
+
+    if(vihodNaKrishuType == "1"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type-svihodom"); 
+    }
+})
+.mouseout(function() {
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-type");
+
+    if(vihodNaKrishuType == "1"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-type-svihodom"); 
+    }
+});
+//////////////////////////////////////////////////////////////////////////////
+
+// Зонт 5 
+$(".zont-select-box .type-select-box img:nth-child(5)").click(function() {
+  // vivodDeleted();
+  zontDeleted();
+  $(".zont-select-box .type-select-box img").removeClass("selectedItem");
+  $(".zont-select-box .type-select-box img:nth-child(5)").addClass("selectedItem");
+  $(".zont-stage-type").addClass("fiveth-type");
+});
+
+$(".zont-select-box .type-select-box img:nth-child(5)").mouseover(function() {
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type");
+})
+.mouseout(function() {
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-type");
+});
+//////////////////////////////////////////////////////////////////////////////
+
+// Зонт 6
+$(".zont-select-box .type-select-box img:nth-child(6)").click(function() {
+  // vivodDeleted();
+  zontDeleted();
+  $(".zont-select-box .type-select-box img").removeClass("selectedItem");
+  $(".zont-select-box .type-select-box img:nth-child(6)").addClass("selectedItem");
+  $(".zont-stage-type").addClass("sixth-type");
+});
+
+$(".zont-select-box .type-select-box img:nth-child(6)").mouseover(function() {
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type");
+})
+.mouseout(function() {
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-type");
+});
+});

@@ -125,14 +125,17 @@
 						<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 text-box">
 							<nav>
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#step-1" role="tab" aria-controls="nav-home" aria-selected="true">Шаг 1</a>
-									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#step-2" role="tab" aria-controls="nav-profile" aria-selected="false">Шаг 2</a>
+									<a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#step-1" role="tab" aria-controls="nav-home" aria-selected="true">Шаг 1</a>
+
+									<a class="nav-item nav-link  active" id="nav-profile-tab" data-toggle="tab" href="#step-2" role="tab" aria-controls="nav-profile" aria-selected="false">Шаг 2</a>
+
 									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#step-3" role="tab" aria-controls="nav-contact" aria-selected="false">Шаг 3</a>
+
 									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#step-4" role="tab" aria-controls="nav-contact" aria-selected="false">Шаг 4</a>
 								</div>
 							</nav>
 							<div class="tab-content" id="nav-tabContent">
-								<div class="tab-pane fade show active" id="step-1" role="tabpanel" aria-labelledby="nav-home-tab">
+								<div class="tab-pane fade" id="step-1" role="tabpanel" aria-labelledby="nav-home-tab">
 									<h5>Основные параметры</h5>
 									<p>Выберите основные параметры для создания вашего дымохода:</p>
 									<div class="table-box">
@@ -208,7 +211,7 @@
 										<div class="_button_push shema">Построить схему</div>
 									</div>
 								</div>
-								<div class="tab-pane fade" id="step-2" role="tabpanel" aria-labelledby="nav-profile-tab">
+								<div class="tab-pane fade show active" id="step-2" role="tabpanel" aria-labelledby="nav-profile-tab">
 									<h5>Схема дымохода</h5>
 									<p>Выберите необходимые секции для каждого этажа:</p>
 									<div class="stage-builder-wrapeer">
@@ -225,7 +228,7 @@
 											</div>
 										</div>
 
-										<!-- Второй этаж интерфейс 
+										<!-- Второй этаж интерфейс -->
 										<div class="second-stage">
 											<h6>Второй этаж</h6>
 											<div class="type-select-box">	
@@ -235,11 +238,22 @@
 												<img src="img/calculator/2-stage-4-type.jpg">
 											</div>
 										</div>
-										Третий этаж интерфейс -->
+										<!-- Третий этаж интерфейс -->
 
 										<!-- Крыша интерфейс -->
 										<div class="krisha-select-box">
 											<h6>Вывод на крышу</h6>
+											<div class="type-select-box">
+												<img src="img/calculator/1-stage-krisha-7-type.jpg">
+												<img src="img/calculator/1-stage-krisha-8-type.jpg">
+												<img src="img/calculator/1-stage-krisha-9-type.jpg">
+												<img src="img/calculator/1-stage-krisha-10-type.jpg">
+											</div>
+										</div>
+
+										<!-- Зонт -->
+										<div class="zont-select-box">
+											<h6>Зонт</h6>
 											<div class="type-select-box">
 												<img src="img/calculator/1-stage-krisha-1-type.jpg">
 												<img src="img/calculator/1-stage-krisha-2-type.jpg">
@@ -247,12 +261,13 @@
 												<img src="img/calculator/1-stage-krisha-4-type.jpg">
 												<img src="img/calculator/1-stage-krisha-5-type.jpg">
 												<img src="img/calculator/1-stage-krisha-6-type.jpg">
-												<img src="img/calculator/1-stage-krisha-7-type.jpg">
-												<img src="img/calculator/1-stage-krisha-8-type.jpg">
-												<img src="img/calculator/1-stage-krisha-9-type.jpg">
-												<img src="img/calculator/1-stage-krisha-10-type.jpg">
+
+												<img src="img/calculator/1-stage-krisha-11-type.jpg">
+												<img src="img/calculator/1-stage-krisha-12-type.jpg">
+												<img src="img/calculator/1-stage-krisha-13-type.jpg">
 											</div>
 										</div>
+										<!-- / Зонт -->
 									</div>
 								</div>
 								<div class="tab-pane fade" id="step-3" role="tabpanel" aria-labelledby="nav-contact-tab">3</div>
@@ -262,24 +277,22 @@
 						<div class="col-xl-8 col-lg-8 col-md-6 col-sm-12 col-12 calculator-wrapper">
 							<div class="calculator-final-look">
 								<div class="main-layer one-stage">
+
 									<!-- Первый этаж -->
-									<div class="first-stage-type">
-										
-									</div>
-									<div class="first-stage-type-hover">
-										
-									</div>
+									<div class="first-stage-type"></div>
+									<div class="first-stage-type-hover"></div>
 
 									<!-- Второй этаж -->
 									
 
 									<!-- Выход на крыше -->
-									<div class="krisha-stage-type">
-										
-									</div>
-									<div class="krisha-stage-type-hover">
-										
-									</div>
+									<div class="krisha-stage-type"></div>
+									<div class="krisha-stage-type-hover"></div>
+
+									<!-- Выход на крыше -->
+									<div class="zont-stage-type"></div>
+									<div class="zont-stage-type-hover"></div>
+									
 								</div>
 							</div>
 						</div>
