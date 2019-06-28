@@ -101,13 +101,23 @@ var vihodNaKrishuType = 0;
 
     //Очитска зонта 
     function zontDeleted() {
-      $(".zont-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom");
-      $(".zont-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom");
+      $(".zont-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom fourth-zont-2-svihodom fiveth-zont-2-svihodom sixth-zont-2-svihodom seventh-zont-3-svihodom eighth-zont-3-svihodom nineth-zont-3-svihodom fourth-zont-4-svihodom fiveth-zont-4-svihodom sixth-zont-4-svihodom");
+      $(".zont-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom fourth-zont-2-svihodom fiveth-zont-2-svihodom sixth-zont-2-svihodom seventh-zont-3-svihodom eighth-zont-3-svihodom nineth-zont-3-svihodom fourth-zont-4-svihodom fiveth-zont-4-svihodom sixth-zont-4-svihodom");
     }
 
     //Очистка выдиления с элемента
     function selectDeleted() {
-      $(".first-stage .type-select-box img").removeClass("selectedItem");
+      $(".krisha-select-box .type-select-box img.selectedItem").removeClass("selectedItem");
+    }
+
+    //Очистка выдиления вывода на крышу
+    function selectVivodDeleted() {
+      $(".first-stage .type-select-box img.selectedItem").removeClass("selectedItem");
+    }
+
+    //Очистка выдиления зонта
+    function selectZontDeleted() {
+      $(".zont-select-box .type-select-box img.selectedItem").removeClass("selectedItem");
     }
 
     // Удаление классов вывода на крышу
@@ -181,6 +191,8 @@ var vihodNaKrishuType = 0;
         zontDeleted();
         typeDimohodDeleted();
         selectDeleted();
+        selectVivodDeleted();
+        selectZontDeleted();
         interfaceVivodDeleted();
         $(".first-stage .type-select-box img:nth-child(1)").addClass("selectedItem");
         $(".krisha-select-box img").css("display", "none");
@@ -206,6 +218,8 @@ var vihodNaKrishuType = 0;
       typeDimohodDeleted();
       vivodDeleted();
       selectDeleted();
+      selectVivodDeleted();
+      selectZontDeleted();
       interfaceVivodDeleted();
       zontDeleted();
       vihodNaKrishuType = 0;
@@ -251,6 +265,8 @@ var vihodNaKrishuType = 0;
       vivodDeleted();
       zontDeleted();
       selectDeleted();
+      selectVivodDeleted();
+      selectZontDeleted();
       interfaceVivodDeleted();
       $(".first-stage .type-select-box img:nth-child(3)").addClass("selectedItem");
       $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
@@ -294,6 +310,8 @@ var vihodNaKrishuType = 0;
       vivodDeleted();
       zontDeleted();
       selectDeleted();
+      selectVivodDeleted();
+      selectZontDeleted();
       interfaceVivodDeleted();
       $(".first-stage .type-select-box img:nth-child(4)").addClass("selectedItem");
       $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
@@ -337,6 +355,8 @@ var vihodNaKrishuType = 0;
       vivodDeleted();
       zontDeleted();
       selectDeleted();
+      selectVivodDeleted();
+      selectZontDeleted();
       interfaceVivodDeleted();
       $(".first-stage .type-select-box img:nth-child(5)").addClass("selectedItem");
       $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
@@ -379,6 +399,8 @@ var vihodNaKrishuType = 0;
       vivodDeleted();
       zontDeleted();
       selectDeleted();
+      selectVivodDeleted();
+      selectZontDeleted();
       interfaceVivodDeleted();
       $(".first-stage .type-select-box img:nth-child(6)").addClass("selectedItem");
       $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
@@ -420,8 +442,10 @@ var vihodNaKrishuType = 0;
 $(".krisha-select-box .type-select-box img:nth-child(1)").click(function() {
   vivodDeleted();
   zontDeleted();
+  selectZontDeleted();
   interfaceVivodDeleted();
   vihodNaKrishuType = 1;
+
   $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
   $(".krisha-select-box .type-select-box img:nth-child(1)").addClass("selectedItem");
   $(".krisha-stage-type").addClass("first-type");
@@ -444,6 +468,7 @@ $(".krisha-select-box .type-select-box img:nth-child(1)").mouseover(function() {
 $(".krisha-select-box .type-select-box img:nth-child(2)").click(function() {
   vivodDeleted();
   zontDeleted();
+  selectZontDeleted();
   interfaceVivodDeleted();
   vihodNaKrishuType = 2;
   $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
@@ -468,6 +493,7 @@ $(".krisha-select-box .type-select-box img:nth-child(2)").mouseover(function() {
 $(".krisha-select-box .type-select-box img:nth-child(3)").click(function() {
   vivodDeleted();
   zontDeleted();
+  selectZontDeleted();
   interfaceVivodDeleted();
   vihodNaKrishuType = 3;
   $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
@@ -492,6 +518,7 @@ $(".krisha-select-box .type-select-box img:nth-child(3)").mouseover(function() {
 $(".krisha-select-box .type-select-box img:nth-child(4)").click(function() {
   vivodDeleted();
   zontDeleted();
+  selectZontDeleted();
   interfaceVivodDeleted();
   vihodNaKrishuType = 4;
   $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
@@ -573,24 +600,51 @@ $(".zont-select-box .type-select-box img:nth-child(4)").click(function() {
   $(".zont-stage-type").addClass("fourth-type");
 
   if(vihodNaKrishuType == "1"){
-    $(".zont-stage-type").removeClass("fourth-type");
+    zontDeleted();
     $(".zont-stage-type").addClass("fourth-type-svihodom");
+  }
+
+  if(vihodNaKrishuType == "2"){
+    zontDeleted();
+    $(".zont-stage-type").addClass("fourth-zont-2-svihodom");
+  }
+
+  if(vihodNaKrishuType == "4"){
+    zontDeleted();
+    $(".zont-stage-type").addClass("fourth-zont-4-svihodom");
   }
 });
 
-$(".zont-select-box .type-select-box img:nth-child(4)").mouseover(function() {
-    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type");  
 
-    if(vihodNaKrishuType == "1"){
-      $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type-svihodom"); 
-    }
+$(".zont-select-box .type-select-box img:nth-child(4)").mouseover(function() {
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type");  
+
+  if(vihodNaKrishuType == "1"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "2"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-zont-2-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "4"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-zont-4-svihodom"); 
+  }
 })
 .mouseout(function() {
-    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-type");
+  $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-type");
 
-    if(vihodNaKrishuType == "1"){
-      $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-type-svihodom"); 
-    }
+  if(vihodNaKrishuType == "1"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-type-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "2"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-zont-2-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "4"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-zont-4-svihodom"); 
+  }
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -601,13 +655,52 @@ $(".zont-select-box .type-select-box img:nth-child(5)").click(function() {
   $(".zont-select-box .type-select-box img").removeClass("selectedItem");
   $(".zont-select-box .type-select-box img:nth-child(5)").addClass("selectedItem");
   $(".zont-stage-type").addClass("fiveth-type");
+
+  if(vihodNaKrishuType == "1"){
+    zontDeleted();
+    $(".zont-stage-type").addClass("fiveth-type-svihodom");
+  }
+
+  if(vihodNaKrishuType == "2"){
+    zontDeleted();
+    $(".zont-stage-type").addClass("fiveth-zont-2-svihodom");
+  }
+
+  if(vihodNaKrishuType == "4"){
+    zontDeleted();
+    $(".zont-stage-type").addClass("fiveth-zont-4-svihodom");
+  }
 });
 
 $(".zont-select-box .type-select-box img:nth-child(5)").mouseover(function() {
   $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type");
+
+  if(vihodNaKrishuType == "1"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "2"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-2-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "4"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-4-svihodom"); 
+  }
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-type");
+
+  if(vihodNaKrishuType == "1"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-type-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "2"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-zont-2-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "4"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-zont-4-svihodom"); 
+  }
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -618,12 +711,142 @@ $(".zont-select-box .type-select-box img:nth-child(6)").click(function() {
   $(".zont-select-box .type-select-box img").removeClass("selectedItem");
   $(".zont-select-box .type-select-box img:nth-child(6)").addClass("selectedItem");
   $(".zont-stage-type").addClass("sixth-type");
+
+  if(vihodNaKrishuType == "1"){
+    zontDeleted();
+    $(".zont-stage-type").addClass("sixth-type-svihodom");
+  }
+
+  if(vihodNaKrishuType == "2"){
+    zontDeleted();
+    $(".zont-stage-type").addClass("sixth-zont-2-svihodom");
+  }
+
+  if(vihodNaKrishuType == "4"){
+    zontDeleted();
+    $(".zont-stage-type").addClass("sixth-zont-4-svihodom");
+  }
 });
 
 $(".zont-select-box .type-select-box img:nth-child(6)").mouseover(function() {
   $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type");
+
+  if(vihodNaKrishuType == "1"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "2"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-2-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "4"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-4-svihodom"); 
+  }
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-type");
+
+  if(vihodNaKrishuType == "1"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-type-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "2"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-zont-2-svihodom"); 
+  }
+
+  if(vihodNaKrishuType == "4"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-zont-4-svihodom"); 
+  }
 });
+//////////////////////////////////////////////////////////////////////////////
+
+// Зонт 7
+$(".zont-select-box .type-select-box img:nth-child(7)").click(function() {
+  // vivodDeleted();
+  zontDeleted();
+  $(".zont-select-box .type-select-box img").removeClass("selectedItem");
+  $(".zont-select-box .type-select-box img:nth-child(7)").addClass("selectedItem");
+
+  if(vihodNaKrishuType == "3"){
+    zontDeleted();
+    $(".zont-stage-type").addClass("seventh-zont-3-svihodom");
+  }
+});
+
+$(".zont-select-box .type-select-box img:nth-child(7)").mouseover(function() {
+
+  if(vihodNaKrishuType == "3"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("seventh-zont-3-svihodom"); 
+  }
+})
+.mouseout(function() {
+
+  if(vihodNaKrishuType == "3"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("seventh-zont-3-svihodom"); 
+  }
+});
+
+//////////////////////////////////////////////////////////////////////////////
+
+// Зонт 8
+$(".zont-select-box .type-select-box img:nth-child(8)").click(function() {
+  // vivodDeleted();
+  zontDeleted();
+  $(".zont-select-box .type-select-box img").removeClass("selectedItem");
+  $(".zont-select-box .type-select-box img:nth-child(8)").addClass("selectedItem");
+
+  if(vihodNaKrishuType == "3"){
+    zontDeleted();
+    $(".zont-stage-type").addClass("eighth-zont-3-svihodom");
+  }
+});
+
+$(".zont-select-box .type-select-box img:nth-child(8)").mouseover(function() {
+
+  if(vihodNaKrishuType == "3"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-zont-3-svihodom"); 
+  }
+})
+.mouseout(function() {
+
+  if(vihodNaKrishuType == "3"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-zont-3-svihodom"); 
+  }
+});
+
+//////////////////////////////////////////////////////////////////////////////
+
+// Зонт 9
+$(".zont-select-box .type-select-box img:nth-child(9)").click(function() {
+  // vivodDeleted();
+  zontDeleted();
+  $(".zont-select-box .type-select-box img").removeClass("selectedItem");
+  $(".zont-select-box .type-select-box img:nth-child(9)").addClass("selectedItem");
+
+  if(vihodNaKrishuType == "3"){
+    zontDeleted();
+    $(".zont-stage-type").addClass("nineth-zont-3-svihodom");
+  }
+});
+
+$(".zont-select-box .type-select-box img:nth-child(9)").mouseover(function() {
+
+  if(vihodNaKrishuType == "3"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("nineth-zont-3-svihodom"); 
+  }
+})
+.mouseout(function() {
+
+  if(vihodNaKrishuType == "3"){
+    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("nineth-zont-3-svihodom"); 
+  }
+});
+
+
+
+
+
+
+
+
 });
