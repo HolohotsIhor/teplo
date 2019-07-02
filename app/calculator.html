@@ -125,9 +125,9 @@
 						<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 text-box">
 							<nav>
 								<div class="nav nav-tabs" id="nav-tab" role="tablist">
-									<a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#step-1" role="tab" aria-controls="nav-home" aria-selected="true">Шаг 1</a>
+									<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#step-1" role="tab" aria-controls="nav-home" aria-selected="true">Шаг 1</a>
 
-									<a class="nav-item nav-link  active" id="nav-profile-tab" data-toggle="tab" href="#step-2" role="tab" aria-controls="nav-profile" aria-selected="false">Шаг 2</a>
+									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#step-2" role="tab" aria-controls="nav-profile" aria-selected="false">Шаг 2</a>
 
 									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#step-3" role="tab" aria-controls="nav-contact" aria-selected="false">Шаг 3</a>
 
@@ -135,7 +135,7 @@
 								</div>
 							</nav>
 							<div class="tab-content" id="nav-tabContent">
-								<div class="tab-pane fade" id="step-1" role="tabpanel" aria-labelledby="nav-home-tab">
+								<div class="tab-pane fade show active" id="step-1" role="tabpanel" aria-labelledby="nav-home-tab">
 									<h5>Основные параметры</h5>
 									<p>Выберите основные параметры для создания вашего дымохода:</p>
 									<div class="table-box">
@@ -211,7 +211,7 @@
 										<div class="_button_push shema">Построить схему</div>
 									</div>
 								</div>
-								<div class="tab-pane fade show active" id="step-2" role="tabpanel" aria-labelledby="nav-profile-tab">
+								<div class="tab-pane fade" id="step-2" role="tabpanel" aria-labelledby="nav-profile-tab">
 									<h5>Схема дымохода</h5>
 									<p>Выберите необходимые секции для каждого этажа:</p>
 									<div class="stage-builder-wrapeer">
@@ -224,7 +224,9 @@
 												<img src="img/calculator/1-stage-3-type.jpg">
 												<img src="img/calculator/1-stage-4-type.jpg">
 												<img src="img/calculator/1-stage-5-type.jpg">
-												<img src="img/calculator/1-stage-6-type.jpg">	
+												<img src="img/calculator/1-stage-6-type.jpg">
+												<img src="img/calculator/1-stage-7-type.jpg">
+												<img src="img/calculator/1-stage-8-type.jpg">	
 											</div>
 										</div>
 
@@ -248,6 +250,10 @@
 												<img src="img/calculator/1-stage-krisha-8-type.jpg">
 												<img src="img/calculator/1-stage-krisha-9-type.jpg">
 												<img src="img/calculator/1-stage-krisha-10-type.jpg">
+												<img src="img/calculator/1-stage-krisha-14-type.jpg">
+												<img src="img/calculator/1-stage-krisha-15-type.jpg">
+												<img src="img/calculator/1-stage-krisha-16-type.jpg">
+												<img src="img/calculator/1-stage-krisha-17-type.jpg">
 											</div>
 										</div>
 
@@ -261,7 +267,6 @@
 												<img src="img/calculator/1-stage-krisha-4-type.jpg">
 												<img src="img/calculator/1-stage-krisha-5-type.jpg">
 												<img src="img/calculator/1-stage-krisha-6-type.jpg">
-
 												<img src="img/calculator/1-stage-krisha-11-type.jpg">
 												<img src="img/calculator/1-stage-krisha-12-type.jpg">
 												<img src="img/calculator/1-stage-krisha-13-type.jpg">
@@ -270,7 +275,33 @@
 										<!-- / Зонт -->
 									</div>
 								</div>
-								<div class="tab-pane fade" id="step-3" role="tabpanel" aria-labelledby="nav-contact-tab">3</div>
+								<div class="tab-pane fade" id="step-3" role="tabpanel" aria-labelledby="nav-contact-tab">
+									<h5>Размеры</h5>
+									<p>Введите размеры вашего дома для точного расчета дымохода иди выберите вариант вызова замерщика:</p>
+
+									<p class="input-text">Высота от пола до патрубка отопительного прибора: <br>	
+									<input id="visotaOtPola"><span>мм</span>
+									</p>
+
+									<p class="input-text">Расстояние между стеной и отопительным прибором: <br>	
+									<input id="rastojanieStenaPribor"><span>мм</span>
+									</p>
+
+									<p class="input-text">Толщина наружной стены: <br>	
+									<input id="tolshinaNarujnoiSteni"><span>мм</span>
+									</p>
+
+									<p class="input-text">Высота 1 этажа: <br>	
+									<input id="visotaFirstStage"><span>мм</span>
+									</p>
+
+									<p class="input-text">Высота 2 этажа: <br>	
+									<input id="visotaSecondStage"><span>мм</span>
+									</p>
+
+									
+
+								</div>
 								<div class="tab-pane fade" id="step-4" role="tabpanel" aria-labelledby="nav-contact-tab">4</div>
 							</div>
 						</div>
@@ -283,7 +314,8 @@
 									<div class="first-stage-type-hover"></div>
 
 									<!-- Второй этаж -->
-									
+									<div class="second-stage-type"></div>
+									<div class="second-stage-type-hover"></div>
 
 									<!-- Выход на крыше -->
 									<div class="krisha-stage-type"></div>
