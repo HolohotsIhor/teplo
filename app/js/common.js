@@ -164,29 +164,56 @@ var partFirstStage = 0;
       stage = stageNumbers();
 
       if (stage == "1") {
-        $(".first-stage-type").removeClass("two-stage-build");
-        $(".first-stage-type-hover").removeClass("two-stage-build");
-        $(".main-layer").removeClass("two-stage three-stage");
-        $(".main-layer").addClass("one-stage");
-        $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "none");
-        $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3), .first-stage .type-select-box img:nth-child(4), .first-stage .type-select-box img:nth-child(5), .first-stage .type-select-box img:nth-child(6)").css("display", "unset");
-      }
+       selectDeleted();
+       selectVivodDeleted();
+       selectZontDeleted();
+       zontDeleted();
+       vivodDeleted();
+       secondStageDeleted();
+       $(".stage-builder-wrapeer .third-stage, .stage-builder-wrapeer .third-stage img").css("display", "none");
+       $(".main-layer").addClass("one-stage");
+       $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("tree-stage-build");
+       $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("two-stage-build");
+       $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "none");
+       $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3), .first-stage .type-select-box img:nth-child(4), .first-stage .type-select-box img:nth-child(5), .first-stage .type-select-box img:nth-child(6)").css("display", "unset");
+     }
 
-      if (stage == "2") {
-        selectDeleted();
-        selectVivodDeleted();
-        selectZontDeleted();
-        zontDeleted();
-        $(".krisha-select-box").css("display", "none");
-        $(".zont-select-box").css("display", "none");
-        $(".main-layer").removeClass("one-stage three-stage");
-        $(".main-layer").addClass("two-stage");
-        $(".first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").addClass("two-stage-build");
-        $(".first-stage-type-hover").addClass("two-stage-build");
-        $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3)").css("display", "none");
-        $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "unset");
-      }
-    });
+     if (stage == "2") {
+      selectDeleted();
+      selectVivodDeleted();
+      selectZontDeleted();
+      zontDeleted();
+      vivodDeleted();
+      secondStageDeleted();
+      $(".stage-builder-wrapeer .third-stage, .stage-builder-wrapeer .third-stage img").css("display", "none");
+      $(".krisha-select-box").css("display", "none");
+      $(".zont-select-box").css("display", "none");
+      $(".main-layer").removeClass("one-stage three-stage");
+      $(".main-layer").addClass("two-stage");
+      $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("tree-stage-build");
+      $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").addClass("two-stage-build");
+      $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3)").css("display", "none");
+      $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "unset");
+    }
+
+    if (stage == "3") {
+     selectDeleted();
+     selectVivodDeleted();
+     selectZontDeleted();
+     zontDeleted();
+     vivodDeleted();
+     secondStageDeleted();
+     $(".second-stage").css("display", "none");
+     $(".krisha-select-box").css("display", "none");
+     $(".zont-select-box").css("display", "none");
+     $(".main-layer").removeClass("two-stage one-stage");
+     $(".main-layer").addClass("three-stage");
+     $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("two-stage-build");
+     $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .second-stage-type, .second-stage-type-hover").addClass("three-stage-build");
+     $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3)").css("display", "none");
+     $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "unset");
+   }
+ });
 
     // Диаметр трубы (мм)
     $('#exampleFormControlSelect2').change(function() {
@@ -374,7 +401,14 @@ var partFirstStage = 0;
         $(".second-stage img:nth-child(3)").css("display", "unset");
         $(".krisha-select-box").css("display", "none");
       }
-    });
+
+      if (stage == "3"){
+       $(".second-stage").css("display", "block");
+       $(".second-stage img").css("display", "none");
+       $(".second-stage img:nth-child(3)").css("display", "unset");
+       $(".krisha-select-box").css("display", "none");
+     }
+   });
 
     $(".first-stage .type-select-box img:nth-child(4)").mouseover(function() {
       if (stage == "1") {
@@ -383,7 +417,9 @@ var partFirstStage = 0;
       if (stage == "2") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("third-type");
       }
-
+      if (stage == "3") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fourth-type");
+      }
     })
     .mouseout(function() {
       if (stage == "1") {
@@ -392,7 +428,9 @@ var partFirstStage = 0;
       if (stage == "2") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("third-type");
       }
-
+      if (stage == "3") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fourth-type");
+      }
     });
 
     ///////////////// Тип дымохода 5 /////////////////
@@ -425,13 +463,25 @@ var partFirstStage = 0;
         $(".second-stage").css("display", "block");
         $(".krisha-select-box").css("display", "none");
       }
-    });
+
+      if (stage == "3"){
+       $(".second-stage").css("display", "block");
+       $(".second-stage img").css("display", "none");
+       $(".second-stage img:nth-child(3)").css("display", "unset");
+       $(".krisha-select-box").css("display", "none");
+       $(".calculator-final-look .main-layer .first-stage-type").addClass("fifth-type");
+     }
+   });
 
     $(".first-stage .type-select-box img:nth-child(5)").mouseover(function() {
       if (stage == "1") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
       }
       if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
+      }
+
+      if (stage == "3") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
       }
     })
@@ -442,7 +492,9 @@ var partFirstStage = 0;
       if (stage == "2") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fifth-type");
       }
-
+      if (stage == "3") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fifth-type");
+      }
     });
 
     ///////////////// Тип дымохода 6 /////////////////
@@ -474,13 +526,25 @@ var partFirstStage = 0;
         $(".second-stage img:nth-child(3), .second-stage img:nth-child(4)").css("display", "unset");
         $(".krisha-select-box").css("display", "none");
       }
-    });
+
+      if (stage == "3"){
+       $(".second-stage").css("display", "block");
+       $(".second-stage img").css("display", "none");
+       $(".second-stage img:nth-child(3)").css("display", "unset");
+       $(".krisha-select-box").css("display", "none");
+       $(".calculator-final-look .main-layer .first-stage-type").addClass("sixth-type");
+     }
+   });
 
     $(".first-stage .type-select-box img:nth-child(6)").mouseover(function() {
       if (stage == "1") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("sixth-type");
       }
       if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("sixth-type");
+      }
+
+      if (stage == "3") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("sixth-type");
       }
     })
@@ -490,6 +554,9 @@ var partFirstStage = 0;
         $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("sixth-type");
       }
       if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("sixth-type");
+      }
+      if (stage == "3") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("sixth-type");
       }
     });
@@ -516,6 +583,14 @@ var partFirstStage = 0;
         $(".second-stage img:nth-child(1), .second-stage img:nth-child(2)").css("display", "unset");
         $(".krisha-select-box").css("display", "none");
       }
+
+       if (stage == "3"){
+       $(".second-stage").css("display", "block");
+       $(".second-stage img").css("display", "none");
+       $(".second-stage img:nth-child(3)").css("display", "unset");
+       $(".krisha-select-box").css("display", "none");
+       $(".calculator-final-look .main-layer .first-stage-type").addClass("seventh-type");
+     }
     });
 
     $(".first-stage .type-select-box img:nth-child(7)").mouseover(function() {
@@ -525,6 +600,9 @@ var partFirstStage = 0;
       if (stage == "2") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("seventh-type");
       }
+       if (stage == "3") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("seventh-type");
+      }
     })
 
     .mouseout(function() {
@@ -532,6 +610,10 @@ var partFirstStage = 0;
         $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("seventh-type");
       }
       if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("seventh-type");
+      }
+
+      if (stage == "3") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("seventh-type");
       }
     });
@@ -558,6 +640,14 @@ var partFirstStage = 0;
         $(".second-stage img:nth-child(1), .second-stage img:nth-child(2)").css("display", "unset");
         $(".krisha-select-box").css("display", "none");
       }
+
+      if (stage == "3"){
+       $(".second-stage").css("display", "block");
+       $(".second-stage img").css("display", "none");
+       $(".second-stage img:nth-child(3)").css("display", "unset");
+       $(".krisha-select-box").css("display", "none");
+       $(".calculator-final-look .main-layer .first-stage-type").addClass("eighth-type");
+     }
     });
 
      $(".first-stage .type-select-box img:nth-child(8)").mouseover(function() {
@@ -567,6 +657,10 @@ var partFirstStage = 0;
       if (stage == "2") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("eighth-type");
       }
+
+      if (stage == "3") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("eighth-type");
+      }
     })
 
      .mouseout(function() {
@@ -574,6 +668,9 @@ var partFirstStage = 0;
         $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("eighth-type");
       }
       if (stage == "2") {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("eighth-type");
+      }
+      if (stage == "3") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("eighth-type");
       }
     });
