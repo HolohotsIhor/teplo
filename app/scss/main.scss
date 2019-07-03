@@ -2237,6 +2237,7 @@ footer {
             }
 
             .third-stage{
+                margin-top: 25px;
                 display: none;
 
                 img{
@@ -2452,12 +2453,22 @@ footer {
                 background: url('../img/calculator/2-stage-2-type-look.png') center no-repeat;  
             }
 
+            &.second-type-3-stage {
+                background: url('../img/calculator/2-stage-2-type-look.png') center no-repeat;  
+                background-position: bottom;
+            }
+
             &.third-type {
                 background: url('../img/calculator/2-stage-3-type-look.png') center no-repeat;  
             }
 
             &.fourth-type {
                 background: url('../img/calculator/2-stage-4-type-look.png') center no-repeat;  
+            }
+
+            &.fourth-type-3-stage {
+                background: url('../img/calculator/2-stage-4-type-look.png') center no-repeat;  
+                background-position: bottom;
             }
 
             &.third-type-2-stage {
@@ -2468,6 +2479,50 @@ footer {
             &.third-type-2-stage-special {
                 background: url('../img/calculator/2-stage-3-type-look.png') center no-repeat;  
                 left: 15px;
+            }
+
+            &.third-type-3-stage {
+                background: url('../img/calculator/2-stage-3-type-look.png') center no-repeat;  
+                background-position: bottom;
+            }
+
+            &.third-type-3-stage-special {
+                background: url('../img/calculator/2-stage-3-type-look.png') center no-repeat;  
+                background-position: bottom;
+                background-position-x: 72px;
+            }
+
+            &.three-stage-build.second-type{
+                background-position: bottom;
+            }
+        }
+
+        .third-stage-type, .third-stage-type-hover{
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            width: 640px;
+            height: 895px;
+            visibility: unset;
+
+            &.first-type{
+                background: url('../img/calculator/3-stage-1-type.png') center no-repeat;  
+            }
+
+            &.third-type-two{
+                background: url('../img/calculator/3-stage-two-type.png') center no-repeat;  
+            }
+
+            &.third-type{
+                background: url('../img/calculator/3-stage-3-type.png') center no-repeat;  
+            }
+
+            &.third-type-special{
+                background: url('../img/calculator/3-type-3-stage-special.png') center no-repeat;  
+            }
+
+            &.fourth-type{
+                background: url('../img/calculator/4-type-3-stage.png') center no-repeat;     
             }
         }
 
@@ -2617,6 +2672,22 @@ footer {
             &.eighth-type {
                 background: url('../img/calculator/1-stage-krisha-23-type-1look.png') center no-repeat;
             }
+
+            &.first-type-3-stage{
+                background: url('../img/calculator/first-type-3-stage-vivod.png') center no-repeat;   
+            }
+
+            &.second-type-3-stage{
+                background: url('../img/calculator/second-type-3-stage-vivod.png') center no-repeat;   
+            }
+
+            &.third-type-3-stage{
+                background: url('../img/calculator/third-type-3-stage-vivod.png') center no-repeat;   
+            }
+
+            &.last-type{
+                background: url('../img/calculator/vivod-3-stage-last.png') center no-repeat;      
+            }
         }
 
         .zont-stage-type, .zont-stage-type-hover {
@@ -2756,18 +2827,18 @@ footer {
             }
 
             &.eighth-stage-2-zont-3-svihodom{
-               background: url('../img/calculator/1-stage-krisha-17-type-1look.png') center no-repeat;
-               left: 15px;
-               top: 0px;
-           }
+             background: url('../img/calculator/1-stage-krisha-17-type-1look.png') center no-repeat;
+             left: 15px;
+             top: 0px;
+         }
 
-           &.nineth-stage-2-zont-3-svihodom{
-               background: url('../img/calculator/1-stage-krisha-18-type-1look.png') center no-repeat;
-               left: 15px;
-               top: 0px;
-           }
+         &.nineth-stage-2-zont-3-svihodom{
+             background: url('../img/calculator/1-stage-krisha-18-type-1look.png') center no-repeat;
+             left: 15px;
+             top: 0px;
+         }
 
-           &.fourth-2-stage-zont-4-svihodom{
+         &.fourth-2-stage-zont-4-svihodom{
             background: url('../img/calculator/1-stage-krisha-4-type-1look.png') center no-repeat;
             left: 178px;
             top: -178px;

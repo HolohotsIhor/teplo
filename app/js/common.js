@@ -88,12 +88,28 @@ var typeOfPech = "не выбрано";
 var vihodNaKrishuType = 0;
 var partSecondStage = 0;
 var partFirstStage = 0;
+var partThirdStage = 0;
 
 
 /*********** ШАГ 1 **********/
     //Почистить переменную выхода дымохода
     function vihodNaKrishuTypeDeleted(){
       var vihodNaKrishuType = 0;
+    }
+
+    // Удаление интерфейса 3-го этажа
+    function deleteThirdStageInterface(){
+      $(".stage-builder-wrapeer .third-stage").css("display", "none");
+    }
+
+    // Удаление классов 3-го этажа
+    function deleteClassThirStage(){
+      $(".third-stage-type, .third-stage-type-hover").removeClass("first-type second-type third-type fourth-type third-type-special");
+    }
+
+    //Очистка выделения 3-го этажа
+    function deleteSelectThirdStage(){
+      $(".third-stage .type-select-box img").removeClass("selectedItem");
     }
 
     //Очистка интерфейса вывода
@@ -110,8 +126,8 @@ var partFirstStage = 0;
 
     //Удаление классов вывода на крышу
     function vivodDeleted() {
-      $(".krisha-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fiveth-2-stage-type");
-      $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fiveth-2-stage-type");
+      $(".krisha-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fiveth-2-stage-type first-type-3-stage second-type-3-stage third-type third-type-3-stage");
+      $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fiveth-2-stage-type first-type-3-stage second-type-3-stage third-type third-type-3-stage");
     }
 
     //Очистка выдиления с элемента
@@ -119,8 +135,8 @@ var partFirstStage = 0;
       $(".krisha-select-box .type-select-box img.selectedItem").removeClass("selectedItem");
     }
 
-    //Очистка выдиления вывода на крышу
-    function selectVivodDeleted() {
+    //Очистка выдиления первого этажа
+    function selectFirstStageDeleted() {
       $(".first-stage .type-select-box img.selectedItem").removeClass("selectedItem");
     }
 
@@ -131,7 +147,7 @@ var partFirstStage = 0;
 
     //Удаление классов второго этажа
     function secondStageDeleted() {
-      $(".second-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type third-type-2-stage third-type-2-stage-special");
+      $(".second-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type third-type-2-stage third-type-2-stage-special third-type-3-stage-special third-type-3-stage fourth-type-3-stage");
     }
 
     //Удаление классов выхода
@@ -164,56 +180,63 @@ var partFirstStage = 0;
       stage = stageNumbers();
 
       if (stage == "1") {
-       selectDeleted();
-       selectVivodDeleted();
-       selectZontDeleted();
-       zontDeleted();
-       vivodDeleted();
-       secondStageDeleted();
-       $(".stage-builder-wrapeer .third-stage, .stage-builder-wrapeer .third-stage img").css("display", "none");
-       $(".main-layer").addClass("one-stage");
-       $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("tree-stage-build");
-       $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("two-stage-build");
-       $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "none");
-       $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3), .first-stage .type-select-box img:nth-child(4), .first-stage .type-select-box img:nth-child(5), .first-stage .type-select-box img:nth-child(6)").css("display", "unset");
-     }
+        deleteThirdStageInterface();
+        deleteSelectThirdStage();
+        selectDeleted();
+        selectFirstStageDeleted();
+        selectZontDeleted();
+        zontDeleted();
+        vivodDeleted();
+        secondStageDeleted();
+        $(".stage-builder-wrapeer .third-stage, .stage-builder-wrapeer .third-stage img").css("display", "none");
+        $(".main-layer").removeClass("two-stage three-stage");
+        $(".main-layer").addClass("one-stage");
+        $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("three-stage-build");
+        $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("two-stage-build");
+        $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "none");
+        $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3), .first-stage .type-select-box img:nth-child(4), .first-stage .type-select-box img:nth-child(5), .first-stage .type-select-box img:nth-child(6)").css("display", "unset");
+      }
 
-     if (stage == "2") {
-      selectDeleted();
-      selectVivodDeleted();
-      selectZontDeleted();
-      zontDeleted();
-      vivodDeleted();
-      secondStageDeleted();
-      $(".stage-builder-wrapeer .third-stage, .stage-builder-wrapeer .third-stage img").css("display", "none");
-      $(".krisha-select-box").css("display", "none");
-      $(".zont-select-box").css("display", "none");
-      $(".main-layer").removeClass("one-stage three-stage");
-      $(".main-layer").addClass("two-stage");
-      $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("tree-stage-build");
-      $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").addClass("two-stage-build");
-      $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3)").css("display", "none");
-      $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "unset");
-    }
+      if (stage == "2") {
+        deleteThirdStageInterface();
+        deleteSelectThirdStage();
+        selectDeleted();
+        selectFirstStageDeleted();
+        selectZontDeleted();
+        zontDeleted();
+        vivodDeleted();
+        secondStageDeleted();
+        $(".stage-builder-wrapeer .third-stage, .stage-builder-wrapeer .third-stage img").css("display", "none");
+        $(".krisha-select-box").css("display", "none");
+        $(".zont-select-box").css("display", "none");
+        $(".main-layer").removeClass("one-stage three-stage");
+        $(".main-layer").addClass("two-stage");
+        $(".first-stage-type-hover, .first-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("three-stage-build");
+        $(".first-stage-type-hover, .first-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").addClass("two-stage-build");
+        $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3)").css("display", "none");
+        $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "unset");
+      }
 
-    if (stage == "3") {
-     selectDeleted();
-     selectVivodDeleted();
-     selectZontDeleted();
-     zontDeleted();
-     vivodDeleted();
-     secondStageDeleted();
-     $(".second-stage").css("display", "none");
-     $(".krisha-select-box").css("display", "none");
-     $(".zont-select-box").css("display", "none");
-     $(".main-layer").removeClass("two-stage one-stage");
-     $(".main-layer").addClass("three-stage");
-     $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("two-stage-build");
-     $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .second-stage-type, .second-stage-type-hover").addClass("three-stage-build");
-     $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3)").css("display", "none");
-     $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "unset");
-   }
- });
+      if (stage == "3") {
+        deleteThirdStageInterface();
+        deleteSelectThirdStage();
+        selectDeleted();
+        selectFirstStageDeleted();
+        selectZontDeleted();
+        zontDeleted();
+        vivodDeleted();
+        secondStageDeleted();
+        $(".second-stage").css("display", "none");
+        $(".krisha-select-box").css("display", "none");
+        $(".zont-select-box").css("display", "none");
+        $(".main-layer").removeClass("two-stage one-stage");
+        $(".main-layer").addClass("three-stage");
+        $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("two-stage-build");
+        $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .second-stage-type, .second-stage-type-hover").addClass("three-stage-build");
+        $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3)").css("display", "none");
+        $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "unset");
+      }
+    });
 
     // Диаметр трубы (мм)
     $('#exampleFormControlSelect2').change(function() {
@@ -244,11 +267,14 @@ var partFirstStage = 0;
     ///////////////// Типдымохода 1 /////////////////
     $(".first-stage .type-select-box img:nth-child(1)").click(function() {
         // Этаж 1
+        deleteThirdStageInterface();
+        deleteClassThirStage();
+        deleteSelectThirdStage();
         vivodDeleted();
         zontDeleted();
         typeDimohodDeleted();
         selectDeleted();
-        selectVivodDeleted();
+        selectFirstStageDeleted();
         selectZontDeleted();
         interfaceVivodDeleted();
         secondStageDeleted();
@@ -281,10 +307,13 @@ var partFirstStage = 0;
 
     ///////////////// Тип дымохода 2 /////////////////
     $(".first-stage .type-select-box img:nth-child(2)").click(function() {
+      deleteThirdStageInterface();
+      deleteClassThirStage();
+      deleteSelectThirdStage();
       typeDimohodDeleted();
       vivodDeleted();
       selectDeleted();
-      selectVivodDeleted();
+      selectFirstStageDeleted();
       selectZontDeleted();
       interfaceVivodDeleted();
       zontDeleted();
@@ -331,11 +360,14 @@ var partFirstStage = 0;
 
     ///////////////// Тип дымохода 3 /////////////////
     $(".first-stage .type-select-box img:nth-child(3)").click(function() {
+      deleteThirdStageInterface();
+      deleteClassThirStage();
+      deleteSelectThirdStage();
       typeDimohodDeleted();
       vivodDeleted();
       zontDeleted();
       selectDeleted();
-      selectVivodDeleted();
+      selectFirstStageDeleted();
       selectZontDeleted();
       interfaceVivodDeleted();
       secondStageDeleted();
@@ -374,11 +406,14 @@ var partFirstStage = 0;
 
     ///////////////// Тип дымохода 4 /////////////////
     $(".first-stage .type-select-box img:nth-child(4)").click(function() {
+      deleteThirdStageInterface();
+      deleteClassThirStage();
+      deleteSelectThirdStage();
       typeDimohodDeleted();
       vivodDeleted();
       zontDeleted();
       selectDeleted();
-      selectVivodDeleted();
+      selectFirstStageDeleted();
       selectZontDeleted();
       interfaceVivodDeleted();
       secondStageDeleted();
@@ -435,11 +470,14 @@ var partFirstStage = 0;
 
     ///////////////// Тип дымохода 5 /////////////////
     $(".first-stage .type-select-box img:nth-child(5)").click(function() {
+      deleteThirdStageInterface();
+      deleteClassThirStage();
+      deleteSelectThirdStage();
       typeDimohodDeleted();
       vivodDeleted();
       zontDeleted();
       selectDeleted();
-      selectVivodDeleted();
+      selectFirstStageDeleted();
       selectZontDeleted();
       interfaceVivodDeleted();
       secondStageDeleted();
@@ -499,11 +537,14 @@ var partFirstStage = 0;
 
     ///////////////// Тип дымохода 6 /////////////////
     $(".first-stage .type-select-box img:nth-child(6)").click(function() {
+      deleteThirdStageInterface();
+      deleteClassThirStage();
+      deleteSelectThirdStage();
       typeDimohodDeleted();
       vivodDeleted();
       zontDeleted();
       selectDeleted();
-      selectVivodDeleted();
+      selectFirstStageDeleted();
       selectZontDeleted();
       interfaceVivodDeleted();
       secondStageDeleted();
@@ -530,7 +571,7 @@ var partFirstStage = 0;
       if (stage == "3"){
        $(".second-stage").css("display", "block");
        $(".second-stage img").css("display", "none");
-       $(".second-stage img:nth-child(3)").css("display", "unset");
+       $(".second-stage img:nth-child(3), .second-stage img:nth-child(4)").css("display", "unset");
        $(".krisha-select-box").css("display", "none");
        $(".calculator-final-look .main-layer .first-stage-type").addClass("sixth-type");
      }
@@ -563,15 +604,19 @@ var partFirstStage = 0;
 
     ///////////////// Тип дымохода 7 /////////////////
     $(".first-stage .type-select-box img:nth-child(7)").click(function() {
+      deleteThirdStageInterface();
+      deleteClassThirStage();
+      deleteSelectThirdStage();
       typeDimohodDeleted();
       vivodDeleted();
       zontDeleted();
       selectDeleted();
-      selectVivodDeleted();
+      selectFirstStageDeleted();
       selectZontDeleted();
       interfaceVivodDeleted();
       secondStageDeleted();
       secondStageSelectDeleted();
+      partFirstStage = 7;
       $(".second-stage img").css("display", "none");
       $(".first-stage .type-select-box img:nth-child(7)").addClass("selectedItem");
       $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
@@ -584,14 +629,14 @@ var partFirstStage = 0;
         $(".krisha-select-box").css("display", "none");
       }
 
-       if (stage == "3"){
+      if (stage == "3"){
        $(".second-stage").css("display", "block");
        $(".second-stage img").css("display", "none");
-       $(".second-stage img:nth-child(3)").css("display", "unset");
+       $(".second-stage img:nth-child(2)").css("display", "unset");
        $(".krisha-select-box").css("display", "none");
        $(".calculator-final-look .main-layer .first-stage-type").addClass("seventh-type");
      }
-    });
+   });
 
     $(".first-stage .type-select-box img:nth-child(7)").mouseover(function() {
       if (stage == "1") {
@@ -600,7 +645,7 @@ var partFirstStage = 0;
       if (stage == "2") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("seventh-type");
       }
-       if (stage == "3") {
+      if (stage == "3") {
         $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("seventh-type");
       }
     })
@@ -620,15 +665,20 @@ var partFirstStage = 0;
 
      ///////////////// Тип дымохода 8 /////////////////
      $(".first-stage .type-select-box img:nth-child(8)").click(function() {
+      deleteThirdStageInterface();
+      deleteClassThirStage();
+      deleteSelectThirdStage();
       typeDimohodDeleted();
       vivodDeleted();
       zontDeleted();
       selectDeleted();
-      selectVivodDeleted();
+      selectFirstStageDeleted();
       selectZontDeleted();
       interfaceVivodDeleted();
       secondStageDeleted();
       secondStageSelectDeleted();
+      partFirstStage = 7;
+
       $(".second-stage img").css("display", "none");
       $(".first-stage .type-select-box img:nth-child(8)").addClass("selectedItem");
       $(".constract .text-box .tab-pane .stage-builder-wrapeer .krisha-select-box").css("display", "block");
@@ -644,11 +694,11 @@ var partFirstStage = 0;
       if (stage == "3"){
        $(".second-stage").css("display", "block");
        $(".second-stage img").css("display", "none");
-       $(".second-stage img:nth-child(3)").css("display", "unset");
+       $(".second-stage img:nth-child(2)").css("display", "unset");
        $(".krisha-select-box").css("display", "none");
        $(".calculator-final-look .main-layer .first-stage-type").addClass("eighth-type");
      }
-    });
+   });
 
      $(".first-stage .type-select-box img:nth-child(8)").mouseover(function() {
       if (stage == "1") {
@@ -694,13 +744,25 @@ $(".krisha-select-box .type-select-box img:nth-child(1)").click(function() {
     $(".zont-select-box").css("display", "block");
     $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
   }
+
+  if(partThirdStage == "3"){
+    $(".krisha-stage-type").addClass("first-type-3-stage");
+  }
 });
 
 $(".krisha-select-box .type-select-box img:nth-child(1)").mouseover(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("first-type");
+
+  if(partThirdStage == "3"){
+    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("first-type-3-stage");
+  }
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("first-type");
+
+  if(partThirdStage == "3"){
+    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("first-type-3-stage");
+  }
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -719,13 +781,25 @@ $(".krisha-select-box .type-select-box img:nth-child(2)").click(function() {
     $(".zont-select-box").css("display", "block");
     $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
   }
+
+  if(partThirdStage == "3"){
+    $(".krisha-stage-type").addClass("second-type-3-stage");
+  }
 });
 
 $(".krisha-select-box .type-select-box img:nth-child(2)").mouseover(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("second-type");
+
+  if(partThirdStage == "3"){
+    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("second-type-3-stage");
+  }
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("second-type");
+
+  if(partThirdStage == "3"){
+    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("second-type-3-stage");
+  }
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -744,13 +818,25 @@ $(".krisha-select-box .type-select-box img:nth-child(3)").click(function() {
     $(".zont-select-box").css("display", "block");
     $(".zont-select-box .type-select-box img:nth-child(7), .zont-select-box .type-select-box img:nth-child(8), .zont-select-box .type-select-box img:nth-child(9)").css("display", "unset");
   }
+
+  if(partThirdStage == "3"){
+    $(".krisha-stage-type").addClass("third-type-3-stage");
+  }
 });
 
 $(".krisha-select-box .type-select-box img:nth-child(3)").mouseover(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("third-type");
+
+  if(partThirdStage == "3"){
+    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("third-type-3-stage");
+  }
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("third-type");
+
+  if(partThirdStage == "3"){
+    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("third-type-3-stage");
+  }
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -914,6 +1000,26 @@ $(".krisha-select-box .type-select-box img:nth-child(7)").mouseover(function() {
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type");
+});
+//////////////////////////////////////////////////////////////////////////////
+
+// Вывод на крышу 9
+$(".krisha-select-box .type-select-box img:nth-child(9)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  selectZontDeleted();
+  interfaceVivodDeleted();
+  vihodNaKrishuType = 7;
+  $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
+  $(".krisha-select-box .type-select-box img:nth-child(9)").addClass("selectedItem");
+  $(".krisha-stage-type").addClass("last-type");
+});
+
+$(".krisha-select-box .type-select-box img:nth-child(9)").mouseover(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("last-type");
+})
+.mouseout(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("last-type");
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -1533,6 +1639,9 @@ $(".zont-select-box .type-select-box img:nth-child(9)").mouseover(function() {
 
 // Второй этаж 1 
 $(".second-stage .type-select-box img:nth-child(1)").click(function() {
+  deleteThirdStageInterface();
+  deleteClassThirStage();
+  deleteSelectThirdStage();
   vivodDeleted();
   zontDeleted();
   selectZontDeleted();
@@ -1540,6 +1649,8 @@ $(".second-stage .type-select-box img:nth-child(1)").click(function() {
   secondStageDeleted();
   partSecondStage = 1;
 
+  $(".third-stage").css("display","none");
+  $(".third-stage img").css("display","none");
   $(".second-stage .type-select-box img").removeClass("selectedItem");
   $(".second-stage .type-select-box img:nth-child(1)").addClass("selectedItem");
   $(".second-stage-type").addClass("first-type");
@@ -1560,17 +1671,29 @@ $(".second-stage .type-select-box img:nth-child(1)").mouseover(function() {
 
 // Второй этаж 2 
 $(".second-stage .type-select-box img:nth-child(2)").click(function() {
+  deleteThirdStageInterface();
+  deleteClassThirStage();
+  deleteSelectThirdStage();
   vivodDeleted();
   zontDeleted();
   selectZontDeleted();
   interfaceVivodDeleted();
   secondStageDeleted();
   partSecondStage = 2;
+
+  $(".third-stage").css("display","none");
+  $(".third-stage img").css("display","none");
   $(".second-stage .type-select-box img").removeClass("selectedItem");
   $(".second-stage .type-select-box img:nth-child(2)").addClass("selectedItem");
   $(".second-stage-type").addClass("second-type");
   $(".krisha-select-box").css("display","block");
   $(".krisha-select-box .type-select-box img:nth-child(8)").css("display","block");
+
+  if(stage == "3"){
+    $(".krisha-select-box").css("display", "none");
+    $(".third-stage").css("display", "block");
+    $(".third-stage .type-select-box img:nth-child(1), .third-stage .type-select-box img:nth-child(3)").css("display", "unset");
+  }
 });
 
 $(".second-stage .type-select-box img:nth-child(2)").mouseover(function() {
@@ -1578,11 +1701,15 @@ $(".second-stage .type-select-box img:nth-child(2)").mouseover(function() {
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("second-type");
+
 });
 //////////////////////////////////////////////////////////////////////////////
 
 // Второй этаж 3
 $(".second-stage .type-select-box img:nth-child(3)").click(function() {
+  deleteThirdStageInterface();
+  deleteClassThirStage();
+  deleteSelectThirdStage();
   vivodDeleted();
   zontDeleted();
   selectZontDeleted();
@@ -1590,6 +1717,8 @@ $(".second-stage .type-select-box img:nth-child(3)").click(function() {
   secondStageDeleted();
   partSecondStage = 3;
 
+  $(".third-stage").css("display","none");
+  $(".third-stage img").css("display","none");
   $(".second-stage .type-select-box img").removeClass("selectedItem");
   $(".second-stage .type-select-box img:nth-child(3)").addClass("selectedItem");
 
@@ -1610,7 +1739,21 @@ $(".second-stage .type-select-box img:nth-child(3)").click(function() {
     if(partFirstStage == "6"){
       $(".krisha-select-box .type-select-box img:nth-child(6), .krisha-select-box .type-select-box img:nth-child(7)").css("display", "none");
     }
+  }
 
+  if(stage == "3"){
+
+    if(partFirstStage == "4" || partFirstStage == "5"){
+      $(".second-stage-type").addClass("third-type-3-stage");
+      $(".third-stage").css("display", "block");
+      $(".third-stage .type-select-box img:nth-child(3)").css("display", "unset");
+    }
+
+    if(partFirstStage == "6"){
+      $(".second-stage-type").addClass("third-type-3-stage-special");
+      $(".third-stage").css("display", "block");
+      $(".third-stage .type-select-box img:nth-child(3), .third-stage .type-select-box img:nth-child(4)").css("display", "unset");
+    }
   }
 });
 
@@ -1622,7 +1765,16 @@ $(".second-stage .type-select-box img:nth-child(3)").mouseover(function() {
     $(".second-stage-type-hover").addClass("third-type-2-stage-special");
   }
 }
+if(stage == "3"){
 
+  if(partFirstStage == "4" || partFirstStage == "5"){
+    $(".second-stage-type-hover").addClass("third-type-3-stage");
+  }
+
+  if(partFirstStage == "6"){
+    $(".second-stage-type-hover").addClass("third-type-3-stage-special");
+  }
+}
 })
 .mouseout(function() {
  if(stage=="1"){$(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("third-type");}
@@ -1632,38 +1784,205 @@ $(".second-stage .type-select-box img:nth-child(3)").mouseover(function() {
   $(".second-stage-type-hover").removeClass("third-type-2-stage-special");
 }
 }
+
+if(stage == "3"){
+
+  if(partFirstStage == "4" || partFirstStage == "5"){
+    $(".second-stage-type-hover").removeClass("third-type-3-stage");
+  }
+
+  if(partFirstStage == "6"){
+    $(".second-stage-type-hover").removeClass("third-type-3-stage-special");
+  }
+}
 });
 //////////////////////////////////////////////////////////////////////////////
 
 // Второй этаж 4
 $(".second-stage .type-select-box img:nth-child(4)").click(function() {
+
+  deleteThirdStageInterface();
+  deleteClassThirStage();
+  deleteSelectThirdStage();
   vivodDeleted();
   secondVihodDeleted();
   selectDeleted();
-  selectVivodDeleted();
   zontDeleted();
   selectZontDeleted();
   interfaceVivodDeleted();
   secondStageDeleted();
   partSecondStage = 4;
 
+  $(".third-stage").css("display","none");
+  $(".third-stage img").css("display","none");
   $(".second-stage .type-select-box img").removeClass("selectedItem");
   $(".second-stage .type-select-box img:nth-child(4)").addClass("selectedItem");
   $(".second-stage-type").addClass("fourth-type");
   $(".krisha-select-box").css("display", "block");
   $(".krisha-select-box .type-select-box img:nth-child(5), .krisha-select-box .type-select-box img:nth-child(6), .krisha-select-box .type-select-box img:nth-child(7)").css("display", "unset");
+
+  if(stage == "3"){
+
+   if(partFirstStage == "6"){
+    $(".second-stage-type").addClass("fourth-type-3-stage");
+    $(".krisha-select-box").css("display", "none");
+    $(".third-stage").css("display", "block");
+    $(".third-stage .type-select-box img:nth-child(3)").css("display", "block");
+  }
+}
 });
 
 $(".second-stage .type-select-box img:nth-child(4)").mouseover(function() {
   $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("fourth-type");
+  if(stage == "3"){
+
+    if(partFirstStage == "6"){
+      $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("fourth-type");
+      $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("fourth-type-3-stage");
+    }
+  }
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("fourth-type");
+
+  if(stage == "3"){
+
+    if(partFirstStage == "6"){
+
+      $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("fourth-type-3-stage");
+    }
+  }
 });
+//////////////////////////////////////////////////////////////////////////////
 
+// Третий этаж 1
+$(".third-stage .type-select-box img:nth-child(1)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  selectZontDeleted();
+  interfaceVivodDeleted();
+  partThirdStage = 1;
 
+  $(".third-stage .type-select-box img").removeClass("selectedItem");
+  $(".third-stage .type-select-box img:nth-child(1)").addClass("selectedItem");
+  $(".third-stage-type").addClass("first-type");
+});
+$(".third-stage .type-select-box img:nth-child(1)").mouseover(function() {
+  $(".third-stage-type-hover").addClass("first-type");
+})
+.mouseout(function() {
+  $(".third-stage-type-hover").removeClass("first-type");
+});
+//////////////////////////////////////////////////////////////////////////////
 
+/* Третий этаж 2
+$(".third-stage .type-select-box img:nth-child(2)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  selectZontDeleted();
+  interfaceVivodDeleted();
+  partThirdStage = 2;
 
+  $(".third-stage .type-select-box img").removeClass("selectedItem");
+  $(".third-stage .type-select-box img:nth-child(2)").addClass("selectedItem");
+  $(".third-stage-type").addClass("second-type");
+});
+$(".third-stage .type-select-box img:nth-child(2)").mouseover(function() {
+  $(".third-stage-type-hover").addClass("second-type");
+})
+.mouseout(function() {
+  $(".third-stage-type-hover").removeClass("second-type");
+});*/
+//////////////////////////////////////////////////////////////////////////////
+
+// Третий этаж 3
+$(".third-stage .type-select-box img:nth-child(3)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  selectZontDeleted();
+  interfaceVivodDeleted();
+  partThirdStage = 3;
+  $(".krisha-select-box .type-select-box img").css("display", "none");
+  $(".third-stage .type-select-box img").removeClass("selectedItem");
+  $(".third-stage .type-select-box img:nth-child(3)").addClass("selectedItem");
+  $(".third-stage-type").addClass("third-type");
+
+  if(partFirstStage == "6"){
+    $(".third-stage-type").addClass("third-type-special");
+
+    if(partSecondStage == "4"){
+      $(".third-stage-type").removeClass("third-type-special");
+      $(".third-stage-type").addClass("third-type");
+    }
+  }
+
+  if(partFirstStage == "7" || partFirstStage == "8"){
+    $(".third-stage-type").removeClass("third-type");
+    $(".third-stage-type").addClass("third-type-two");
+  }
+
+  if(partFirstStage == "4" || partFirstStage == "5"){
+    $(".krisha-select-box").css("display", "block");
+    $(".krisha-select-box .type-select-box img:nth-child(1), .krisha-select-box .type-select-box img:nth-child(2), .krisha-select-box .type-select-box img:nth-child(3)").css("display", "unset");
+  }
+
+  if(partFirstStage == "6"){
+    $(".krisha-select-box").css("display","block");
+    $(".krisha-select-box .type-select-box img:nth-child(9)").css("display","unset");
+  }
+});
+$(".third-stage .type-select-box img:nth-child(3)").mouseover(function() {
+  $(".third-stage-type-hover").addClass("third-type");
+
+  if(partFirstStage == "6"){
+    $(".third-stage-type-hover").addClass("third-type-special");
+
+    if(partSecondStage == "4"){
+      $(".third-stage-type-hover").removeClass("third-type-special");
+      $(".third-stage-type-hover").addClass("third-type");
+    }
+  }
+
+  if(partFirstStage == "7" || partFirstStage == "8"){
+    $(".third-stage-type-hover").removeClass("third-type");
+    $(".third-stage-type-hover").addClass("third-type-two");
+  }
+})
+.mouseout(function() {
+  $(".third-stage-type-hover").removeClass("third-type");
+
+  if(partFirstStage == "6"){
+    $(".third-stage-type-hover").removeClass("third-type-special");
+
+    if(partSecondStage == "4"){
+      $(".third-stage-type-hover").removeClass("third-type");
+    }
+  }
+
+  if(partFirstStage == "7" || partFirstStage == "8"){
+   $(".third-stage-type-hover").removeClass("third-type-two");
+ }
+});
+//////////////////////////////////////////////////////////////////////////////
+
+// Третий этаж 4
+$(".third-stage .type-select-box img:nth-child(4)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  selectZontDeleted();
+  interfaceVivodDeleted();
+  partThirdStage = 4;
+
+  $(".third-stage .type-select-box img").removeClass("selectedItem");
+  $(".third-stage .type-select-box img:nth-child(4)").addClass("selectedItem");
+  $(".third-stage-type").addClass("fourth-type");
+});
+$(".third-stage .type-select-box img:nth-child(4)").mouseover(function() {
+  $(".third-stage-type-hover").addClass("fourth-type");
+})
+.mouseout(function() {
+  $(".third-stage-type-hover").removeClass("fourth-type");
+});
 
 
 
