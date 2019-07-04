@@ -2688,6 +2688,22 @@ footer {
             &.last-type{
                 background: url('../img/calculator/vivod-3-stage-last.png') center no-repeat;      
             }
+
+            &.sixth-type-3-stage{
+                background: url('../img/calculator/6-type-stage-3.png') center no-repeat;
+            }
+
+            &.sixth-type-3-stage-special{
+                background: url('../img/calculator/6-type-stage-3-special.png') center no-repeat;
+            }
+
+            &.seventh-type-3-stage {
+                background: url('../img/calculator/3-stage-krisha-16.png') center no-repeat;
+            }
+
+            &.last-type-special {
+                background: url('../img/calculator/3-stage-krisha-16.png') center no-repeat;
+            }
         }
 
         .zont-stage-type, .zont-stage-type-hover {
@@ -2848,7 +2864,6 @@ footer {
             background: url('../img/calculator/1-stage-krisha-5-type-1look.png') center no-repeat;
             left: 178px;
             top: -178px;
-
         }
 
         &.sixth-2-stage-zont-4-svihodom{
@@ -2909,6 +2924,30 @@ footer {
             background: url('../img/calculator/1-stage-krisha-6-type-1look.png') center no-repeat;
             left: 14px;
             top: -117px;
+        }
+
+        &.seventh-3-stage {
+            background: url('../img/calculator/seventh-3-stage.png') center no-repeat;
+        }
+
+        &.eighth-3-stage {
+            background: url('../img/calculator/eighth-3-stage.png') center no-repeat;
+        }
+
+        &.nineth-3-stage {
+            background: url('../img/calculator/nineth-3-stage.png') center no-repeat;
+        }
+
+        &.fourth-3-stage {
+            background: url('../img/calculator/fourth-3-stage.png') center no-repeat;
+        }
+
+        &.fiveth-3-stage {
+            background: url('../img/calculator/fiveth-3-stage.png') center no-repeat;
+        }
+
+        &.sixth-3-stage {
+            background: url('../img/calculator/sixth-3-stage.png') center no-repeat;
         }
     }
 }

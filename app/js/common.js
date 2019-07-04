@@ -104,7 +104,7 @@ var partThirdStage = 0;
 
     // Удаление классов 3-го этажа
     function deleteClassThirStage(){
-      $(".third-stage-type, .third-stage-type-hover").removeClass("first-type second-type third-type fourth-type third-type-special");
+      $(".third-stage-type, .third-stage-type-hover").removeClass("first-type second-type third-type fourth-type third-type-special third-type-special third-type-two");
     }
 
     //Очистка выделения 3-го этажа
@@ -120,14 +120,18 @@ var partThirdStage = 0;
 
     //Удаление классов зонта 
     function zontDeleted() {
-      $(".zont-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom fourth-zont-2-svihodom fiveth-zont-2-svihodom sixth-zont-2-svihodom seventh-zont-3-svihodom eighth-zont-3-svihodom nineth-zont-3-svihodom fourth-zont-4-svihodom fiveth-zont-4-svihodom sixth-zont-4-svihodom nineth-stage-2-zont-3-svihodom eighth-stage-2-zont-3-svihodom seventh-stage-2-zont-3-svihodom first-2-stage-type second-2-stage-type third-2-stage-type fourth-type-2-stage fiveth-type-2-stage sixth-type-2-stage eighth-type-2-stage fourth-2-stage-zont-4-svihodom fiveth-2-stage-zont-4-svihodom sixth-2-stage-zont-4-svihodom fourth-2-stage-zont-5-svihodom fiveth-zont-5-svihodom sixth-zont-5-svihodom");
-      $(".zont-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom fourth-zont-2-svihodom fiveth-zont-2-svihodom sixth-zont-2-svihodom seventh-zont-3-svihodom eighth-zont-3-svihodom nineth-zont-3-svihodom fourth-zont-4-svihodom fiveth-zont-4-svihodom sixth-zont-4-svihodom nineth-stage-2-zont-3-svihodom eighth-stage-2-zont-3-svihodom seventh-stage-2-zont-3-svihodom first-2-stage-type second-2-stage-type third-2-stage-type fourth-type-2-stage fiveth-type-2-stage sixth-type-2-stage eighth-type-2-stage");
+      $(".zont-stage-type, .zont-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom fourth-zont-2-svihodom fiveth-zont-2-svihodom sixth-zont-2-svihodom seventh-zont-3-svihodom eighth-zont-3-svihodom nineth-zont-3-svihodom fourth-zont-4-svihodom fiveth-zont-4-svihodom sixth-zont-4-svihodom nineth-stage-2-zont-3-svihodom eighth-stage-2-zont-3-svihodom seventh-stage-2-zont-3-svihodom first-2-stage-type second-2-stage-type third-2-stage-type fourth-type-2-stage fiveth-type-2-stage sixth-type-2-stage eighth-type-2-stage fourth-2-stage-zont-4-svihodom fiveth-2-stage-zont-4-svihodom sixth-2-stage-zont-4-svihodom fourth-2-stage-zont-5-svihodom fiveth-zont-5-svihodom sixth-zont-5-svihodom nineth-3-stage eighth-3-stage seventh-3-stage fourth-3-stage fiveth-3-stage sixth-3-stage");
+    }
+
+    //Удаление классов зонта HOVER 
+    function zontHoverDeleted() {
+      $(".zont-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom fourth-zont-2-svihodom fiveth-zont-2-svihodom sixth-zont-2-svihodom seventh-zont-3-svihodom eighth-zont-3-svihodom nineth-zont-3-svihodom fourth-zont-4-svihodom fiveth-zont-4-svihodom sixth-zont-4-svihodom nineth-stage-2-zont-3-svihodom eighth-stage-2-zont-3-svihodom seventh-stage-2-zont-3-svihodom first-2-stage-type second-2-stage-type third-2-stage-type fourth-type-2-stage fiveth-type-2-stage sixth-type-2-stage eighth-type-2-stage fourth-2-stage-zont-4-svihodom fiveth-2-stage-zont-4-svihodom sixth-2-stage-zont-4-svihodom fourth-2-stage-zont-5-svihodom fiveth-zont-5-svihodom sixth-zont-5-svihodom nineth-3-stage eighth-3-stage seventh-3-stage fourth-3-stage fiveth-3-stage sixth-3-stage");
     }
 
     //Удаление классов вывода на крышу
     function vivodDeleted() {
-      $(".krisha-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fiveth-2-stage-type first-type-3-stage second-type-3-stage third-type third-type-3-stage");
-      $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fiveth-2-stage-type first-type-3-stage second-type-3-stage third-type third-type-3-stage");
+      $(".krisha-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fiveth-2-stage-type first-type-3-stage second-type-3-stage third-type third-type-3-stage last-type sixth-type-3-stage sixth-type-3-stage-special seventh-type-3-stage last-type-special");
+      $(".krisha-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fiveth-2-stage-type first-type-3-stage second-type-3-stage third-type third-type-3-stage last-type sixth-type-3-stage sixth-type-3-stage-special seventh-type-3-stage last-type-special");
     }
 
     //Очистка выдиления с элемента
@@ -745,24 +749,16 @@ $(".krisha-select-box .type-select-box img:nth-child(1)").click(function() {
     $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
   }
 
-  if(partThirdStage == "3"){
-    $(".krisha-stage-type").addClass("first-type-3-stage");
-  }
 });
 
 $(".krisha-select-box .type-select-box img:nth-child(1)").mouseover(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("first-type");
 
-  if(partThirdStage == "3"){
-    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("first-type-3-stage");
-  }
+
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("first-type");
 
-  if(partThirdStage == "3"){
-    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("first-type-3-stage");
-  }
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -780,26 +776,14 @@ $(".krisha-select-box .type-select-box img:nth-child(2)").click(function() {
   if(stage == "1"){
     $(".zont-select-box").css("display", "block");
     $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
-  }
-
-  if(partThirdStage == "3"){
-    $(".krisha-stage-type").addClass("second-type-3-stage");
-  }
+  }  
 });
 
 $(".krisha-select-box .type-select-box img:nth-child(2)").mouseover(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("second-type");
-
-  if(partThirdStage == "3"){
-    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("second-type-3-stage");
-  }
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("second-type");
-
-  if(partThirdStage == "3"){
-    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("second-type-3-stage");
-  }
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -821,6 +805,8 @@ $(".krisha-select-box .type-select-box img:nth-child(3)").click(function() {
 
   if(partThirdStage == "3"){
     $(".krisha-stage-type").addClass("third-type-3-stage");
+    $(".zont-select-box").css("display", "block");
+    $(".zont-select-box .type-select-box img:nth-child(7), .zont-select-box .type-select-box img:nth-child(8), .zont-select-box .type-select-box img:nth-child(9)").css("display", "unset");
   }
 });
 
@@ -899,6 +885,12 @@ $(".krisha-select-box .type-select-box img:nth-child(5)").click(function() {
       $(".krisha-stage-type").addClass("fiveth-type");
     }
   }
+
+  if(partThirdStage == "3"){
+    $(".krisha-stage-type").addClass("first-type-3-stage");
+    $(".zont-select-box").css("display", "block");
+    $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
+  }
 });
 
 $(".krisha-select-box .type-select-box img:nth-child(5)").mouseover(function() {
@@ -922,6 +914,10 @@ $(".krisha-select-box .type-select-box img:nth-child(5)").mouseover(function() {
       $(".krisha-stage-type-hover").addClass("fiveth-type");
     }
   }
+
+  if(partThirdStage == "3"){
+    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("first-type-3-stage");
+  }
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-type");
@@ -940,6 +936,10 @@ $(".krisha-select-box .type-select-box img:nth-child(5)").mouseover(function() {
       $(".krisha-stage-type-hover").removeClass("fiveth-type");
     }
   }
+
+  if(partThirdStage == "3"){
+    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("first-type-3-stage");
+  }
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -950,6 +950,7 @@ $(".krisha-select-box .type-select-box img:nth-child(6)").click(function() {
   selectZontDeleted();
   interfaceVivodDeleted();
   vihodNaKrishuType = 6;
+
   $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
   $(".krisha-select-box .type-select-box img:nth-child(6)").addClass("selectedItem");
   $(".krisha-stage-type").addClass("sixth-type");
@@ -968,13 +969,69 @@ $(".krisha-select-box .type-select-box img:nth-child(6)").click(function() {
       $(".krisha-stage-type").addClass("sixth-type");
     }
   }
+
+  if(stage == "3"){
+
+    if(partThirdStage == "4"){
+      $(".krisha-stage-type").addClass("sixth-type-3-stage-special");
+    }
+
+    if(partThirdStage == "3"){
+      $(".krisha-stage-type").addClass("second-type-3-stage");
+      $(".krisha-stage-type").addClass("first-type-3-stage");
+      $(".zont-select-box").css("display", "block");
+      $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
+    }
+
+    if(partThirdStage == "3" && partSecondStage == "4"){
+      $(".krisha-stage-type").addClass("sixth-type-3-stage-special");
+    }
+
+    if(partThirdStage == "4" && partSecondStage == "3"){
+      $(".zont-select-box").css("display", "block");
+      $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
+    }
+  }
+
 });
 
 $(".krisha-select-box .type-select-box img:nth-child(6)").mouseover(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("sixth-type");
+
+  if(stage == "3"){
+
+    if(partThirdStage == "3"){
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("second-type-3-stage");
+    }
+
+    if(partThirdStage == "4"){
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type");
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("sixth-type-3-stage-special");
+    }
+
+    if(partThirdStage == "3" && partSecondStage == "4"){
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type");
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("sixth-type-3-stage-special");
+    }
+  }
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type");
+
+  if(stage == "3"){
+
+    if(partThirdStage == "3"){
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("second-type-3-stage");
+    }
+
+    if(partThirdStage == "4"){
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type-3-stage-special");
+    }
+
+    if(partThirdStage == "3" && partSecondStage == "4"){
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type-3-stage-special");
+    }
+  }
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -985,6 +1042,7 @@ $(".krisha-select-box .type-select-box img:nth-child(7)").click(function() {
   selectZontDeleted();
   interfaceVivodDeleted();
   vihodNaKrishuType = 7;
+
   $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
   $(".krisha-select-box .type-select-box img:nth-child(7)").addClass("selectedItem");
   $(".krisha-stage-type").addClass("seventh-type");
@@ -993,13 +1051,58 @@ $(".krisha-select-box .type-select-box img:nth-child(7)").click(function() {
     $(".zont-select-box").css("display", "block");
     $(".zont-select-box .type-select-box img:nth-child(7), .zont-select-box .type-select-box img:nth-child(8), .zont-select-box .type-select-box img:nth-child(9)").css("display", "unset");
   }
+
+  if(stage == "3"){
+
+    if(partThirdStage == "4"){
+      $(".krisha-stage-type").addClass("seventh-type-3-stage");
+    }
+
+    if(partThirdStage == "3" && partSecondStage == "4"){
+      $(".krisha-stage-type").addClass("seventh-type-3-stage");
+    }
+
+    if(partThirdStage == "3"){
+      $(".zont-select-box").css("display", "block");
+      $(".zont-select-box .type-select-box img:nth-child(7), .zont-select-box .type-select-box img:nth-child(8), .zont-select-box .type-select-box img:nth-child(9)").css("display", "unset");
+    }
+
+    if(partThirdStage == "4" && partSecondStage == "3"){
+      $(".zont-select-box").css("display", "block");
+      $(".zont-select-box .type-select-box img:nth-child(7), .zont-select-box .type-select-box img:nth-child(8), .zont-select-box .type-select-box img:nth-child(9)").css("display", "unset");
+    }
+  }
 });
 
 $(".krisha-select-box .type-select-box img:nth-child(7)").mouseover(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("seventh-type");
+
+  if(stage == "3"){
+
+    if(partThirdStage == "4"){
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type");
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("seventh-type-3-stage");
+    }
+
+    if(partThirdStage == "3" && partSecondStage == "4"){
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type");
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("seventh-type-3-stage");
+    }
+  }
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type");
+
+  if(stage == "3"){
+
+    if(partThirdStage == "4"){
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type-3-stage");
+    }
+
+    if(partThirdStage == "3" && partSecondStage == "4"){
+      $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type-3-stage");
+    }
+  }
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -1013,6 +1116,13 @@ $(".krisha-select-box .type-select-box img:nth-child(9)").click(function() {
   $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
   $(".krisha-select-box .type-select-box img:nth-child(9)").addClass("selectedItem");
   $(".krisha-stage-type").addClass("last-type");
+
+
+  if(partThirdStage == "3"){
+    $(".krisha-stage-type").addClass("first-type-3-stage");
+    $(".zont-select-box").css("display", "block");
+    $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
+  }
 });
 
 $(".krisha-select-box .type-select-box img:nth-child(9)").mouseover(function() {
@@ -1023,7 +1133,71 @@ $(".krisha-select-box .type-select-box img:nth-child(9)").mouseover(function() {
 });
 //////////////////////////////////////////////////////////////////////////////
 
-// Вывод на крышу 2 
+// Вывод на крышу 10
+$(".krisha-select-box .type-select-box img:nth-child(10)").click(function() {
+  vivodDeleted();
+  zontDeleted();
+  selectZontDeleted();
+  interfaceVivodDeleted();
+  vihodNaKrishuType = 7;
+  $(".krisha-select-box .type-select-box img").removeClass("selectedItem");
+  $(".krisha-select-box .type-select-box img:nth-child(10)").addClass("selectedItem");
+  $(".krisha-stage-type").addClass("last-type");
+
+  if(stage == "3"){
+
+    if(partThirdStage == "4"){
+      $(".krisha-stage-type").addClass("sixth-type-3-stage");
+    }
+
+    if(partThirdStage == "3" && partSecondStage == "4"){
+      $(".krisha-stage-type").addClass("sixth-type-3-stage");
+    }
+
+    if(partThirdStage == "3"){
+      $(".zont-select-box").css("display", "block");
+      $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
+    }
+
+    if(partThirdStage == "4" && partSecondStage == "3"){
+      $(".zont-select-box").css("display", "block");
+      $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
+    }
+  }
+});
+
+$(".krisha-select-box .type-select-box img:nth-child(10)").mouseover(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("last-type");
+
+  if(stage == "3"){
+
+    if(partThirdStage == "4"){
+      $(".krisha-stage-type-hover").addClass("sixth-type-3-stage");
+    }
+
+    if(partThirdStage == "3" && partSecondStage == "4"){
+      $(".krisha-stage-type-hover").addClass("sixth-type-3-stage");
+    }
+  }
+})
+.mouseout(function() {
+  $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("last-type");
+
+
+  if(stage == "3"){
+
+    if(partThirdStage == "4"){
+      $(".krisha-stage-type-hover").removeClass("sixth-type-3-stage");
+    }
+
+    if(partThirdStage == "3" && partSecondStage == "4"){
+      $(".krisha-stage-type-hover").removeClass("sixth-type-3-stage"); 
+    }
+  }
+});
+//////////////////////////////////////////////////////////////////////////////
+
+// Вывод на крышу 8
 $(".krisha-select-box .type-select-box img:nth-child(8)").click(function() {
   vivodDeleted();
   zontDeleted();
@@ -1209,9 +1383,15 @@ $(".zont-select-box .type-select-box img:nth-child(4)").click(function() {
   if(vihodNaKrishuType == "8"){
     $(".zont-stage-type").addClass("eighth-type-2-stage");
   }
+
+  if(partThirdStage == "3" ){
+    zontDeleted();
+
+    if(vihodNaKrishuType == "5"){
+      $(".zont-stage-type").addClass("fourth-3-stage");  
+    }
+  }
 });
-
-
 $(".zont-select-box .type-select-box img:nth-child(4)").mouseover(function() {
   $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type");  
 
@@ -1247,7 +1427,13 @@ $(".zont-select-box .type-select-box img:nth-child(4)").mouseover(function() {
     $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-type-2-stage"); 
   }
 
-  
+  if(partThirdStage == "3" ){
+    zontHoverDeleted();
+
+    if(vihodNaKrishuType == "5"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage"); 
+    }
+  }
 })
 .mouseout(function() {
   $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-type");
@@ -1274,13 +1460,19 @@ $(".zont-select-box .type-select-box img:nth-child(4)").mouseover(function() {
       }
     }
   }
-
   if(vihodNaKrishuType == "6"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-2-stage-zont-4-svihodom"); 
   }
 
   if(vihodNaKrishuType == "8"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-type-2-stage"); 
+  }
+
+   if(partThirdStage == "3" ){
+
+    if(vihodNaKrishuType == "5"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage"); 
+    }
   }
 });
 //////////////////////////////////////////////////////////////////////////////
@@ -1319,18 +1511,22 @@ $(".zont-select-box .type-select-box img:nth-child(5)").click(function() {
       }
     }
   }
-
   if(vihodNaKrishuType == "6"){
     zontDeleted();
     $(".zont-stage-type").addClass("fiveth-2-stage-zont-4-svihodom");
   }
-
   if(vihodNaKrishuType == "8"){
     zontDeleted();
     $(".zont-stage-type").addClass("fiveth-type-2-stage");
   }
-});
+  if(partThirdStage == "3" ){
+    zontDeleted();
 
+    if(vihodNaKrishuType == "5"){
+      $(".zont-stage-type").addClass("fiveth-3-stage");  
+    }
+  }
+});
 $(".zont-select-box .type-select-box img:nth-child(5)").mouseover(function() {
   $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type");
 
@@ -1345,7 +1541,6 @@ $(".zont-select-box .type-select-box img:nth-child(5)").mouseover(function() {
   if(vihodNaKrishuType == "4"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-4-svihodom"); 
   }
-
   if(vihodNaKrishuType == "5"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-5-svihodom"); 
 
@@ -1356,13 +1551,18 @@ $(".zont-select-box .type-select-box img:nth-child(5)").mouseover(function() {
       }
     }
   }
-
   if(vihodNaKrishuType == "6"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-2-stage-zont-4-svihodom"); 
   }
-
   if(vihodNaKrishuType == "8"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type-2-stage"); 
+  }
+  if(partThirdStage == "3" ){
+    zontHoverDeleted();
+      
+    if(vihodNaKrishuType == "5"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage"); 
+    }
   }
 })
 .mouseout(function() {
@@ -1390,13 +1590,18 @@ $(".zont-select-box .type-select-box img:nth-child(5)").mouseover(function() {
       }
     }
   }
-
   if(vihodNaKrishuType == "6"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-2-stage-zont-4-svihodom"); 
   }
 
   if(vihodNaKrishuType == "8"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-type-2-stage"); 
+  }
+  if(partThirdStage == "3" ){
+    
+    if(vihodNaKrishuType == "5"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage"); 
+    }
   }
 });
 //////////////////////////////////////////////////////////////////////////////
@@ -1445,8 +1650,15 @@ $(".zont-select-box .type-select-box img:nth-child(6)").click(function() {
     zontDeleted();
     $(".zont-stage-type").addClass("sixth-type-2-stage");
   }
-});
 
+  if(partThirdStage == "3" ){
+    zontDeleted();
+
+    if(vihodNaKrishuType == "5"){
+      $(".zont-stage-type").addClass("sixth-3-stage");  
+    }
+  }
+});
 $(".zont-select-box .type-select-box img:nth-child(6)").mouseover(function() {
   $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type");
 
@@ -1472,13 +1684,18 @@ $(".zont-select-box .type-select-box img:nth-child(6)").mouseover(function() {
       }
     }
   }
-
   if(vihodNaKrishuType == "6"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-2-stage-zont-4-svihodom"); 
   }
-
   if(vihodNaKrishuType == "8"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type-2-stage"); 
+  }
+  if(partThirdStage == "3" ){
+    zontHoverDeleted(); 
+
+    if(vihodNaKrishuType == "5"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage");
+    }
   }
 })
 .mouseout(function() {
@@ -1506,16 +1723,18 @@ $(".zont-select-box .type-select-box img:nth-child(6)").mouseover(function() {
       }
     }
   }
-
   if(vihodNaKrishuType == "6"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-2-stage-zont-4-svihodom"); 
   }
-
-
   if(vihodNaKrishuType == "8"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-type-2-stage"); 
   }
-  
+  if(partThirdStage == "3" ){
+
+    if(vihodNaKrishuType == "5"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage");
+    }
+  }
 });
 //////////////////////////////////////////////////////////////////////////////
 
@@ -1534,6 +1753,14 @@ $(".zont-select-box .type-select-box img:nth-child(7)").click(function() {
     zontDeleted();
     $(".zont-stage-type").addClass("seventh-stage-2-zont-3-svihodom");
   }
+
+  if(partThirdStage == "3" ){
+    zontDeleted();
+
+    if(vihodNaKrishuType == "3"){
+      $(".zont-stage-type").addClass("seventh-3-stage");  
+    }
+  }
 });
 
 $(".zont-select-box .type-select-box img:nth-child(7)").mouseover(function() {
@@ -1544,6 +1771,13 @@ $(".zont-select-box .type-select-box img:nth-child(7)").mouseover(function() {
   if(vihodNaKrishuType == "7"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("seventh-stage-2-zont-3-svihodom"); 
   }
+
+  if(partThirdStage == "3"){
+
+    if(vihodNaKrishuType == "3"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("seventh-3-stage"); 
+    }
+  }
 })
 .mouseout(function() {
 
@@ -1552,6 +1786,12 @@ $(".zont-select-box .type-select-box img:nth-child(7)").mouseover(function() {
   }
   if(vihodNaKrishuType == "7"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("seventh-stage-2-zont-3-svihodom"); 
+  }
+  if(partThirdStage == "3"){
+
+    if(vihodNaKrishuType == "3"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("seventh-3-stage"); 
+    }
   }
 });
 
@@ -1572,6 +1812,13 @@ $(".zont-select-box .type-select-box img:nth-child(8)").click(function() {
     zontDeleted();
     $(".zont-stage-type").addClass("eighth-stage-2-zont-3-svihodom");
   }
+  if(partThirdStage == "3"){
+    zontDeleted();
+
+    if(vihodNaKrishuType == "3"){
+      $(".zont-stage-type").addClass("eighth-3-stage");
+    }
+  }
 });
 
 $(".zont-select-box .type-select-box img:nth-child(8)").mouseover(function() {
@@ -1582,6 +1829,12 @@ $(".zont-select-box .type-select-box img:nth-child(8)").mouseover(function() {
   if(vihodNaKrishuType == "7"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-stage-2-zont-3-svihodom"); 
   }
+  if(partThirdStage == "3"){
+
+    if(vihodNaKrishuType == "3"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-3-stage");
+    }
+  }
 })
 .mouseout(function() {
 
@@ -1590,6 +1843,12 @@ $(".zont-select-box .type-select-box img:nth-child(8)").mouseover(function() {
   }
   if(vihodNaKrishuType == "7"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-stage-2-zont-3-svihodom"); 
+  }
+  if(partThirdStage == "3"){
+
+    if(vihodNaKrishuType == "3"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-3-stage");
+    }
   }
 });
 
@@ -1611,6 +1870,14 @@ $(".zont-select-box .type-select-box img:nth-child(9)").click(function() {
     zontDeleted();
     $(".zont-stage-type").addClass("nineth-stage-2-zont-3-svihodom");
   }
+
+  if(partThirdStage == "3"){
+    zontDeleted();
+
+    if(vihodNaKrishuType == "3"){
+      $(".zont-stage-type").addClass("nineth-3-stage");
+    }
+  }
 });
 
 $(".zont-select-box .type-select-box img:nth-child(9)").mouseover(function() {
@@ -1622,6 +1889,13 @@ $(".zont-select-box .type-select-box img:nth-child(9)").mouseover(function() {
   if(vihodNaKrishuType == "7"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("nineth-stage-2-zont-3-svihodom"); 
   }
+
+  if(partThirdStage == "3"){
+
+    if(vihodNaKrishuType == "3"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("nineth-3-stage"); 
+    }
+  }
 })
 .mouseout(function() {
 
@@ -1631,6 +1905,13 @@ $(".zont-select-box .type-select-box img:nth-child(9)").mouseover(function() {
 
   if(vihodNaKrishuType == "7"){
     $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("nineth-stage-2-zont-3-svihodom"); 
+  }
+
+  if(partThirdStage == "3"){
+
+    if(vihodNaKrishuType == "3"){
+      $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("nineth-3-stage"); 
+    }
   }
 });
 //////////////////////////////////////////////////////////////////////////////
@@ -1861,11 +2142,17 @@ $(".third-stage .type-select-box img:nth-child(1)").click(function() {
   zontDeleted();
   selectZontDeleted();
   interfaceVivodDeleted();
+  deleteClassThirStage();
   partThirdStage = 1;
 
   $(".third-stage .type-select-box img").removeClass("selectedItem");
   $(".third-stage .type-select-box img:nth-child(1)").addClass("selectedItem");
   $(".third-stage-type").addClass("first-type");
+
+  if(partFirstStage == "7" || partFirstStage == "8" ){
+    $(".zont-select-box").css("display", "block");
+    $(".zont-select-box .type-select-box img:nth-child(1), .zont-select-box .type-select-box img:nth-child(2), .zont-select-box .type-select-box img:nth-child(3)").css("display", "unset");
+  }
 });
 $(".third-stage .type-select-box img:nth-child(1)").mouseover(function() {
   $(".third-stage-type-hover").addClass("first-type");
@@ -1875,33 +2162,15 @@ $(".third-stage .type-select-box img:nth-child(1)").mouseover(function() {
 });
 //////////////////////////////////////////////////////////////////////////////
 
-/* Третий этаж 2
-$(".third-stage .type-select-box img:nth-child(2)").click(function() {
-  vivodDeleted();
-  zontDeleted();
-  selectZontDeleted();
-  interfaceVivodDeleted();
-  partThirdStage = 2;
-
-  $(".third-stage .type-select-box img").removeClass("selectedItem");
-  $(".third-stage .type-select-box img:nth-child(2)").addClass("selectedItem");
-  $(".third-stage-type").addClass("second-type");
-});
-$(".third-stage .type-select-box img:nth-child(2)").mouseover(function() {
-  $(".third-stage-type-hover").addClass("second-type");
-})
-.mouseout(function() {
-  $(".third-stage-type-hover").removeClass("second-type");
-});*/
-//////////////////////////////////////////////////////////////////////////////
-
 // Третий этаж 3
 $(".third-stage .type-select-box img:nth-child(3)").click(function() {
   vivodDeleted();
   zontDeleted();
   selectZontDeleted();
   interfaceVivodDeleted();
+  deleteClassThirStage();
   partThirdStage = 3;
+
   $(".krisha-select-box .type-select-box img").css("display", "none");
   $(".third-stage .type-select-box img").removeClass("selectedItem");
   $(".third-stage .type-select-box img:nth-child(3)").addClass("selectedItem");
@@ -1919,16 +2188,23 @@ $(".third-stage .type-select-box img:nth-child(3)").click(function() {
   if(partFirstStage == "7" || partFirstStage == "8"){
     $(".third-stage-type").removeClass("third-type");
     $(".third-stage-type").addClass("third-type-two");
+    $(".zont-select-box").css("display", "block");
+    $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
   }
 
   if(partFirstStage == "4" || partFirstStage == "5"){
     $(".krisha-select-box").css("display", "block");
-    $(".krisha-select-box .type-select-box img:nth-child(1), .krisha-select-box .type-select-box img:nth-child(2), .krisha-select-box .type-select-box img:nth-child(3)").css("display", "unset");
+    $(".krisha-select-box .type-select-box img:nth-child(5), .krisha-select-box .type-select-box img:nth-child(6), .krisha-select-box .type-select-box img:nth-child(3)").css("display", "unset");
   }
 
   if(partFirstStage == "6"){
     $(".krisha-select-box").css("display","block");
     $(".krisha-select-box .type-select-box img:nth-child(9)").css("display","unset");
+  }
+
+  if(partSecondStage == "4"){
+    $(".krisha-select-box .type-select-box img").css("display", "none");
+    $(".krisha-select-box .type-select-box img:nth-child(10), .krisha-select-box .type-select-box img:nth-child(6), .krisha-select-box .type-select-box img:nth-child(7)").css("display", "unset");
   }
 });
 $(".third-stage .type-select-box img:nth-child(3)").mouseover(function() {
@@ -1971,11 +2247,16 @@ $(".third-stage .type-select-box img:nth-child(4)").click(function() {
   zontDeleted();
   selectZontDeleted();
   interfaceVivodDeleted();
+  deleteClassThirStage();
   partThirdStage = 4;
 
   $(".third-stage .type-select-box img").removeClass("selectedItem");
   $(".third-stage .type-select-box img:nth-child(4)").addClass("selectedItem");
   $(".third-stage-type").addClass("fourth-type");
+
+  $(".krisha-select-box").css("display", "block");
+  $(".krisha-select-box .type-select-box img:nth-child(9)").css("display", "none");
+  $(".krisha-select-box .type-select-box img:nth-child(10), .krisha-select-box .type-select-box img:nth-child(6), .krisha-select-box .type-select-box img:nth-child(7)").css("display", "unset");
 });
 $(".third-stage .type-select-box img:nth-child(4)").mouseover(function() {
   $(".third-stage-type-hover").addClass("fourth-type");
