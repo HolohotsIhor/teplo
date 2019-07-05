@@ -2027,3 +2027,15 @@ footer {
     background: url("../img/calculator/fiveth-3-stage.png") center no-repeat; }
   .constract .calculator-wrapper .calculator-final-look .zont-stage-type.sixth-3-stage, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.sixth-3-stage {
     background: url("../img/calculator/sixth-3-stage.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .zont-stage-type.fourth-3-stage-final, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.fourth-3-stage-final {
+    background: url("../img/calculator/fourth-3-stage-final.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .zont-stage-type.fiveth-3-stage-final, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.fiveth-3-stage-final {
+    background: url("../img/calculator/fiveth-3-stage-final.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .zont-stage-type.sixth-3-stage-final, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.sixth-3-stage-final {
+    background: url("../img/calculator/sixth-3-stage-final.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .zont-stage-type.first-type-3-stage, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.first-type-3-stage {
+    background: url("../img/calculator/first-type-3-stage.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .zont-stage-type.second-type-3-stage, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.second-type-3-stage {
+    background: url("../img/calculator/second-type-3-stage.png") center no-repeat; }
+  .constract .calculator-wrapper .calculator-final-look .zont-stage-type.third-type-3-stage, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.third-type-3-stage {
+    background: url("../img/calculator/third-type-3-stage.png") center no-repeat; }
