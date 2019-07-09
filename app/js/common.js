@@ -120,12 +120,12 @@ $(document).ready(function() {
 
     //Удаление классов зонта 
     function zontDeleted() {
-      $(".zont-stage-type, .zont-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom fourth-zont-2-svihodom fiveth-zont-2-svihodom sixth-zont-2-svihodom seventh-zont-3-svihodom eighth-zont-3-svihodom nineth-zont-3-svihodom fourth-zont-4-svihodom fiveth-zont-4-svihodom sixth-zont-4-svihodom nineth-stage-2-zont-3-svihodom eighth-stage-2-zont-3-svihodom seventh-stage-2-zont-3-svihodom first-2-stage-type second-2-stage-type third-2-stage-type fourth-type-2-stage fiveth-type-2-stage sixth-type-2-stage eighth-type-2-stage fourth-2-stage-zont-4-svihodom fiveth-2-stage-zont-4-svihodom sixth-2-stage-zont-4-svihodom fourth-2-stage-zont-5-svihodom fiveth-zont-5-svihodom sixth-zont-5-svihodom nineth-3-stage eighth-3-stage seventh-3-stage fourth-3-stage fiveth-3-stage sixth-3-stage sixth-3-stage-final fiveth-3-stage-final fourth-3-stage-final first-type-3-stage third-type-3-stage second-type-3-stage");
+      $(".zont-stage-type, .zont-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom fourth-zont-2-svihodom fiveth-zont-2-svihodom sixth-zont-2-svihodom seventh-zont-3-svihodom eighth-zont-3-svihodom nineth-zont-3-svihodom fourth-zont-4-svihodom fiveth-zont-4-svihodom sixth-zont-4-svihodom nineth-stage-2-zont-3-svihodom eighth-stage-2-zont-3-svihodom seventh-stage-2-zont-3-svihodom first-2-stage-type second-2-stage-type third-2-stage-type fourth-type-2-stage fiveth-type-2-stage sixth-type-2-stage eighth-type-2-stage fourth-2-stage-zont-4-svihodom fiveth-2-stage-zont-4-svihodom sixth-2-stage-zont-4-svihodom fourth-2-stage-zont-5-svihodom fiveth-zont-5-svihodom sixth-zont-5-svihodom nineth-3-stage eighth-3-stage seventh-3-stage fourth-3-stage fiveth-3-stage sixth-3-stage sixth-3-stage-final fiveth-3-stage-final fourth-3-stage-final first-type-3-stage third-type-3-stage second-type-3-stage fourth-3-stage-last fiveth-3-stage-last sixth-3-stage-last sixth-3-stage-main fiveth-3-stage-main fourth-3-stage-main fourth-2-stage-zont-4-svihodom fourth-3-stage-final fourth-2-stage-zont-5-2svihodom fiveth-zont-5-2svihodom sixth-zont-5-2svihodom sixth-zont-5-svihodom 1-stage-krisha-4-type-1look-1full 1-stage-krisha-1-type-1look-full 1-stage-krisha-2-type-1look-full 1-stage-krisha-5-typefull-1look 1-stage-krisha-full-6-type-1look");
     }
 
     //Удаление классов зонта HOVER 
     function zontHoverDeleted() {
-      $(".zont-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom fourth-zont-2-svihodom fiveth-zont-2-svihodom sixth-zont-2-svihodom seventh-zont-3-svihodom eighth-zont-3-svihodom nineth-zont-3-svihodom fourth-zont-4-svihodom fiveth-zont-4-svihodom sixth-zont-4-svihodom nineth-stage-2-zont-3-svihodom eighth-stage-2-zont-3-svihodom seventh-stage-2-zont-3-svihodom first-2-stage-type second-2-stage-type third-2-stage-type fourth-type-2-stage fiveth-type-2-stage sixth-type-2-stage eighth-type-2-stage fourth-2-stage-zont-4-svihodom fiveth-2-stage-zont-4-svihodom sixth-2-stage-zont-4-svihodom fourth-2-stage-zont-5-svihodom fiveth-zont-5-svihodom sixth-zont-5-svihodom nineth-3-stage eighth-3-stage seventh-3-stage fourth-3-stage fiveth-3-stage sixth-3-stage sixth-3-stage-final fiveth-3-stage-final fourth-3-stage-final first-type-3-stage third-type-3-stage second-type-3-stage");
+      $(".zont-stage-type-hover").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type fourth-type-svihodom fiveth-type-svihodom sixth-type-svihodom fourth-zont-2-svihodom fiveth-zont-2-svihodom sixth-zont-2-svihodom seventh-zont-3-svihodom eighth-zont-3-svihodom nineth-zont-3-svihodom fourth-zont-4-svihodom fiveth-zont-4-svihodom sixth-zont-4-svihodom nineth-stage-2-zont-3-svihodom eighth-stage-2-zont-3-svihodom seventh-stage-2-zont-3-svihodom first-2-stage-type second-2-stage-type third-2-stage-type fourth-type-2-stage fiveth-type-2-stage sixth-type-2-stage eighth-type-2-stage fourth-2-stage-zont-4-svihodom fiveth-2-stage-zont-4-svihodom sixth-2-stage-zont-4-svihodom fourth-2-stage-zont-5-svihodom fiveth-zont-5-svihodom sixth-zont-5-svihodom nineth-3-stage eighth-3-stage seventh-3-stage fourth-3-stage fiveth-3-stage sixth-3-stage sixth-3-stage-final fiveth-3-stage-final fourth-3-stage-final first-type-3-stage third-type-3-stage second-type-3-stage fourth-3-stage-last fiveth-3-stage-last sixth-3-stage-last sixth-3-stage-main fiveth-3-stage-main fourth-3-stage-main fourth-2-stage-zont-5-2svihodom fiveth-zont-5-2svihodom sixth-zont-5-2svihodom sixth-zont-5-svihodom 1-stage-krisha-1-type-1look-full 1-stage-krisha-2-type-1look-full 1-stage-krisha-5-typefull-1look 1-stage-krisha-full-6-type-1look");
     }
 
     //Удаление классов вывода на крышу
@@ -151,7 +151,7 @@ $(document).ready(function() {
 
     //Удаление классов второго этажа
     function secondStageDeleted() {
-      $(".second-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type third-type-2-stage third-type-2-stage-special third-type-3-stage-special third-type-3-stage fourth-type-3-stage");
+      $(".second-stage-type").removeClass("first-type second-type third-type fourth-type fiveth-type sixth-type seventh-type eighth-type ninth-type tenth-type third-type-2-stage third-type-2-stage-special third-type-3-stage-special third-type-3-stage fourth-type-3-stage third-type-2-stage third-type-2-stage-special");
     }
 
     //Удаление классов выхода
@@ -167,6 +167,11 @@ $(document).ready(function() {
     //Функция удаления всех типов дымоходов для первого этажа
     function typeDimohodDeleted() {
       $(".calculator-final-look .main-layer .first-stage-type").removeClass("first-type second-type third-type fourth-type fifth-type sixth-type seventh-type eighth-type");
+    }
+
+    //Функция удаления всех типов дымоходов для Hovera первого этажа
+    function typeDimohodHoverDeleted() {
+      $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("first-type second-type third-type fourth-type fifth-type sixth-type seventh-type eighth-type");
     }
 
     // Функция вычисления количество этажей
@@ -192,6 +197,19 @@ $(document).ready(function() {
         zontDeleted();
         vivodDeleted();
         secondStageDeleted();
+        deleteClassThirStage();
+        typeDimohodDeleted();
+        typeDimohodHoverDeleted();
+        vihodNaKrishuType = 0;
+        partSecondStage = 0;
+        partFirstStage = 0;
+        partThirdStage = 0;
+
+        $(".second-stage").css("display", "none");
+        $(".second-stage").css("third-stage", "none");
+        $(".second-stage").css("krisha-select-box", "none");
+        $(".second-stage").css("zont-select-box", "none");
+
         $(".stage-builder-wrapeer .third-stage, .stage-builder-wrapeer .third-stage img").css("display", "none");
         $(".main-layer").removeClass("two-stage three-stage");
         $(".main-layer").addClass("one-stage");
@@ -210,6 +228,18 @@ $(document).ready(function() {
         zontDeleted();
         vivodDeleted();
         secondStageDeleted();
+        deleteClassThirStage();
+        typeDimohodDeleted();
+        typeDimohodHoverDeleted();
+        vihodNaKrishuType = 0;
+        partSecondStage = 0;
+        partFirstStage = 0;
+        partThirdStage = 0;
+        $(".second-stage").css("display", "none");
+        $(".second-stage").css("third-stage", "none");
+        $(".second-stage").css("krisha-select-box", "none");
+        $(".second-stage").css("zont-select-box", "none");
+
         $(".stage-builder-wrapeer .third-stage, .stage-builder-wrapeer .third-stage img").css("display", "none");
         $(".krisha-select-box").css("display", "none");
         $(".zont-select-box").css("display", "none");
@@ -230,6 +260,18 @@ $(document).ready(function() {
         zontDeleted();
         vivodDeleted();
         secondStageDeleted();
+        deleteClassThirStage();
+        typeDimohodDeleted();
+        typeDimohodHoverDeleted();
+        vihodNaKrishuType = 0;
+        partSecondStage = 0;
+        partFirstStage = 0;
+        partThirdStage = 0;
+        $(".second-stage").css("display", "none");
+        $(".second-stage").css("third-stage", "none");
+        $(".second-stage").css("krisha-select-box", "none");
+        $(".second-stage").css("zont-select-box", "none");
+
         $(".second-stage").css("display", "none");
         $(".krisha-select-box").css("display", "none");
         $(".zont-select-box").css("display", "none");
@@ -971,6 +1013,8 @@ $(document).ready(function() {
       }
 
       if (stage == "3") {
+        $(".zont-select-box").css("display", "block");
+        $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
 
         if (partThirdStage == "4") {
           $(".krisha-stage-type").addClass("sixth-type-3-stage-special");
@@ -1053,6 +1097,8 @@ $(document).ready(function() {
       }
 
       if (stage == "3") {
+        $(".zont-select-box").css("display", "block");
+        $(".zont-select-box .type-select-box img:nth-child(7), .zont-select-box .type-select-box img:nth-child(8), .zont-select-box .type-select-box img:nth-child(9)").css("display", "unset");
 
         if (partThirdStage == "4") {
           $(".krisha-stage-type").addClass("seventh-type-3-stage");
@@ -1145,6 +1191,8 @@ $(document).ready(function() {
       $(".krisha-stage-type").addClass("last-type");
 
       if (stage == "3") {
+        $(".zont-select-box").css("display", "block");
+        $(".zont-select-box .type-select-box img:nth-child(4), .zont-select-box .type-select-box img:nth-child(5), .zont-select-box .type-select-box img:nth-child(6)").css("display", "unset");
 
         if (partThirdStage == "4") {
           $(".krisha-stage-type").addClass("sixth-type-3-stage");
@@ -1239,7 +1287,7 @@ $(document).ready(function() {
       if (stage == "3") {
         zontDeleted();
 
-        if(partThirdStage == "1"){
+        if (partThirdStage == "1") {
           $(".zont-stage-type").addClass("first-type-3-stage");
         }
       }
@@ -1258,7 +1306,7 @@ $(document).ready(function() {
 
       if (stage == "3") {
 
-        if(partThirdStage == "1"){
+        if (partThirdStage == "1") {
           zontHoverDeleted();
           $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("first-type-3-stage");
         }
@@ -1276,7 +1324,7 @@ $(document).ready(function() {
 
       if (stage == "3") {
 
-        if(partThirdStage == "1"){
+        if (partThirdStage == "1") {
           $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("first-type-3-stage");
         }
       }
@@ -1303,7 +1351,7 @@ $(document).ready(function() {
       if (stage == "3") {
         zontDeleted();
 
-        if(partThirdStage == "1"){
+        if (partThirdStage == "1") {
           $(".zont-stage-type").addClass("second-type-3-stage");
         }
       }
@@ -1322,7 +1370,7 @@ $(document).ready(function() {
 
       if (stage == "3") {
 
-        if(partThirdStage == "1"){
+        if (partThirdStage == "1") {
           zontHoverDeleted();
           $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("second-type-3-stage");
         }
@@ -1339,7 +1387,7 @@ $(document).ready(function() {
 
           if (stage == "3") {
 
-            if(partThirdStage == "1"){
+            if (partThirdStage == "1") {
               $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-type-3-stage");
             }
           }
@@ -1367,7 +1415,7 @@ $(document).ready(function() {
       if (stage == "3") {
         zontDeleted();
 
-        if(partThirdStage == "1"){
+        if (partThirdStage == "1") {
           $(".zont-stage-type").addClass("third-type-3-stage");
         }
       }
@@ -1386,7 +1434,7 @@ $(document).ready(function() {
 
       if (stage == "3") {
 
-        if(partThirdStage == "1"){
+        if (partThirdStage == "1") {
           zontHoverDeleted();
           $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("third-type-3-stage");
         }
@@ -1404,7 +1452,7 @@ $(document).ready(function() {
 
       if (stage == "3") {
 
-        if(partThirdStage == "1"){
+        if (partThirdStage == "1") {
           $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("third-type-3-stage");
         }
       }
@@ -1433,13 +1481,20 @@ $(document).ready(function() {
         $(".zont-stage-type").addClass("fourth-zont-4-svihodom");
       }
 
+      if(stage == "1" && partFirstStage == "3"){
+        zontDeleted();
+        $(".zont-stage-type").addClass("fourth-type");
+      }
+
       if (vihodNaKrishuType == "5") {
         zontDeleted();
         $(".zont-stage-type").addClass("fourth-2-stage-zont-5-svihodom");
 
         if (partFirstStage == "6") {
 
+
           if (partSecondStage == "3") {
+            zontHoverDeleted();
             $(".zont-stage-type").addClass("fourth-2-stage-zont-5-2svihodom");
           }
         }
@@ -1462,6 +1517,7 @@ $(document).ready(function() {
       }
 
       if (stage == "3") {
+        zontDeleted();
 
         if (vihodNaKrishuType == "6") {
 
@@ -1474,7 +1530,19 @@ $(document).ready(function() {
           }
         }
 
-        if(partSecondStage == "4" && vihodNaKrishuType == "10"){
+        if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+          $(".zont-stage-type").addClass("fourth-3-stage");
+        }
+
+        if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+          $(".zont-stage-type").addClass("fourth-3-stage-last");
+        }
+
+        if(vihodNaKrishuType == "9" && partThirdStage == "3"){
+          $(".zont-stage-type").addClass("fourth-3-stage-main");
+        }
+
+        if(vihodNaKrishuType == "5"){
           $(".zont-stage-type").addClass("fourth-3-stage");
         }
       }
@@ -1484,6 +1552,11 @@ $(document).ready(function() {
 
       if (vihodNaKrishuType == "1") {
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type-svihodom");
+      }
+
+      if(stage == "1" && partFirstStage == "3"){
+        zontHoverDeleted();
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type");
       }
 
       if (vihodNaKrishuType == "2") {
@@ -1500,6 +1573,7 @@ $(document).ready(function() {
         if (partFirstStage == "6") {
 
           if (partSecondStage == "3") {
+            zontHoverDeleted();
             $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-2-stage-zont-5-2svihodom");
           }
         }
@@ -1510,7 +1584,7 @@ $(document).ready(function() {
       }
 
       if (vihodNaKrishuType == "8") {
-        zontDeleted();
+        zontHoverDeleted();
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-type-2-stage");
       }
 
@@ -1536,6 +1610,18 @@ $(document).ready(function() {
         }
 
         if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage");
+        }
+
+        if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage-last");
+        }
+
+        if(vihodNaKrishuType == "9" && partThirdStage == "3"){
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage-main");
+        }
+
+        if(vihodNaKrishuType == "5"){
           $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage");
         }
       }
@@ -1596,6 +1682,18 @@ $(document).ready(function() {
         if (partSecondStage == "4" && vihodNaKrishuType == "10") {
           $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage");
         }
+
+        if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage-last");
+        }
+
+        if(vihodNaKrishuType == "9" && partThirdStage == "3"){
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage-main");
+        }
+
+        if(vihodNaKrishuType == "5"){
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage");
+        }
       }
     });
     //////////////////////////////////////////////////////////////////////////////
@@ -1621,6 +1719,11 @@ $(document).ready(function() {
         if (vihodNaKrishuType == "4") {
           zontDeleted();
           $(".zont-stage-type").addClass("fiveth-zont-4-svihodom");
+        }
+
+        if(stage == "1" && partFirstStage == "3"){
+          zontDeleted();
+          $(".zont-stage-type").addClass("fiveth-type");
         }
 
         if (vihodNaKrishuType == "5") {
@@ -1651,6 +1754,7 @@ $(document).ready(function() {
         }
 
         if (stage == "3") {
+          zontDeleted();
 
           if (vihodNaKrishuType == "6") {
 
@@ -1663,7 +1767,19 @@ $(document).ready(function() {
             }
           }
 
-          if(partSecondStage == "4" && vihodNaKrishuType == "10"){
+          if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+            $(".zont-stage-type").addClass("fiveth-3-stage");
+          }
+
+          if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+            $(".zont-stage-type").addClass("fiveth-3-stage-last");
+          }
+
+          if(vihodNaKrishuType == "9" && partThirdStage == "3"){
+            $(".zont-stage-type").addClass("fiveth-3-stage-main");
+          }
+
+          if(vihodNaKrishuType == "5"){
             $(".zont-stage-type").addClass("fiveth-3-stage");
           }
         }
@@ -1677,6 +1793,11 @@ $(document).ready(function() {
 
       if (vihodNaKrishuType == "2") {
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-2-svihodom");
+      }
+
+      if(stage == "1" && partFirstStage == "3"){
+        zontHoverDeleted();
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type");
       }
 
       if (vihodNaKrishuType == "4") {
@@ -1719,7 +1840,19 @@ $(document).ready(function() {
           }
         }
 
-        if(partSecondStage == "4" && vihodNaKrishuType == "10"){
+        if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage");
+        }
+
+        if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage-last");
+        }
+
+        if(vihodNaKrishuType == "9" && partThirdStage == "3"){
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage-main");
+        }
+
+        if(vihodNaKrishuType == "5"){
           $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage");
         }
       }
@@ -1775,7 +1908,19 @@ $(document).ready(function() {
           }
         }
 
-        if(partSecondStage == "4" && vihodNaKrishuType == "10"){
+        if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage");
+        }
+
+        if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage-last");
+        }
+
+        if(vihodNaKrishuType == "9" && partThirdStage == "3"){
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage-main");
+        }
+
+        if(vihodNaKrishuType == "5"){
           $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage");
         }
       }
@@ -1798,6 +1943,11 @@ $(document).ready(function() {
         if (vihodNaKrishuType == "2") {
           zontDeleted();
           $(".zont-stage-type").addClass("sixth-zont-2-svihodom");
+        }
+
+        if(stage == "1" && partFirstStage == "3"){
+          zontDeleted();
+          $(".zont-stage-type").addClass("sixth-type");
         }
 
         if (vihodNaKrishuType == "4") {
@@ -1836,6 +1986,7 @@ $(document).ready(function() {
         }
 
         if (stage == "3") {
+          zontDeleted();
 
           if (vihodNaKrishuType == "6") {
 
@@ -1848,7 +1999,19 @@ $(document).ready(function() {
             }
           }
 
-          if(partSecondStage == "4" && vihodNaKrishuType == "10"){
+          if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+            $(".zont-stage-type").addClass("sixth-3-stage");
+          }
+
+          if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+            $(".zont-stage-type").addClass("sixth-3-stage-last");
+          }
+
+          if(vihodNaKrishuType == "9" && partThirdStage == "3"){
+            $(".zont-stage-type").addClass("sixth-3-stage-main");
+          }
+
+          if(vihodNaKrishuType == "5"){
             $(".zont-stage-type").addClass("sixth-3-stage");
           }
         }
@@ -1864,11 +2027,17 @@ $(document).ready(function() {
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-2-svihodom");
       }
 
+      if(stage == "1" && partFirstStage == "3"){
+        zontHoverDeleted();
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type");
+      }
+
       if (vihodNaKrishuType == "4") {
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-4-svihodom");
       }
 
       if (vihodNaKrishuType == "5") {
+        zontHoverDeleted();
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-5-svihodom");
 
         if (partFirstStage == "6") {
@@ -1905,7 +2074,19 @@ $(document).ready(function() {
           }
         }
 
-        if(partSecondStage == "4" && vihodNaKrishuType == "10"){
+        if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage");
+        }
+
+        if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage-last");
+        }
+
+        if(vihodNaKrishuType == "9" && partThirdStage == "3"){
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage-main");
+        }
+
+        if(vihodNaKrishuType == "5"){
           $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage");
         }
       }
@@ -1960,7 +2141,19 @@ $(document).ready(function() {
           }
         }
 
-        if(partSecondStage == "4" && vihodNaKrishuType == "10"){
+        if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage");
+        }
+
+        if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage-last");
+        }
+
+        if(vihodNaKrishuType == "9" && partThirdStage == "3"){
+          $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage-main");
+        }
+
+        if(vihodNaKrishuType == "5"){
           $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage");
         }
       }
@@ -2220,6 +2413,7 @@ $(document).ready(function() {
       secondStageDeleted();
       partSecondStage = 1;
 
+      $(".krisha-select-box").css("display", "none");
       $(".third-stage").css("display", "none");
       $(".third-stage img").css("display", "none");
       $(".second-stage .type-select-box img").removeClass("selectedItem");
@@ -2258,7 +2452,7 @@ $(document).ready(function() {
       $(".second-stage .type-select-box img:nth-child(2)").addClass("selectedItem");
       $(".second-stage-type").addClass("second-type");
       $(".krisha-select-box").css("display", "block");
-      $(".krisha-select-box .type-select-box img:nth-child(8)").css("display", "block");
+      $(".krisha-select-box .type-select-box img:nth-child(8)").css("display", "unset");
 
       if (stage == "3") {
         $(".krisha-select-box").css("display", "none");
@@ -2373,7 +2567,6 @@ $(document).ready(function() {
 
     // Второй этаж 4
     $(".second-stage .type-select-box img:nth-child(4)").click(function() {
-
       deleteThirdStageInterface();
       deleteClassThirStage();
       deleteSelectThirdStage();
@@ -2400,7 +2593,7 @@ $(document).ready(function() {
           $(".second-stage-type").addClass("fourth-type-3-stage");
           $(".krisha-select-box").css("display", "none");
           $(".third-stage").css("display", "block");
-          $(".third-stage .type-select-box img:nth-child(3)").css("display", "block");
+          $(".third-stage .type-select-box img:nth-child(3)").css("display", "unset");
         }
       }
     });
