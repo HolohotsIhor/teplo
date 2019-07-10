@@ -31,6 +31,8 @@ gulp.task('scripts', function(){
 		'app/libs/jqueryCounter/counter.lib.js',
 		'app/libs/jqueryCounter/jquery.counterup.min.js',
 		// 'app/libs/backgroundvideo/jquery.backgroundvideo.min.js',
+		// 'app/libs/pdfmake/pdfmake.min.js',
+		// 'app/libs/pdfmake/vfs_fonts.js',
 	])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())

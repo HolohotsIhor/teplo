@@ -78,6 +78,25 @@ $(document).ready(function() {
       }
     });
   });
+    ///////////////// Сброс /////////////////
+    $("#resetButton").click(function() {
+      deleteThirdStageInterface();
+      deleteClassThirStage();
+      deleteSelectThirdStage();
+      vivodDeleted();
+      zontDeleted();
+      typeDimohodDeleted();
+      selectDeleted();
+      selectFirstStageDeleted();
+      selectZontDeleted();
+      interfaceVivodDeleted();
+      secondStageDeleted();
+      secondStageSelectDeleted();
+      $(".second-stage").css("display","none");
+      $(".third-stage").css("display","none");
+      $(".krisha-select-box").css("display","none");
+      $(".zont-select-box").css("display","none");
+    });
 
     ////////////////////////////////////////////////////////////////////////////////////////
     /* Calculator controllers */
@@ -310,6 +329,40 @@ $(document).ready(function() {
 
     /********** ШАГ 2 **********/
 
+     /************************ Кнопки **************************/
+   ///////////////// Кнопка назад к шагу 1 /////////////////
+    $("#backToStep1").click(function() {
+      $(".nav-tabs a:nth-child(1)").addClass("active");
+      $(".tab-content #step-1").addClass("active show");
+      $(".nav-tabs a:nth-child(2)").removeClass("active");
+      $(".tab-content #step-2").removeClass("active show");
+    });
+
+    ///////////////// Кнопка назад к шагу 2 /////////////////
+    $("#backTwoStep").click(function() {
+      $(".nav-tabs a:nth-child(2)").addClass("active");
+      $(".tab-content #step-2").addClass("active show");
+      $(".nav-tabs a:nth-child(3)").removeClass("active");
+      $(".tab-content #step-3").removeClass("active show");
+    });
+
+    ///////////////// Кнопка вперёд к шагу 3 /////////////////
+    $("#nextToStep3").click(function() {
+      $(".nav-tabs a:nth-child(3)").addClass("active");
+      $(".tab-content #step-3").addClass("active show");
+      $(".nav-tabs a:nth-child(2)").removeClass("active");
+      $(".tab-content #step-2").removeClass("active show");
+    });
+
+    ///////////////// Кнопка вперёд к шагу 4 /////////////////
+    $("#nextFourthStep").click(function() {
+      $(".nav-tabs a:nth-child(4)").addClass("active");
+      $(".tab-content #step-4").addClass("active show");
+      $(".nav-tabs a:nth-child(3)").removeClass("active");
+      $(".tab-content #step-3").removeClass("active show");
+      $(".nav-tabs a:nth-child(2)").removeClass("active");
+      $(".tab-content #step-2").removeClass("active show");
+    });
     ///////////////// Типдымохода 1 /////////////////
     $(".first-stage .type-select-box img:nth-child(1)").click(function() {
         // Этаж 1
@@ -2749,7 +2802,4 @@ $(document).ready(function() {
     .mouseout(function() {
       $(".third-stage-type-hover").removeClass("fourth-type");
     });
-
-
-
   });
