@@ -1535,9 +1535,8 @@ footer {
   padding-bottom: 0; }
 
 /* 16. Constract */
-@media only screen and (max-device-width: 991px) {
-  .constract .mobile-buttons {
-    display: inline-block; } }
+.constract .for-one-stage-build, .constract .for-two-stage-build, .constract .for-three-stage-build {
+  display: none; }
 
 .constract ._button_push {
   float: left;
@@ -1561,6 +1560,18 @@ footer {
 @media only screen and (max-device-width: 991px) {
   .constract .desktop-button {
     display: none; } }
+
+.constract .mobile-buttons {
+  display: none;
+  position: relative;
+  z-index: 99; }
+  @media only screen and (max-device-width: 991px) {
+    .constract .mobile-buttons {
+      display: inline-block; } }
+  .constract .mobile-buttons ._button_push {
+    margin-top: 10px; }
+  .constract .mobile-buttons ._button_push:nth-child(2), .constract .mobile-buttons ._button_push:nth-child(3), .constract .mobile-buttons ._button_push:nth-child(4), .constract .mobile-buttons ._button_push:nth-child(5), .constract .mobile-buttons ._button_push:nth-child(6) {
+    display: none; }
 
 @media only screen and (max-device-width: 991px) {
   .constract .text-box {
@@ -1942,8 +1953,7 @@ footer {
         -webkit-background-size: contain;
                 background-size: contain; } }
   .constract .calculator-wrapper .calculator-final-look .second-stage-type.third-type-2-stage-special, .constract .calculator-wrapper .calculator-final-look .second-stage-type-hover.third-type-2-stage-special {
-    background: url("../img/calculator/2-stage-3-type-look.png") center no-repeat;
-    left: 15px; }
+    background: url("../img/calculator/2-stage-3-type-look.png") center no-repeat; }
     @media only screen and (max-device-width: 700px) {
       .constract .calculator-wrapper .calculator-final-look .second-stage-type.third-type-2-stage-special, .constract .calculator-wrapper .calculator-final-look .second-stage-type-hover.third-type-2-stage-special {
         -webkit-background-size: contain;
@@ -2015,7 +2025,6 @@ footer {
   visibility: hidden;
   position: absolute;
   top: 0;
-  left: 15px;
   height: 480px;
   width: 640px; }
   @media only screen and (max-device-width: 700px) {
@@ -2145,7 +2154,6 @@ footer {
   z-index: 1;
   position: absolute;
   top: 0;
-  left: 15px;
   width: 640px;
   height: 480px; }
   @media only screen and (max-device-width: 700px) {
@@ -2206,8 +2214,7 @@ footer {
         -webkit-background-size: contain;
                 background-size: contain; } }
   .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.fiveth-2-stage-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.fiveth-2-stage-type {
-    background: url("../img/calculator/1-stage-krisha-22-type-1look.png") center no-repeat;
-    left: 15px; }
+    background: url("../img/calculator/1-stage-krisha-22-type-1look.png") center no-repeat; }
     @media only screen and (max-device-width: 700px) {
       .constract .calculator-wrapper .calculator-final-look .krisha-stage-type.fiveth-2-stage-type, .constract .calculator-wrapper .calculator-final-look .krisha-stage-type-hover.fiveth-2-stage-type {
         -webkit-background-size: contain;
@@ -2272,7 +2279,6 @@ footer {
   z-index: 1;
   position: absolute;
   top: 0;
-  left: 15px;
   width: 640px;
   height: 480px; }
   @media only screen and (max-device-width: 700px) {
@@ -2400,7 +2406,6 @@ footer {
                 background-size: contain; } }
   .constract .calculator-wrapper .calculator-final-look .zont-stage-type.seventh-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.seventh-zont-3-svihodom {
     background: url("../img/calculator/1-stage-krisha-11-type-1look.png") center no-repeat;
-    left: 15px;
     top: 0px; }
     @media only screen and (max-device-width: 700px) {
       .constract .calculator-wrapper .calculator-final-look .zont-stage-type.seventh-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.seventh-zont-3-svihodom {
@@ -2409,7 +2414,6 @@ footer {
         left: unset; } }
   .constract .calculator-wrapper .calculator-final-look .zont-stage-type.eighth-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.eighth-zont-3-svihodom {
     background: url("../img/calculator/1-stage-krisha-12-type-1look.png") center no-repeat;
-    left: 15px;
     top: 0px; }
     @media only screen and (max-device-width: 700px) {
       .constract .calculator-wrapper .calculator-final-look .zont-stage-type.eighth-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.eighth-zont-3-svihodom {
@@ -2418,7 +2422,6 @@ footer {
         left: unset; } }
   .constract .calculator-wrapper .calculator-final-look .zont-stage-type.nineth-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.nineth-zont-3-svihodom {
     background: url("../img/calculator/1-stage-krisha-13-type-1look.png") center no-repeat;
-    left: 15px;
     top: 0px; }
     @media only screen and (max-device-width: 700px) {
       .constract .calculator-wrapper .calculator-final-look .zont-stage-type.nineth-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.nineth-zont-3-svihodom {
@@ -2427,7 +2430,6 @@ footer {
         left: unset; } }
   .constract .calculator-wrapper .calculator-final-look .zont-stage-type.seventh-stage-2-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.seventh-stage-2-zont-3-svihodom {
     background: url("../img/calculator/1-stage-krisha-19-type-1look.png") center no-repeat;
-    left: 15px;
     top: 0px; }
     @media only screen and (max-device-width: 700px) {
       .constract .calculator-wrapper .calculator-final-look .zont-stage-type.seventh-stage-2-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.seventh-stage-2-zont-3-svihodom {
@@ -2436,7 +2438,6 @@ footer {
         left: unset; } }
   .constract .calculator-wrapper .calculator-final-look .zont-stage-type.eighth-stage-2-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.eighth-stage-2-zont-3-svihodom {
     background: url("../img/calculator/1-stage-krisha-17-type-1look.png") center no-repeat;
-    left: 15px;
     top: 0px; }
     @media only screen and (max-device-width: 700px) {
       .constract .calculator-wrapper .calculator-final-look .zont-stage-type.eighth-stage-2-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.eighth-stage-2-zont-3-svihodom {
@@ -2445,7 +2446,6 @@ footer {
         left: unset; } }
   .constract .calculator-wrapper .calculator-final-look .zont-stage-type.nineth-stage-2-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.nineth-stage-2-zont-3-svihodom {
     background: url("../img/calculator/1-stage-krisha-18-type-1look.png") center no-repeat;
-    left: 15px;
     top: 0px; }
     @media only screen and (max-device-width: 700px) {
       .constract .calculator-wrapper .calculator-final-look .zont-stage-type.nineth-stage-2-zont-3-svihodom, .constract .calculator-wrapper .calculator-final-look .zont-stage-type-hover.nineth-stage-2-zont-3-svihodom {

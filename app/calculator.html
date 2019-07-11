@@ -184,8 +184,6 @@
 															<option>Колор</option>
 															<option>Стандарт</option>
 															<option>Премиум</option>
-															<option>Воздух</option>
-															<option>Пром-котельники</option>
 														</select>
 													</td>
 												</tr>
@@ -288,21 +286,133 @@
 								<div class="tab-pane fade" id="step-3" role="tabpanel" aria-labelledby="nav-contact-tab">
 									<h5>Размеры</h5>
 									<p>Введите размеры вашего дома для точного расчета дымохода иди выберите вариант вызова замерщика:</p>
-									<p class="input-text">Высота от пола до патрубка отопительного прибора: <br>
-										<input id="visotaOtPola"><span>мм</span>
-									</p>
-									<p class="input-text">Расстояние между стеной и отопительным прибором: <br>
-										<input id="rastojanieStenaPribor"><span>мм</span>
-									</p>
-									<p class="input-text">Толщина наружной стены: <br>
-										<input id="tolshinaNarujnoiSteni"><span>мм</span>
-									</p>
-									<p class="input-text">Высота 1 этажа: <br>
-										<input id="visotaFirstStage"><span>мм</span>
-									</p>
-									<p class="input-text">Высота 2 этажа: <br>
-										<input id="visotaSecondStage"><span>мм</span>
-									</p>
+
+									<div class="for-one-stage-build">
+										<p class="input-text">Высота от пола до патрубка отопительного прибора: <br>
+											<input id="oneStageBuildParam1"><span>мм</span>
+										</p>
+										<p class="input-text">Расстояние между стеной и отопительным прибором: <br>
+											<input id="oneStageBuildParam2"><span>мм</span>
+										</p>
+										<p class="input-text">Толщина наружной стены: <br>
+											<input id="oneStageBuildParam3"><span>мм</span>
+										</p>
+										<p class="input-text">Высота 1 этажа: <br>
+											<input id="oneStageBuildParam4"><span>мм</span>
+										</p>
+										<p class="input-text">Высота перекрытий: <br>
+											<input id="oneStageBuildParam5"><span>мм</span>
+										</p>
+										<p class="input-text">Высота до конька крыши: <br>
+											<input id="oneStageBuildParam6"><span>мм</span>
+										</p>
+										<p class="input-text">Толщина крыши: <br>
+											<input id="oneStageBuildParam7"><span>мм</span>
+										</p>
+										<p class="input-text">Угол наклона крыши: <br>
+											<input id="oneStageBuildParam8"><span>°</span>
+										</p>
+										<p class="input-text">Ширина отопительного прибора: <br>
+											<input id="oneStageBuildParam9"><span>мм</span>
+										</p>
+										<p class="input-text">От карниза до внешней поверхности наружней стены <br>
+											<input id="oneStageBuildParam10"><span>мм</span>
+										</p>
+										<p class="input-text">От внешней поверхности наружней стены до конька <br>
+											<input id="oneStageBuildParam11"><span>мм</span>
+										</p>
+									</div>
+
+									<div class="for-two-stage-build">
+										<p class="input-text">Высота от пола до патрубка отопительного прибора:<br>
+											<input id="twoStageBuildParam1"><span>мм</span>
+										</p>
+										<p class="input-text">Расстояние между стеной и отопительным прибором:<br>
+											<input id="twoStageBuildParam2"><span>мм</span>
+										</p>
+										<p class="input-text">Толщина наружной стены:<br>
+											<input id="twoStageBuildParam3"><span>мм</span>
+										</p>
+										<p class="input-text">Высота 1 этажа:<br>
+											<input id="twoStageBuildParam4"><span>мм</span>
+										</p>
+										<p class="input-text">Высота 2 этажа:<br>
+											<input id="twoStageBuildParam5"><span>мм</span>
+										</p>
+										<p class="input-text">Высота перекрытий первого этажа:<br>
+											<input id="twoStageBuildParam6"><span>мм</span>
+										</p>
+										<p class="input-text">Высота перекрытия второго этажа:<br>
+											<input id="twoStageBuildParam7"><span>мм</span>
+										</p>
+										<p class="input-text">Высота до конька крыши:<br>
+											<input id="twoStageBuildParam8"><span>мм</span>
+										</p>
+										<p class="input-text">Толщина крыши:<br>
+											<input id="twoStageBuildParam9"><span>мм</span>
+										</p>
+										<p class="input-text">Угол наклона крыши:<br>
+											<input id="twoStageBuildParam10"><span>°</span>
+										</p>
+										<p class="input-text">Ширина отопительного прибора<br>
+											<input id="twoStageBuildParam11"><span>мм</span>
+										</p>
+										<p class="input-text">От карниза до внешней поверхности наружней стены<br>
+											<input id="twoStageBuildParam12"><span>мм</span>
+										</p>
+										<p class="input-text">От внешней поверхности наружней стены до конька<br>
+											<input id="twoStageBuildParam13"><span>мм</span>
+										</p>
+									</div>
+
+									<div class="for-three-stage-build">
+										<p class="input-text">Высота от пола до патрубка отопительного прибора:<br>
+											<input id="threeStageBuildParam1"><span>мм</span>
+										</p>
+										<p class="input-text">Расстояние между стеной и отопительным прибором:<br>
+											<input id="threeStageBuildParam2"><span>мм</span>
+										</p>
+										<p class="input-text">Толщина наружной стены:<br>
+											<input id="threeStageBuildParam3"><span>мм</span>
+										</p>
+										<p class="input-text">Высота 1 этажа:<br>
+											<input id="threeStageBuildParam4"><span>мм</span>
+										</p>
+										<p class="input-text">Высота 2 этажа:<br>
+											<input id="threeStageBuildParam5"><span>мм</span>
+										</p>
+										<p class="input-text">Высота 3 этажа:<br>
+											<input id="threeStageBuildParam6"><span>мм</span>
+										</p>
+										<p class="input-text">Высота перекрытий первого этажа:<br>
+											<input id="threeStageBuildParam7"><span>мм</span>
+										</p>
+										<p class="input-text">Высота перекрытия второго этажа:<br>
+											<input id="threeStageBuildParam8"><span>мм</span>
+										</p>
+										<p class="input-text">Высота перекрытия третьего этажа:<br>
+											<input id="threeStageBuildParam9"><span>мм</span>
+										</p>
+										<p class="input-text">Высота до конька крыши:<br>
+											<input id="threeStageBuildParam10"><span>мм</span>
+										</p>
+										<p class="input-text">Толщина крыши:<br>
+											<input id="threeStageBuildParam11"><span>мм</span>
+										</p>
+										<p class="input-text">Угол наклона крыши:<br>
+											<input id="threeStageBuildParam12"><span>мм</span>
+										</p>
+										<p class="input-text">Ширина отопительного прибора<br>
+											<input id="threeStageBuildParam13"><span>мм</span>
+										</p>
+										<p class="input-text">От карниза до внешней поверхности наружней стены<br>
+											<input id="threeStageBuildParam14"><span>мм</span>
+										</p>
+										<p class="input-text">От внешней поверхности наружней стены до конька<br>
+											<input id="threeStageBuildParam15"><span>мм</span>
+										</p>
+									</div>
+									
 									<!-- Навигация -->
 									<div class="_button_push shema desktop-button" id="backTwoStep">Назад</div>
 									<div class="_button_push shema desktop-button" id="nextFourthStep">Получить расчет</div>
@@ -331,23 +441,25 @@
 									<div class="zont-stage-type-hover"></div>
 								</div>
 							</div>
+						</div>
 
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 calculator-wrapper">
 							<div class="mobile-buttons">
 								<!-- Навигация Шаг 1 -->
-								<div class="_button_push shema">Построить схему</div>
+								<div class="_button_push shema" id="firstButtonNav">Построить схему</div>
 								<!-- Навигация Шаг 1 -->
 
 								<!-- Навигация Шаг 2 -->
-								<div class="_button_push shema" id="backToStep1">Назад</div>
-								<div class="_button_push shema" id="resetButton">Сброс</div>
-								<div class="_button_push shema" id="nextToStep3">Вперёд</div>
+								<div class="_button_push" id="secondButtonNav">Назад</div>
+								<div class="_button_push" id="resetMobile">Сброс</div>
+								<div class="_button_push" id="fourthButtonNav">Вперёд</div>
 								<!-- / Навигация Шаг 2 -->
 
 								<!-- Навигация Шаг 3 -->
-								<div class="_button_push shema" id="backTwoStep">Назад</div>
-								<div class="_button_push shema" id="nextFourthStep">Получить расчет</div>
+								<div class="_button_push" id="fivethButtonNav">Назад</div>
+								<div class="_button_push" id="sixthButtonNav">Получить расчет</div>
 								<!-- / Навигация Шаг 3 -->
-							</div>
+							</div>	
 						</div>
 					</div>
 				</div>
