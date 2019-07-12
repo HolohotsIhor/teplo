@@ -16,6 +16,7 @@
 14. Breadcrmabs
 15. Work zone
 16. Constract
+17. Constract form
 
 */
 
@@ -2130,7 +2131,7 @@ footer {
 .constract {
 
 
-.for-one-stage-build, .for-two-stage-build, .for-three-stage-build{
+	.for-one-stage-build, .for-two-stage-build, .for-three-stage-build{
 		display: none;
 	}
 	
@@ -2273,11 +2274,23 @@ footer {
 				&.input-text{
 					line-height: 14px;
 					color: $dark;
+					margin-bottom: 5px;
+					letter-spacing: 0;
+					font-size: 13px;
 
 					input{
 						width: 100px;
 						margin-right: 10px;
 						margin-top: 5px;
+
+						&.checkbox-sizes{
+							width: auto;
+							margin-top: 2px;
+						}
+					}
+
+					.for-checkbox{
+						margin-bottom: 10px;
 					}
 
 					span{
@@ -3248,9 +3261,46 @@ footer {
 			}
 		}
 	}
+
+	.first-stage-type-hover, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type-hover{
+		@media only screen and (max-device-width: 700px) {display: none;}
+	}
+
+	/* 17. Constract form */
+
+	.text-box{
+
+		.tab-pane{
+
+			form{
+				margin-top: 20px;
+
+				span{
+
+					input{
+						padding: 15px;
+
+						&.submit{
+							float: left;
+							padding: 10px 14px;
+							font-size: 13px;
+							letter-spacing: 0;
+							-webkit-box-shadow: 1.563px 5.863px 10px 0 rgba(0, 0, 0, 0.2);
+							box-shadow: 1.563px 5.863px 10px 0 rgba(0, 0, 0, 0.2);
+							font-family: "Open-Sans-Bold", sans-serif, Arial;
+							margin-top: 30px;
+							margin-right: 5px;
+						}
+					}
+				}
+
+				.one-stage-hidden-strings{
+					display: none;
+				}
+			}
+		}
+	}
 }
 
-.first-stage-type-hover, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type-hover{
-	@media only screen and (max-device-width: 700px) {display: none;}
-}
+
 

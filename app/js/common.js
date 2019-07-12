@@ -318,7 +318,7 @@ $(document).ready(function() {
     });
 
     // Контроллер табов TAB 3
-    $(".nav-tabs a:nth-child(2)").click(function() {
+    $(".nav-tabs a:nth-child(3)").click(function() {
         $(".mobile-buttons ._button_push:nth-child(1), .mobile-buttons ._button_push:nth-child(2), .mobile-buttons ._button_push:nth-child(3), .mobile-buttons ._button_push:nth-child(4), .mobile-buttons ._button_push:nth-child(5), .mobile-buttons ._button_push:nth-child(6)").css("display", "none");
         $(".mobile-buttons ._button_push:nth-child(5), .mobile-buttons ._button_push:nth-child(6)").css("display", "inline-block");
 
@@ -2919,4 +2919,87 @@ $(document).ready(function() {
         .mouseout(function() {
             $(".third-stage-type-hover").removeClass("fourth-type");
         });
+
+
+
+/***********************************************************************************/
+/*********************************** FORM DATAS ************************************/
+/***********************************************************************************/
+var paramString = "";
+
+// Чекбокс "Не знаю размеров..."
+$(".checkbox-sizes").change(function() {
+  alert("123");
 });
+
+//******************************* 1 STAGE ************************//
+$('#oneStageBuildParam1').change(function() {
+    paramString = $('#oneStageBuildParam1').val();
+    $(".text-970 input").val(paramString);
+});
+$('#oneStageBuildParam2').change(function() {
+    paramString = $('#oneStageBuildParam2').val();
+    $(".text-971 input").val(paramString);
+});
+$('#oneStageBuildParam3').change(function() {
+    paramString = $('#oneStageBuildParam3').val();
+    $(".text-972 input").val(paramString);
+});
+$('#oneStageBuildParam4').change(function() {
+    paramString = $('#oneStageBuildParam4').val();
+    $(".text-973 input").val(paramString);
+});
+$('#oneStageBuildParam5').change(function() {
+    paramString = $('#oneStageBuildParam5').val();
+    $(".text-974 input").val(paramString);
+});
+$('#oneStageBuildParam6').change(function() {
+    paramString = $('#oneStageBuildParam6').val();
+    $(".text-975 input").val(paramString);
+});
+$('#oneStageBuildParam7').change(function() {
+    paramString = $('#oneStageBuildParam7').val();
+    $(".text-976 input").val(paramString);
+});
+$('#oneStageBuildParam8').change(function() {
+    paramString = $('#oneStageBuildParam8').val();
+    $(".text-977 input").val(paramString);
+});
+$('#oneStageBuildParam9').change(function() {
+    paramString = $('#oneStageBuildParam9').val();
+    $(".text-978 input").val(paramString);
+});
+$('#oneStageBuildParam10').change(function() {
+    paramString = $('#oneStageBuildParam10').val();
+    $(".text-979 input").val(paramString);
+});
+$('#oneStageBuildParam11').change(function() {
+    paramString = $('#oneStageBuildParam11').val();
+    $(".text-980 input").val(paramString);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
