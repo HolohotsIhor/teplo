@@ -2926,13 +2926,34 @@ $(document).ready(function() {
 /*********************************** FORM DATAS ************************************/
 /***********************************************************************************/
 var paramString = "";
+var ckeckBoxStatus = "";
 
 // Чекбокс "Не знаю размеров..."
-$(".checkbox-sizes").change(function() {
-  alert("123");
+$(".checkbox-sizes").click(function() {
+ ckeckBoxStatus = $(".checkbox-sizes").is(':checked');
+
+ if(ckeckBoxStatus == true){
+    $("#for-one-stage-build, #for-two-stage-build, #for-three-stage-build").css("display", "none");
+ }
+ if(ckeckBoxStatus == false){
+    if(stage == "1"){
+       $(".for-one-stage-build").css("display", "block");  
+    }
+    if(stage == "2"){
+       $(".for-two-stage-build").css("display", "block");  
+    }
+    if(stage == "3"){
+       $(".for-three-stage-build").css("display", "block");  
+    }
+ }
 });
 
+
 //******************************* 1 STAGE ************************//
+$('#oneStageBuildParam0').change(function() {
+    paramString = $('#oneStageBuildParam0').val();
+    $(".text-969 input").val(paramString);
+});
 $('#oneStageBuildParam1').change(function() {
     paramString = $('#oneStageBuildParam1').val();
     $(".text-970 input").val(paramString);
@@ -2977,6 +2998,19 @@ $('#oneStageBuildParam11').change(function() {
     paramString = $('#oneStageBuildParam11').val();
     $(".text-980 input").val(paramString);
 });
+$('#oneStageBuildParam12').change(function() {
+    paramString = $('#oneStageBuildParam12').val();
+    $(".text-981 input").val(paramString);
+});
+$('#oneStageBuildParam13').change(function() {
+    paramString = $('#oneStageBuildParam13').val();
+    $(".text-982 input").val(paramString);
+});
+$('#oneStageBuildParam14').change(function() {
+    paramString = $('#oneStageBuildParam14').val();
+    $(".text-983 input").val(paramString);
+});
+
 
 
 
