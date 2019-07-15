@@ -214,8 +214,8 @@ $(document).ready(function() {
             $(".stage-builder-wrapeer .third-stage, .stage-builder-wrapeer .third-stage img").css("display", "none");
             $(".main-layer").removeClass("two-stage three-stage");
             $(".main-layer").addClass("one-stage");
-            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("three-stage-build");
-            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("two-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover").removeClass("three-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover").removeClass("two-stage-build");
             $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "none");
             $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3), .first-stage .type-select-box img:nth-child(4), .first-stage .type-select-box img:nth-child(5), .first-stage .type-select-box img:nth-child(6)").css("display", "unset");
         }
@@ -246,8 +246,8 @@ $(document).ready(function() {
             $(".zont-select-box").css("display", "none");
             $(".main-layer").removeClass("one-stage three-stage");
             $(".main-layer").addClass("two-stage");
-            $(".first-stage-type-hover, .first-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("three-stage-build");
-            $(".first-stage-type-hover, .first-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").addClass("two-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover").removeClass("three-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover").addClass("two-stage-build");
             $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3)").css("display", "none");
             $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "unset");
         }
@@ -278,8 +278,8 @@ $(document).ready(function() {
             $(".zont-select-box").css("display", "none");
             $(".main-layer").removeClass("two-stage one-stage");
             $(".main-layer").addClass("three-stage");
-            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover").removeClass("two-stage-build");
-            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .second-stage-type, .second-stage-type-hover").addClass("three-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .second-stage-type, .second-stage-type-hover, .third-stage-type, .third-stage-type-hover").removeClass("two-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .second-stage-type, .second-stage-type-hover, .third-stage-type, .third-stage-type-hover").addClass("three-stage-build");
             $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3)").css("display", "none");
             $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "unset");
         }
@@ -324,16 +324,34 @@ $(document).ready(function() {
 
         $(".for-one-stage-build, .for-two-stage-build, .for-three-stage-build").css("display", "none");
 
-        if(stage == "1"){
-          $(".for-one-stage-build").css("display", "block");
+        if (stage == "1") {
+            $(".for-one-stage-build").css("display", "block");
         }
 
-        if(stage == "2"){
-          $(".for-two-stage-build").css("display", "block");
+        if (stage == "2") {
+            $(".for-two-stage-build").css("display", "block");
         }
 
-        if(stage == "3"){
-          $(".for-three-stage-build").css("display", "block");
+        if (stage == "3") {
+            $(".for-three-stage-build").css("display", "block");
+        }
+    });
+
+    // Контроллер табов TAB 3
+    $(".nav-tabs a:nth-child(4)").click(function() {
+
+        $(".class-form-one-stage, .class-form-two-stage, .class-form-tree-stage").css("display", "none");
+
+        if (stage == "1") {
+            $(".class-form-one-stage").css("display", "block");
+        }
+
+        if (stage == "2") {
+            $(".class-form-two-stage").css("display", "block");
+        }
+
+        if (stage == "3") {
+            $(".class-form-three-stage").css("display", "block");
         }
     });
 
@@ -436,16 +454,16 @@ $(document).ready(function() {
 
         $(".for-one-stage-build, .for-two-stage-build, .for-three-stage-build").css("display", "none");
 
-        if(stage == "1"){
-          $(".for-one-stage-build").css("display", "block");
+        if (stage == "1") {
+            $(".for-one-stage-build").css("display", "block");
         }
 
-        if(stage == "2"){
-          $(".for-two-stage-build").css("display", "block");
+        if (stage == "2") {
+            $(".for-two-stage-build").css("display", "block");
         }
 
-        if(stage == "3"){
-          $(".for-three-stage-build").css("display", "block");
+        if (stage == "3") {
+            $(".for-three-stage-build").css("display", "block");
         }
     });
 
@@ -467,6 +485,20 @@ $(document).ready(function() {
         $(".tab-content #step-3").removeClass("active show");
         $(".nav-tabs a:nth-child(2)").removeClass("active");
         $(".tab-content #step-2").removeClass("active show");
+
+        $(".class-form-one-stage, .class-form-two-stage, .class-form-tree-stage").css("display", "none");
+
+        if (stage == "1") {
+            $(".class-form-one-stage").css("display", "block");
+        }
+
+        if (stage == "2") {
+            $(".class-form-two-stage").css("display", "block");
+        }
+
+        if (stage == "3") {
+            $(".class-form-three-stage").css("display", "block");
+        }
     });
 
     ///////////////// Кнопка вперёд к шагу 4 МОБИЛЬНАЯ версия /////////////////
@@ -478,6 +510,20 @@ $(document).ready(function() {
         $(".nav-tabs a:nth-child(2)").removeClass("active");
         $(".tab-content #step-2").removeClass("active show");
         $(".mobile-buttons ._button_push:nth-child(1), .mobile-buttons ._button_push:nth-child(2), .mobile-buttons ._button_push:nth-child(3), .mobile-buttons ._button_push:nth-child(4), .mobile-buttons ._button_push:nth-child(5), .mobile-buttons ._button_push:nth-child(6)").css("display", "none");
+
+        $(".class-form-one-stage, .class-form-two-stage, .class-form-tree-stage").css("display", "none");
+
+        if (stage == "1") {
+            $(".class-form-one-stage").css("display", "block");
+        }
+
+        if (stage == "2") {
+            $(".class-form-two-stage").css("display", "block");
+        }
+
+        if (stage == "3") {
+            $(".class-form-three-stage").css("display", "block");
+        }
     });
 
     ///////////////// Типдымохода 1 /////////////////
@@ -515,11 +561,11 @@ $(document).ready(function() {
     });
 
     $(".first-stage .type-select-box img:nth-child(1)").mouseover(function() {
-            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("first-type");
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("first-type");
-        });
+        $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("first-type");
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("first-type");
+    });
 
     ///////////////// Тип дымохода 2 /////////////////
     $(".first-stage .type-select-box img:nth-child(2)").click(function() {
@@ -557,22 +603,22 @@ $(document).ready(function() {
     });
 
     $(".first-stage .type-select-box img:nth-child(2)").mouseover(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("second-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("first-type");
-            }
-        })
-        .mouseout(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("second-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("first-type");
-            }
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("second-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("first-type");
+        }
+    })
+    .mouseout(function() {
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("second-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("first-type");
+        }
 
-        });
+    });
 
     ///////////////// Тип дымохода 3 /////////////////
     $(".first-stage .type-select-box img:nth-child(3)").click(function() {
@@ -604,21 +650,21 @@ $(document).ready(function() {
     });
 
     $(".first-stage .type-select-box img:nth-child(3)").mouseover(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("third-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("second-type");
-            }
-        })
-        .mouseout(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("third-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("second-type");
-            }
-        });
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("third-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("second-type");
+        }
+    })
+    .mouseout(function() {
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("third-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("second-type");
+        }
+    });
 
     ///////////////// Тип дымохода 4 /////////////////
     $(".first-stage .type-select-box img:nth-child(4)").click(function() {
@@ -662,27 +708,27 @@ $(document).ready(function() {
     });
 
     $(".first-stage .type-select-box img:nth-child(4)").mouseover(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fourth-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("third-type");
-            }
-            if (stage == "3") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fourth-type");
-            }
-        })
-        .mouseout(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fourth-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("third-type");
-            }
-            if (stage == "3") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fourth-type");
-            }
-        });
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fourth-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("third-type");
+        }
+        if (stage == "3") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fourth-type");
+        }
+    })
+    .mouseout(function() {
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fourth-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("third-type");
+        }
+        if (stage == "3") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fourth-type");
+        }
+    });
 
     ///////////////// Тип дымохода 5 /////////////////
     $(".first-stage .type-select-box img:nth-child(5)").click(function() {
@@ -728,28 +774,28 @@ $(document).ready(function() {
     });
 
     $(".first-stage .type-select-box img:nth-child(5)").mouseover(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
-            }
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
+        }
 
-            if (stage == "3") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
-            }
-        })
-        .mouseout(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fifth-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fifth-type");
-            }
-            if (stage == "3") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fifth-type");
-            }
-        });
+        if (stage == "3") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("fifth-type");
+        }
+    })
+    .mouseout(function() {
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fifth-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fifth-type");
+        }
+        if (stage == "3") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("fifth-type");
+        }
+    });
 
     ///////////////// Тип дымохода 6 /////////////////
     $(".first-stage .type-select-box img:nth-child(6)").click(function() {
@@ -794,29 +840,29 @@ $(document).ready(function() {
     });
 
     $(".first-stage .type-select-box img:nth-child(6)").mouseover(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("sixth-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("sixth-type");
-            }
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("sixth-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("sixth-type");
+        }
 
-            if (stage == "3") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("sixth-type");
-            }
-        })
-        .mouseout(function() {
+        if (stage == "3") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("sixth-type");
+        }
+    })
+    .mouseout(function() {
 
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("sixth-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("sixth-type");
-            }
-            if (stage == "3") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("sixth-type");
-            }
-        });
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("sixth-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("sixth-type");
+        }
+        if (stage == "3") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("sixth-type");
+        }
+    });
 
     ///////////////// Тип дымохода 7 /////////////////
     $(".first-stage .type-select-box img:nth-child(7)").click(function() {
@@ -855,29 +901,29 @@ $(document).ready(function() {
     });
 
     $(".first-stage .type-select-box img:nth-child(7)").mouseover(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("seventh-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("seventh-type");
-            }
-            if (stage == "3") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("seventh-type");
-            }
-        })
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("seventh-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("seventh-type");
+        }
+        if (stage == "3") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("seventh-type");
+        }
+    })
 
-        .mouseout(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("seventh-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("seventh-type");
-            }
+    .mouseout(function() {
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("seventh-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("seventh-type");
+        }
 
-            if (stage == "3") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("seventh-type");
-            }
-        });
+        if (stage == "3") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("seventh-type");
+        }
+    });
 
     ///////////////// Тип дымохода 8 /////////////////
     $(".first-stage .type-select-box img:nth-child(8)").click(function() {
@@ -917,29 +963,29 @@ $(document).ready(function() {
     });
 
     $(".first-stage .type-select-box img:nth-child(8)").mouseover(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("eighth-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("eighth-type");
-            }
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("eighth-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("eighth-type");
+        }
 
-            if (stage == "3") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("eighth-type");
-            }
-        })
+        if (stage == "3") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").addClass("eighth-type");
+        }
+    })
 
-        .mouseout(function() {
-            if (stage == "1") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("eighth-type");
-            }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("eighth-type");
-            }
-            if (stage == "3") {
-                $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("eighth-type");
-            }
-        });
+    .mouseout(function() {
+        if (stage == "1") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("eighth-type");
+        }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("eighth-type");
+        }
+        if (stage == "3") {
+            $(".calculator-final-look .main-layer .first-stage-type-hover").removeClass("eighth-type");
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
@@ -964,14 +1010,14 @@ $(document).ready(function() {
     });
 
     $(".krisha-select-box .type-select-box img:nth-child(1)").mouseover(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("first-type");
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("first-type");
 
 
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("first-type");
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("first-type");
 
-        });
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Вывод на крышу 2 
@@ -992,11 +1038,11 @@ $(document).ready(function() {
     });
 
     $(".krisha-select-box .type-select-box img:nth-child(2)").mouseover(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("second-type");
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("second-type");
-        });
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("second-type");
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("second-type");
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Вывод на крышу 3 
@@ -1023,19 +1069,19 @@ $(document).ready(function() {
     });
 
     $(".krisha-select-box .type-select-box img:nth-child(3)").mouseover(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("third-type");
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("third-type");
 
-            if (partThirdStage == "3") {
-                $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("third-type-3-stage");
-            }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("third-type");
+        if (partThirdStage == "3") {
+            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("third-type-3-stage");
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("third-type");
 
-            if (partThirdStage == "3") {
-                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("third-type-3-stage");
-            }
-        });
+        if (partThirdStage == "3") {
+            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("third-type-3-stage");
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Вывод на крышу 4 
@@ -1056,11 +1102,11 @@ $(document).ready(function() {
     });
 
     $(".krisha-select-box .type-select-box img:nth-child(4)").mouseover(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("fourth-type");
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fourth-type");
-        });
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("fourth-type");
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fourth-type");
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Вывод на крышу 5 
@@ -1106,53 +1152,53 @@ $(document).ready(function() {
     });
 
     $(".krisha-select-box .type-select-box img:nth-child(5)").mouseover(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("fiveth-type");
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("fiveth-type");
 
-            if (stage == "2") {
+        if (stage == "2") {
 
-                if (partSecondStage == "3") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-type");
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("fiveth-2-stage-type");
-                }
-
-                if (partSecondStage == "4") {
-                    secondVihodDeleted();
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-2-stage-type");
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("fiveth-type");
-                }
-
-                if (partFirstStage == "4" || partFirstStage == "5") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-2-stage-type");
-                    $(".krisha-stage-type-hover").addClass("fiveth-type");
-                }
+            if (partSecondStage == "3") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-type");
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("fiveth-2-stage-type");
             }
 
-            if (partThirdStage == "3") {
-                $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("first-type-3-stage");
-            }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-type");
-
-            if (stage == "2") {
-                if (partSecondStage == "3") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-2-stage-type");
-                }
-
-                if (partSecondStage == "4") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-type");
-                }
-
-
-                if (partFirstStage == "4" || partFirstStage == "5") {
-                    $(".krisha-stage-type-hover").removeClass("fiveth-type");
-                }
+            if (partSecondStage == "4") {
+                secondVihodDeleted();
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-2-stage-type");
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("fiveth-type");
             }
 
-            if (partThirdStage == "3") {
-                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("first-type-3-stage");
+            if (partFirstStage == "4" || partFirstStage == "5") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-2-stage-type");
+                $(".krisha-stage-type-hover").addClass("fiveth-type");
             }
-        });
+        }
+
+        if (partThirdStage == "3") {
+            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("first-type-3-stage");
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-type");
+
+        if (stage == "2") {
+            if (partSecondStage == "3") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-2-stage-type");
+            }
+
+            if (partSecondStage == "4") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("fiveth-type");
+            }
+
+
+            if (partFirstStage == "4" || partFirstStage == "5") {
+                $(".krisha-stage-type-hover").removeClass("fiveth-type");
+            }
+        }
+
+        if (partThirdStage == "3") {
+            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("first-type-3-stage");
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Вывод на крышу 6 
@@ -1210,43 +1256,43 @@ $(document).ready(function() {
     });
 
     $(".krisha-select-box .type-select-box img:nth-child(6)").mouseover(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("sixth-type");
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("sixth-type");
 
-            if (stage == "3") {
+        if (stage == "3") {
 
-                if (partThirdStage == "3") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("second-type-3-stage");
-                }
-
-                if (partThirdStage == "4") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type");
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("sixth-type-3-stage-special");
-                }
-
-                if (partThirdStage == "3" && partSecondStage == "4") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type");
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("sixth-type-3-stage-special");
-                }
+            if (partThirdStage == "3") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("second-type-3-stage");
             }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type");
 
-            if (stage == "3") {
-
-                if (partThirdStage == "3") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("second-type-3-stage");
-                }
-
-                if (partThirdStage == "4") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type-3-stage-special");
-                }
-
-                if (partThirdStage == "3" && partSecondStage == "4") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type-3-stage-special");
-                }
+            if (partThirdStage == "4") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type");
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("sixth-type-3-stage-special");
             }
-        });
+
+            if (partThirdStage == "3" && partSecondStage == "4") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type");
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("sixth-type-3-stage-special");
+            }
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type");
+
+        if (stage == "3") {
+
+            if (partThirdStage == "3") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("second-type-3-stage");
+            }
+
+            if (partThirdStage == "4") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type-3-stage-special");
+            }
+
+            if (partThirdStage == "3" && partSecondStage == "4") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("sixth-type-3-stage-special");
+            }
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Вывод на крышу 7
@@ -1291,35 +1337,35 @@ $(document).ready(function() {
     });
 
     $(".krisha-select-box .type-select-box img:nth-child(7)").mouseover(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("seventh-type");
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("seventh-type");
 
-            if (stage == "3") {
+        if (stage == "3") {
 
-                if (partThirdStage == "4") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type");
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("seventh-type-3-stage");
-                }
-
-                if (partThirdStage == "3" && partSecondStage == "4") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type");
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("seventh-type-3-stage");
-                }
+            if (partThirdStage == "4") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type");
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("seventh-type-3-stage");
             }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type");
 
-            if (stage == "3") {
-
-                if (partThirdStage == "4") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type-3-stage");
-                }
-
-                if (partThirdStage == "3" && partSecondStage == "4") {
-                    $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type-3-stage");
-                }
+            if (partThirdStage == "3" && partSecondStage == "4") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type");
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("seventh-type-3-stage");
             }
-        });
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type");
+
+        if (stage == "3") {
+
+            if (partThirdStage == "4") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type-3-stage");
+            }
+
+            if (partThirdStage == "3" && partSecondStage == "4") {
+                $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("seventh-type-3-stage");
+            }
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Вывод на крышу 9
@@ -1342,11 +1388,11 @@ $(document).ready(function() {
     });
 
     $(".krisha-select-box .type-select-box img:nth-child(9)").mouseover(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("last-type");
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("last-type");
-        });
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("last-type");
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("last-type");
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Вывод на крышу 10
@@ -1385,34 +1431,34 @@ $(document).ready(function() {
     });
 
     $(".krisha-select-box .type-select-box img:nth-child(10)").mouseover(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("last-type");
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("last-type");
 
-            if (stage == "3") {
+        if (stage == "3") {
 
-                if (partThirdStage == "4") {
-                    $(".krisha-stage-type-hover").addClass("sixth-type-3-stage");
-                }
-
-                if (partThirdStage == "3" && partSecondStage == "4") {
-                    $(".krisha-stage-type-hover").addClass("sixth-type-3-stage");
-                }
+            if (partThirdStage == "4") {
+                $(".krisha-stage-type-hover").addClass("sixth-type-3-stage");
             }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("last-type");
 
-
-            if (stage == "3") {
-
-                if (partThirdStage == "4") {
-                    $(".krisha-stage-type-hover").removeClass("sixth-type-3-stage");
-                }
-
-                if (partThirdStage == "3" && partSecondStage == "4") {
-                    $(".krisha-stage-type-hover").removeClass("sixth-type-3-stage");
-                }
+            if (partThirdStage == "3" && partSecondStage == "4") {
+                $(".krisha-stage-type-hover").addClass("sixth-type-3-stage");
             }
-        });
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("last-type");
+
+
+        if (stage == "3") {
+
+            if (partThirdStage == "4") {
+                $(".krisha-stage-type-hover").removeClass("sixth-type-3-stage");
+            }
+
+            if (partThirdStage == "3" && partSecondStage == "4") {
+                $(".krisha-stage-type-hover").removeClass("sixth-type-3-stage");
+            }
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Вывод на крышу 8
@@ -1430,11 +1476,11 @@ $(document).ready(function() {
     });
 
     $(".krisha-select-box .type-select-box img:nth-child(8)").mouseover(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("eighth-type");
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("eighth-type");
-        });
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").addClass("eighth-type");
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .krisha-stage-type-hover").removeClass("eighth-type");
+    });
 
     //////////////////////////////////////////////////////////////////////////////
 
@@ -1464,41 +1510,41 @@ $(document).ready(function() {
     });
 
     $(".zont-select-box .type-select-box img:nth-child(1)").mouseover(function() {
-            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("first-type");
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("first-type");
 
-            if (stage == "2") {
+        if (stage == "2") {
 
-                if (partSecondStage == "1") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("first-type");
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("first-2-stage-type");
-                }
+            if (partSecondStage == "1") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("first-type");
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("first-2-stage-type");
             }
+        }
 
-            if (stage == "3") {
+        if (stage == "3") {
 
-                if (partThirdStage == "1") {
-                    zontHoverDeleted();
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("first-type-3-stage");
-                }
+            if (partThirdStage == "1") {
+                zontHoverDeleted();
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("first-type-3-stage");
             }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("first-type");
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("first-type");
 
-            if (stage == "2") {
+        if (stage == "2") {
 
-                if (partSecondStage == "1") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("first-2-stage-type");
-                }
+            if (partSecondStage == "1") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("first-2-stage-type");
             }
+        }
 
-            if (stage == "3") {
+        if (stage == "3") {
 
-                if (partThirdStage == "1") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("first-type-3-stage");
-                }
+            if (partThirdStage == "1") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("first-type-3-stage");
             }
-        });
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Зонт 2
@@ -1528,42 +1574,42 @@ $(document).ready(function() {
     });
 
     $(".zont-select-box .type-select-box img:nth-child(2)").mouseover(function() {
-            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("second-type");
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("second-type");
 
-            if (stage == "2") {
+        if (stage == "2") {
 
-                if (partSecondStage == "1") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-type");
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("second-2-stage-type");
-                }
+            if (partSecondStage == "1") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-type");
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("second-2-stage-type");
             }
+        }
 
-            if (stage == "3") {
+        if (stage == "3") {
 
-                if (partThirdStage == "1") {
-                    zontHoverDeleted();
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("second-type-3-stage");
-                }
+            if (partThirdStage == "1") {
+                zontHoverDeleted();
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("second-type-3-stage");
             }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-type");
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-type");
 
-            if (stage == "2") {
+        if (stage == "2") {
 
-                if (partSecondStage == "1") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-type");
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-2-stage-type");
+            if (partSecondStage == "1") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-type");
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-2-stage-type");
 
-                    if (stage == "3") {
+                if (stage == "3") {
 
-                        if (partThirdStage == "1") {
-                            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-type-3-stage");
-                        }
+                    if (partThirdStage == "1") {
+                        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("second-type-3-stage");
                     }
                 }
             }
-        });
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Зонт 3
@@ -1592,41 +1638,41 @@ $(document).ready(function() {
     });
 
     $(".zont-select-box .type-select-box img:nth-child(3)").mouseover(function() {
-            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("third-type");
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("third-type");
 
-            if (stage == "2") {
+        if (stage == "2") {
 
-                if (partSecondStage == "1") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("third-type");
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("third-2-stage-type");
-                }
+            if (partSecondStage == "1") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("third-type");
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("third-2-stage-type");
             }
+        }
 
-            if (stage == "3") {
+        if (stage == "3") {
 
-                if (partThirdStage == "1") {
-                    zontHoverDeleted();
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("third-type-3-stage");
-                }
+            if (partThirdStage == "1") {
+                zontHoverDeleted();
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("third-type-3-stage");
             }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("third-type");
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("third-type");
 
-            if (stage == "2") {
+        if (stage == "2") {
 
-                if (partSecondStage == "1") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("third-2-stage-type");
-                }
+            if (partSecondStage == "1") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("third-2-stage-type");
             }
+        }
 
-            if (stage == "3") {
+        if (stage == "3") {
 
-                if (partThirdStage == "1") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("third-type-3-stage");
-                }
+            if (partThirdStage == "1") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("third-type-3-stage");
             }
-        });
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Зонт 4
@@ -1718,154 +1764,154 @@ $(document).ready(function() {
         }
     });
     $(".zont-select-box .type-select-box img:nth-child(4)").mouseover(function() {
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type");
+
+        if (vihodNaKrishuType == "1") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type-svihodom");
+        }
+
+        if (stage == "1" && partFirstStage == "3") {
+            zontHoverDeleted();
             $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type");
+        }
 
-            if (vihodNaKrishuType == "1") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type-svihodom");
+        if (vihodNaKrishuType == "2") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-zont-2-svihodom");
+        }
+
+        if (vihodNaKrishuType == "4") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-zont-4-svihodom");
+        }
+
+        if (vihodNaKrishuType == "5") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-2-stage-zont-5-svihodom");
+
+            if (partFirstStage == "6") {
+
+                if (partSecondStage == "3") {
+                    zontHoverDeleted();
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-2-stage-zont-5-2svihodom");
+                }
+            }
+        }
+
+        if (vihodNaKrishuType == "6") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-2-stage-zont-4-svihodom");
+        }
+
+        if (vihodNaKrishuType == "8") {
+            zontHoverDeleted();
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-type-2-stage");
+        }
+
+        if (partThirdStage == "3") {
+            zontHoverDeleted();
+
+            if (vihodNaKrishuType == "5") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage");
+            }
+        }
+
+        if (stage == "3") {
+
+            if (vihodNaKrishuType == "6") {
+
+                if (partSecondStage = "4") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage-final");
+                }
+
+                if (partFirstStage == "4" || partFirstStage == "5") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage-final");
+                }
             }
 
-            if (stage == "1" && partFirstStage == "3") {
-                zontHoverDeleted();
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type");
+            if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage");
             }
 
-            if (vihodNaKrishuType == "2") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-zont-2-svihodom");
+            if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage-last");
             }
 
-            if (vihodNaKrishuType == "4") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-zont-4-svihodom");
+            if (vihodNaKrishuType == "9" && partThirdStage == "3") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage-main");
             }
 
             if (vihodNaKrishuType == "5") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-2-stage-zont-5-svihodom");
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage");
+            }
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-type");
 
-                if (partFirstStage == "6") {
+        if (vihodNaKrishuType == "1") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-type-svihodom");
+        }
 
-                    if (partSecondStage == "3") {
-                        zontHoverDeleted();
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-2-stage-zont-5-2svihodom");
-                    }
+        if (vihodNaKrishuType == "2") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-zont-2-svihodom");
+        }
+
+        if (vihodNaKrishuType == "4") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-zont-4-svihodom");
+        }
+
+        if (vihodNaKrishuType == "5") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-2-stage-zont-5-svihodom");
+
+            if (partFirstStage == "6") {
+
+                if (partSecondStage == "3") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-2-stage-zont-5-2svihodom");
                 }
             }
+        }
+        if (vihodNaKrishuType == "6") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-2-stage-zont-4-svihodom");
+        }
+
+        if (vihodNaKrishuType == "8") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-type-2-stage");
+        }
+
+        if (partThirdStage == "3") {
+
+            if (vihodNaKrishuType == "5") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage");
+            }
+        }
+
+        if (stage == "3") {
 
             if (vihodNaKrishuType == "6") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-2-stage-zont-4-svihodom");
-            }
 
-            if (vihodNaKrishuType == "8") {
-                zontHoverDeleted();
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-type-2-stage");
-            }
+                if (partSecondStage = "4") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage-final");
+                }
 
-            if (partThirdStage == "3") {
-                zontHoverDeleted();
-
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage");
+                if (partFirstStage == "4" || partFirstStage == "5") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage-final");
                 }
             }
 
-            if (stage == "3") {
-
-                if (vihodNaKrishuType == "6") {
-
-                    if (partSecondStage = "4") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage-final");
-                    }
-
-                    if (partFirstStage == "4" || partFirstStage == "5") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage-final");
-                    }
-                }
-
-                if (partSecondStage == "4" && vihodNaKrishuType == "10") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage");
-                }
-
-                if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage-last");
-                }
-
-                if (vihodNaKrishuType == "9" && partThirdStage == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage-main");
-                }
-
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-3-stage");
-                }
-            }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-type");
-
-            if (vihodNaKrishuType == "1") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-type-svihodom");
+            if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage");
             }
 
-            if (vihodNaKrishuType == "2") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-zont-2-svihodom");
+            if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage-last");
             }
 
-            if (vihodNaKrishuType == "4") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-zont-4-svihodom");
+            if (vihodNaKrishuType == "9" && partThirdStage == "3") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage-main");
             }
 
             if (vihodNaKrishuType == "5") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-2-stage-zont-5-svihodom");
-
-                if (partFirstStage == "6") {
-
-                    if (partSecondStage == "3") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-2-stage-zont-5-2svihodom");
-                    }
-                }
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage");
             }
-            if (vihodNaKrishuType == "6") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-2-stage-zont-4-svihodom");
-            }
-
-            if (vihodNaKrishuType == "8") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-type-2-stage");
-            }
-
-            if (partThirdStage == "3") {
-
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage");
-                }
-            }
-
-            if (stage == "3") {
-
-                if (vihodNaKrishuType == "6") {
-
-                    if (partSecondStage = "4") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage-final");
-                    }
-
-                    if (partFirstStage == "4" || partFirstStage == "5") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage-final");
-                    }
-                }
-
-                if (partSecondStage == "4" && vihodNaKrishuType == "10") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage");
-                }
-
-                if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage-last");
-                }
-
-                if (vihodNaKrishuType == "9" && partThirdStage == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage-main");
-                }
-
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fourth-3-stage");
-                }
-            }
-        });
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Зонт 5 
@@ -1955,146 +2001,146 @@ $(document).ready(function() {
         }
     });
     $(".zont-select-box .type-select-box img:nth-child(5)").mouseover(function() {
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type");
+
+        if (vihodNaKrishuType == "1") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type-svihodom");
+        }
+
+        if (vihodNaKrishuType == "2") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-2-svihodom");
+        }
+
+        if (stage == "1" && partFirstStage == "3") {
+            zontHoverDeleted();
             $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type");
+        }
 
-            if (vihodNaKrishuType == "1") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type-svihodom");
-            }
+        if (vihodNaKrishuType == "4") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-4-svihodom");
+        }
+        if (vihodNaKrishuType == "5") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-5-svihodom");
 
-            if (vihodNaKrishuType == "2") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-2-svihodom");
-            }
+            if (partFirstStage == "6") {
 
-            if (stage == "1" && partFirstStage == "3") {
-                zontHoverDeleted();
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type");
+                if (partSecondStage == "3") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-5-2svihodom");
+                }
             }
+        }
+        if (vihodNaKrishuType == "6") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-2-stage-zont-4-svihodom");
+        }
+        if (vihodNaKrishuType == "8") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type-2-stage");
+        }
+        if (partThirdStage == "3") {
+            zontHoverDeleted();
 
-            if (vihodNaKrishuType == "4") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-4-svihodom");
-            }
             if (vihodNaKrishuType == "5") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-5-svihodom");
-
-                if (partFirstStage == "6") {
-
-                    if (partSecondStage == "3") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-zont-5-2svihodom");
-                    }
-                }
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage");
             }
+        }
+
+        if (stage == "3") {
+
             if (vihodNaKrishuType == "6") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-2-stage-zont-4-svihodom");
-            }
-            if (vihodNaKrishuType == "8") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type-2-stage");
-            }
-            if (partThirdStage == "3") {
-                zontHoverDeleted();
 
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage");
+                if (partSecondStage = "4") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage-final");
+                }
+
+                if (partFirstStage == "4" || partFirstStage == "5") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage-final");
                 }
             }
 
-            if (stage == "3") {
-
-                if (vihodNaKrishuType == "6") {
-
-                    if (partSecondStage = "4") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage-final");
-                    }
-
-                    if (partFirstStage == "4" || partFirstStage == "5") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage-final");
-                    }
-                }
-
-                if (partSecondStage == "4" && vihodNaKrishuType == "10") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage");
-                }
-
-                if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage-last");
-                }
-
-                if (vihodNaKrishuType == "9" && partThirdStage == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage-main");
-                }
-
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage");
-                }
-            }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-type");
-
-            if (vihodNaKrishuType == "1") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-type-svihodom");
+            if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage");
             }
 
-            if (vihodNaKrishuType == "2") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-zont-2-svihodom");
+            if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage-last");
             }
 
-            if (vihodNaKrishuType == "4") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-zont-4-svihodom");
+            if (vihodNaKrishuType == "9" && partThirdStage == "3") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage-main");
             }
 
             if (vihodNaKrishuType == "5") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-zont-5-svihodom");
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-3-stage");
+            }
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-type");
 
-                if (partFirstStage == "6") {
+        if (vihodNaKrishuType == "1") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-type-svihodom");
+        }
 
-                    if (partSecondStage == "3") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-zont-5-2svihodom");
-                    }
+        if (vihodNaKrishuType == "2") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-zont-2-svihodom");
+        }
+
+        if (vihodNaKrishuType == "4") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-zont-4-svihodom");
+        }
+
+        if (vihodNaKrishuType == "5") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-zont-5-svihodom");
+
+            if (partFirstStage == "6") {
+
+                if (partSecondStage == "3") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-zont-5-2svihodom");
                 }
             }
+        }
+        if (vihodNaKrishuType == "6") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-2-stage-zont-4-svihodom");
+        }
+
+        if (vihodNaKrishuType == "8") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-type-2-stage");
+        }
+        if (partThirdStage == "3") {
+
+            if (vihodNaKrishuType == "5") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage");
+            }
+        }
+        if (stage == "3") {
+
             if (vihodNaKrishuType == "6") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-2-stage-zont-4-svihodom");
-            }
 
-            if (vihodNaKrishuType == "8") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-type-2-stage");
-            }
-            if (partThirdStage == "3") {
+                if (partSecondStage = "4") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage-final");
+                }
 
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage");
+                if (partFirstStage == "4" || partFirstStage == "5") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage-final");
                 }
             }
-            if (stage == "3") {
 
-                if (vihodNaKrishuType == "6") {
-
-                    if (partSecondStage = "4") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage-final");
-                    }
-
-                    if (partFirstStage == "4" || partFirstStage == "5") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage-final");
-                    }
-                }
-
-                if (partSecondStage == "4" && vihodNaKrishuType == "10") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage");
-                }
-
-                if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage-last");
-                }
-
-                if (vihodNaKrishuType == "9" && partThirdStage == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage-main");
-                }
-
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage");
-                }
+            if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage");
             }
-        });
+
+            if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage-last");
+            }
+
+            if (vihodNaKrishuType == "9" && partThirdStage == "3") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage-main");
+            }
+
+            if (vihodNaKrishuType == "5") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("fiveth-3-stage");
+            }
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Зонт 6
@@ -2187,147 +2233,147 @@ $(document).ready(function() {
         }
     });
     $(".zont-select-box .type-select-box img:nth-child(6)").mouseover(function() {
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type");
+
+        if (vihodNaKrishuType == "1") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type-svihodom");
+        }
+
+        if (vihodNaKrishuType == "2") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-2-svihodom");
+        }
+
+        if (stage == "1" && partFirstStage == "3") {
+            zontHoverDeleted();
             $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type");
+        }
 
-            if (vihodNaKrishuType == "1") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type-svihodom");
+        if (vihodNaKrishuType == "4") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-4-svihodom");
+        }
+
+        if (vihodNaKrishuType == "5") {
+            zontHoverDeleted();
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-5-svihodom");
+
+            if (partFirstStage == "6") {
+
+                if (partSecondStage == "3") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-5-2svihodom");
+                }
+            }
+        }
+        if (vihodNaKrishuType == "6") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-2-stage-zont-4-svihodom");
+        }
+        if (vihodNaKrishuType == "8") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type-2-stage");
+        }
+        if (partThirdStage == "3") {
+            zontHoverDeleted();
+
+            if (vihodNaKrishuType == "5") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage");
+            }
+        }
+
+        if (stage == "3") {
+
+            if (vihodNaKrishuType == "6") {
+
+                if (partSecondStage = "4") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage-final");
+                }
+
+                if (partFirstStage == "4" || partFirstStage == "5") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage-final");
+                }
             }
 
-            if (vihodNaKrishuType == "2") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-2-svihodom");
+            if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage");
             }
 
-            if (stage == "1" && partFirstStage == "3") {
-                zontHoverDeleted();
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type");
+            if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage-last");
             }
 
-            if (vihodNaKrishuType == "4") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-4-svihodom");
+            if (vihodNaKrishuType == "9" && partThirdStage == "3") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage-main");
             }
 
             if (vihodNaKrishuType == "5") {
-                zontHoverDeleted();
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-5-svihodom");
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage");
+            }
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-type");
 
-                if (partFirstStage == "6") {
+        if (vihodNaKrishuType == "1") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-type-svihodom");
+        }
 
-                    if (partSecondStage == "3") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-zont-5-2svihodom");
-                    }
+        if (vihodNaKrishuType == "2") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-zont-2-svihodom");
+        }
+
+        if (vihodNaKrishuType == "4") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-zont-4-svihodom");
+        }
+
+        if (vihodNaKrishuType == "5") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-zont-5-svihodom");
+
+            if (partFirstStage == "6") {
+
+                if (partSecondStage == "3") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-zont-5-2svihodom");
                 }
             }
+        }
+        if (vihodNaKrishuType == "6") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-2-stage-zont-4-svihodom");
+        }
+        if (vihodNaKrishuType == "8") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-type-2-stage");
+        }
+        if (partThirdStage == "3") {
+
+            if (vihodNaKrishuType == "5") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage");
+            }
+        }
+        if (stage == "3") {
+
             if (vihodNaKrishuType == "6") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-2-stage-zont-4-svihodom");
-            }
-            if (vihodNaKrishuType == "8") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type-2-stage");
-            }
-            if (partThirdStage == "3") {
-                zontHoverDeleted();
 
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage");
+                if (partSecondStage = "4") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage-final");
+                }
+
+                if (partFirstStage == "4" || partFirstStage == "5") {
+                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage-final");
                 }
             }
 
-            if (stage == "3") {
-
-                if (vihodNaKrishuType == "6") {
-
-                    if (partSecondStage = "4") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage-final");
-                    }
-
-                    if (partFirstStage == "4" || partFirstStage == "5") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage-final");
-                    }
-                }
-
-                if (partSecondStage == "4" && vihodNaKrishuType == "10") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage");
-                }
-
-                if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage-last");
-                }
-
-                if (vihodNaKrishuType == "9" && partThirdStage == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage-main");
-                }
-
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-3-stage");
-                }
-            }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-type");
-
-            if (vihodNaKrishuType == "1") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-type-svihodom");
+            if (partSecondStage == "4" && vihodNaKrishuType == "10") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage");
             }
 
-            if (vihodNaKrishuType == "2") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-zont-2-svihodom");
+            if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage-last");
             }
 
-            if (vihodNaKrishuType == "4") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-zont-4-svihodom");
+            if (vihodNaKrishuType == "9" && partThirdStage == "3") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage-main");
             }
 
             if (vihodNaKrishuType == "5") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-zont-5-svihodom");
-
-                if (partFirstStage == "6") {
-
-                    if (partSecondStage == "3") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-zont-5-2svihodom");
-                    }
-                }
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage");
             }
-            if (vihodNaKrishuType == "6") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-2-stage-zont-4-svihodom");
-            }
-            if (vihodNaKrishuType == "8") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-type-2-stage");
-            }
-            if (partThirdStage == "3") {
-
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage");
-                }
-            }
-            if (stage == "3") {
-
-                if (vihodNaKrishuType == "6") {
-
-                    if (partSecondStage = "4") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage-final");
-                    }
-
-                    if (partFirstStage == "4" || partFirstStage == "5") {
-                        $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage-final");
-                    }
-                }
-
-                if (partSecondStage == "4" && vihodNaKrishuType == "10") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage");
-                }
-
-                if (partThirdStage == "3" && partFirstStage == "7" || partThirdStage == "3" && partFirstStage == "8") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage-last");
-                }
-
-                if (vihodNaKrishuType == "9" && partThirdStage == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage-main");
-                }
-
-                if (vihodNaKrishuType == "5") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("sixth-3-stage");
-                }
-            }
-        });
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Зонт 7
@@ -2364,49 +2410,49 @@ $(document).ready(function() {
 
     $(".zont-select-box .type-select-box img:nth-child(7)").mouseover(function() {
 
-            if (vihodNaKrishuType == "3") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("seventh-zont-3-svihodom");
-            }
-            if (vihodNaKrishuType == "7") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("seventh-stage-2-zont-3-svihodom");
-            }
+        if (vihodNaKrishuType == "3") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("seventh-zont-3-svihodom");
+        }
+        if (vihodNaKrishuType == "7") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("seventh-stage-2-zont-3-svihodom");
+        }
 
-            if (partThirdStage == "3") {
-
-                if (vihodNaKrishuType == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("seventh-3-stage");
-                }
-            }
-
-            if (stage == "3") {
-
-                if (partSecondStage = "4") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("seventh-3-stage");
-                }
-            }
-        })
-        .mouseout(function() {
+        if (partThirdStage == "3") {
 
             if (vihodNaKrishuType == "3") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("seventh-zont-3-svihodom");
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("seventh-3-stage");
             }
-            if (vihodNaKrishuType == "7") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("seventh-stage-2-zont-3-svihodom");
-            }
-            if (partThirdStage == "3") {
+        }
 
-                if (vihodNaKrishuType == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("seventh-3-stage");
-                }
-            }
+        if (stage == "3") {
 
-            if (stage == "3") {
-
-                if (partSecondStage = "4") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("seventh-3-stage");
-                }
+            if (partSecondStage = "4") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("seventh-3-stage");
             }
-        });
+        }
+    })
+    .mouseout(function() {
+
+        if (vihodNaKrishuType == "3") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("seventh-zont-3-svihodom");
+        }
+        if (vihodNaKrishuType == "7") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("seventh-stage-2-zont-3-svihodom");
+        }
+        if (partThirdStage == "3") {
+
+            if (vihodNaKrishuType == "3") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("seventh-3-stage");
+            }
+        }
+
+        if (stage == "3") {
+
+            if (partSecondStage = "4") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("seventh-3-stage");
+            }
+        }
+    });
 
     //////////////////////////////////////////////////////////////////////////////
 
@@ -2443,46 +2489,46 @@ $(document).ready(function() {
 
     $(".zont-select-box .type-select-box img:nth-child(8)").mouseover(function() {
 
-            if (vihodNaKrishuType == "3") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-zont-3-svihodom");
-            }
-            if (vihodNaKrishuType == "7") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-stage-2-zont-3-svihodom");
-            }
-            if (partThirdStage == "3") {
-
-                if (vihodNaKrishuType == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-3-stage");
-                }
-            }
-            if (stage == "3") {
-
-                if (partSecondStage = "4") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-3-stage");
-                }
-            }
-        })
-        .mouseout(function() {
+        if (vihodNaKrishuType == "3") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-zont-3-svihodom");
+        }
+        if (vihodNaKrishuType == "7") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-stage-2-zont-3-svihodom");
+        }
+        if (partThirdStage == "3") {
 
             if (vihodNaKrishuType == "3") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-zont-3-svihodom");
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-3-stage");
             }
-            if (vihodNaKrishuType == "7") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-stage-2-zont-3-svihodom");
-            }
-            if (partThirdStage == "3") {
+        }
+        if (stage == "3") {
 
-                if (vihodNaKrishuType == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-3-stage");
-                }
+            if (partSecondStage = "4") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("eighth-3-stage");
             }
-            if (stage == "3") {
+        }
+    })
+    .mouseout(function() {
 
-                if (partSecondStage = "4") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-3-stage");
-                }
+        if (vihodNaKrishuType == "3") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-zont-3-svihodom");
+        }
+        if (vihodNaKrishuType == "7") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-stage-2-zont-3-svihodom");
+        }
+        if (partThirdStage == "3") {
+
+            if (vihodNaKrishuType == "3") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-3-stage");
             }
-        });
+        }
+        if (stage == "3") {
+
+            if (partSecondStage = "4") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("eighth-3-stage");
+            }
+        }
+    });
 
     //////////////////////////////////////////////////////////////////////////////
 
@@ -2521,52 +2567,52 @@ $(document).ready(function() {
 
     $(".zont-select-box .type-select-box img:nth-child(9)").mouseover(function() {
 
-            if (vihodNaKrishuType == "3") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("nineth-zont-3-svihodom");
-            }
+        if (vihodNaKrishuType == "3") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("nineth-zont-3-svihodom");
+        }
 
-            if (vihodNaKrishuType == "7") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("nineth-stage-2-zont-3-svihodom");
-            }
+        if (vihodNaKrishuType == "7") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("nineth-stage-2-zont-3-svihodom");
+        }
 
-            if (partThirdStage == "3") {
-
-                if (vihodNaKrishuType == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("nineth-3-stage");
-                }
-            }
-
-            if (stage == "3") {
-
-                if (partSecondStage = "4") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("nineth-3-stage");
-                }
-            }
-        })
-        .mouseout(function() {
+        if (partThirdStage == "3") {
 
             if (vihodNaKrishuType == "3") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("nineth-zont-3-svihodom");
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("nineth-3-stage");
             }
+        }
 
-            if (vihodNaKrishuType == "7") {
-                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("nineth-stage-2-zont-3-svihodom");
+        if (stage == "3") {
+
+            if (partSecondStage = "4") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("nineth-3-stage");
             }
+        }
+    })
+    .mouseout(function() {
 
-            if (partThirdStage == "3") {
+        if (vihodNaKrishuType == "3") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("nineth-zont-3-svihodom");
+        }
 
-                if (vihodNaKrishuType == "3") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("nineth-3-stage");
-                }
+        if (vihodNaKrishuType == "7") {
+            $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("nineth-stage-2-zont-3-svihodom");
+        }
+
+        if (partThirdStage == "3") {
+
+            if (vihodNaKrishuType == "3") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("nineth-3-stage");
             }
+        }
 
-            if (stage == "3") {
+        if (stage == "3") {
 
-                if (partSecondStage = "4") {
-                    $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("nineth-3-stage");
-                }
+            if (partSecondStage = "4") {
+                $(".calculator-final-look .main-layer .zont-stage-type-hover").removeClass("nineth-3-stage");
             }
-        });
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////////
@@ -2597,11 +2643,11 @@ $(document).ready(function() {
     });
 
     $(".second-stage .type-select-box img:nth-child(1)").mouseover(function() {
-            $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("first-type");
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("first-type");
-        });
+        $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("first-type");
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("first-type");
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Второй этаж 2 
@@ -2632,12 +2678,12 @@ $(document).ready(function() {
     });
 
     $(".second-stage .type-select-box img:nth-child(2)").mouseover(function() {
-            $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("second-type");
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("second-type");
+        $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("second-type");
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("second-type");
 
-        });
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Второй этаж 3
@@ -2693,46 +2739,46 @@ $(document).ready(function() {
     });
 
     $(".second-stage .type-select-box img:nth-child(3)").mouseover(function() {
-            if (stage == "1") { $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("third-type"); }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("third-type-2-stage");
+        if (stage == "1") { $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("third-type"); }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("third-type-2-stage");
 
-                if (partFirstStage == "4" || partFirstStage == "5") {
-                    $(".second-stage-type-hover").addClass("third-type-2-stage-special");
-                }
+            if (partFirstStage == "4" || partFirstStage == "5") {
+                $(".second-stage-type-hover").addClass("third-type-2-stage-special");
             }
-            if (stage == "3") {
+        }
+        if (stage == "3") {
 
-                if (partFirstStage == "4" || partFirstStage == "5") {
-                    $(".second-stage-type-hover").addClass("third-type-3-stage");
-                }
-
-                if (partFirstStage == "6") {
-                    $(".second-stage-type-hover").addClass("third-type-3-stage-special");
-                }
-            }
-        })
-        .mouseout(function() {
-            if (stage == "1") { $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("third-type"); }
-            if (stage == "2") {
-                $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("third-type-2-stage");
-
-                if (partFirstStage == "4" || partFirstStage == "5") {
-                    $(".second-stage-type-hover").removeClass("third-type-2-stage-special");
-                }
+            if (partFirstStage == "4" || partFirstStage == "5") {
+                $(".second-stage-type-hover").addClass("third-type-3-stage");
             }
 
-            if (stage == "3") {
-
-                if (partFirstStage == "4" || partFirstStage == "5") {
-                    $(".second-stage-type-hover").removeClass("third-type-3-stage");
-                }
-
-                if (partFirstStage == "6") {
-                    $(".second-stage-type-hover").removeClass("third-type-3-stage-special");
-                }
+            if (partFirstStage == "6") {
+                $(".second-stage-type-hover").addClass("third-type-3-stage-special");
             }
-        });
+        }
+    })
+    .mouseout(function() {
+        if (stage == "1") { $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("third-type"); }
+        if (stage == "2") {
+            $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("third-type-2-stage");
+
+            if (partFirstStage == "4" || partFirstStage == "5") {
+                $(".second-stage-type-hover").removeClass("third-type-2-stage-special");
+            }
+        }
+
+        if (stage == "3") {
+
+            if (partFirstStage == "4" || partFirstStage == "5") {
+                $(".second-stage-type-hover").removeClass("third-type-3-stage");
+            }
+
+            if (partFirstStage == "6") {
+                $(".second-stage-type-hover").removeClass("third-type-3-stage-special");
+            }
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Второй этаж 4
@@ -2769,26 +2815,26 @@ $(document).ready(function() {
     });
 
     $(".second-stage .type-select-box img:nth-child(4)").mouseover(function() {
-            $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("fourth-type");
-            if (stage == "3") {
+        $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("fourth-type");
+        if (stage == "3") {
 
-                if (partFirstStage == "6") {
-                    $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("fourth-type");
-                    $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("fourth-type-3-stage");
-                }
+            if (partFirstStage == "6") {
+                $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("fourth-type");
+                $(".calculator-final-look .main-layer .second-stage-type-hover").addClass("fourth-type-3-stage");
             }
-        })
-        .mouseout(function() {
-            $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("fourth-type");
+        }
+    })
+    .mouseout(function() {
+        $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("fourth-type");
 
-            if (stage == "3") {
+        if (stage == "3") {
 
-                if (partFirstStage == "6") {
+            if (partFirstStage == "6") {
 
-                    $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("fourth-type-3-stage");
-                }
+                $(".calculator-final-look .main-layer .second-stage-type-hover").removeClass("fourth-type-3-stage");
             }
-        });
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Третий этаж 1
@@ -2810,11 +2856,11 @@ $(document).ready(function() {
         }
     });
     $(".third-stage .type-select-box img:nth-child(1)").mouseover(function() {
-            $(".third-stage-type-hover").addClass("first-type");
-        })
-        .mouseout(function() {
-            $(".third-stage-type-hover").removeClass("first-type");
-        });
+        $(".third-stage-type-hover").addClass("first-type");
+    })
+    .mouseout(function() {
+        $(".third-stage-type-hover").removeClass("first-type");
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Третий этаж 3
@@ -2863,37 +2909,37 @@ $(document).ready(function() {
         }
     });
     $(".third-stage .type-select-box img:nth-child(3)").mouseover(function() {
-            $(".third-stage-type-hover").addClass("third-type");
+        $(".third-stage-type-hover").addClass("third-type");
 
-            if (partFirstStage == "6") {
-                $(".third-stage-type-hover").addClass("third-type-special");
+        if (partFirstStage == "6") {
+            $(".third-stage-type-hover").addClass("third-type-special");
 
-                if (partSecondStage == "4") {
-                    $(".third-stage-type-hover").removeClass("third-type-special");
-                    $(".third-stage-type-hover").addClass("third-type");
-                }
-            }
-
-            if (partFirstStage == "7" || partFirstStage == "8") {
-                $(".third-stage-type-hover").removeClass("third-type");
-                $(".third-stage-type-hover").addClass("third-type-two");
-            }
-        })
-        .mouseout(function() {
-            $(".third-stage-type-hover").removeClass("third-type");
-
-            if (partFirstStage == "6") {
+            if (partSecondStage == "4") {
                 $(".third-stage-type-hover").removeClass("third-type-special");
-
-                if (partSecondStage == "4") {
-                    $(".third-stage-type-hover").removeClass("third-type");
-                }
+                $(".third-stage-type-hover").addClass("third-type");
             }
+        }
 
-            if (partFirstStage == "7" || partFirstStage == "8") {
-                $(".third-stage-type-hover").removeClass("third-type-two");
+        if (partFirstStage == "7" || partFirstStage == "8") {
+            $(".third-stage-type-hover").removeClass("third-type");
+            $(".third-stage-type-hover").addClass("third-type-two");
+        }
+    })
+    .mouseout(function() {
+        $(".third-stage-type-hover").removeClass("third-type");
+
+        if (partFirstStage == "6") {
+            $(".third-stage-type-hover").removeClass("third-type-special");
+
+            if (partSecondStage == "4") {
+                $(".third-stage-type-hover").removeClass("third-type");
             }
-        });
+        }
+
+        if (partFirstStage == "7" || partFirstStage == "8") {
+            $(".third-stage-type-hover").removeClass("third-type-two");
+        }
+    });
     //////////////////////////////////////////////////////////////////////////////
 
     // Третий этаж 4
@@ -2914,126 +2960,350 @@ $(document).ready(function() {
         $(".krisha-select-box .type-select-box img:nth-child(10), .krisha-select-box .type-select-box img:nth-child(6), .krisha-select-box .type-select-box img:nth-child(7)").css("display", "unset");
     });
     $(".third-stage .type-select-box img:nth-child(4)").mouseover(function() {
-            $(".third-stage-type-hover").addClass("fourth-type");
-        })
-        .mouseout(function() {
-            $(".third-stage-type-hover").removeClass("fourth-type");
-        });
+        $(".third-stage-type-hover").addClass("fourth-type");
+    })
+    .mouseout(function() {
+        $(".third-stage-type-hover").removeClass("fourth-type");
+    });
 
 
 
-/***********************************************************************************/
-/*********************************** FORM DATAS ************************************/
-/***********************************************************************************/
-var paramString = "";
-var ckeckBoxStatus = "";
+    /***********************************************************************************/
+    /*********************************** FORM DATAS ************************************/
+    /***********************************************************************************/
+    var paramString = "";
+    var ckeckBoxStatus = "";
 
-// Чекбокс "Не знаю размеров..."
-$(".checkbox-sizes").click(function() {
- ckeckBoxStatus = $(".checkbox-sizes").is(':checked');
+    // Чекбокс "Не знаю размеров..."
+    $(".checkbox-sizes").click(function() {
+        ckeckBoxStatus = $(".checkbox-sizes").is(':checked');
 
- if(ckeckBoxStatus == true){
-    $("#for-one-stage-build, #for-two-stage-build, #for-three-stage-build").css("display", "none");
- }
- if(ckeckBoxStatus == false){
-    if(stage == "1"){
-       $(".for-one-stage-build").css("display", "block");  
-    }
-    if(stage == "2"){
-       $(".for-two-stage-build").css("display", "block");  
-    }
-    if(stage == "3"){
-       $(".for-three-stage-build").css("display", "block");  
-    }
- }
+        if (ckeckBoxStatus == true) {
+            $("#for-one-stage-build, #for-two-stage-build, #for-three-stage-build").css("display", "none");
+        }
+        if (ckeckBoxStatus == false) {
+            if (stage == "1") {
+                $(".for-one-stage-build").css("display", "block");
+            }
+            if (stage == "2") {
+                $(".for-two-stage-build").css("display", "block");
+            }
+            if (stage == "3") {
+                $(".for-three-stage-build").css("display", "block");
+            }
+        }
+    });
+
+
+    //******************************* 1 STAGE ************************//
+    $('#oneStageBuildParam0').change(function() {
+        paramString = $('#oneStageBuildParam0').val();
+        $(".text-969 input").val(paramString);
+    });
+    $('#oneStageBuildParam1').change(function() {
+        paramString = $('#oneStageBuildParam1').val();
+        $(".text-970 input").val(paramString);
+    });
+    $('#oneStageBuildParam2').change(function() {
+        paramString = $('#oneStageBuildParam2').val();
+        $(".text-971 input").val(paramString);
+    });
+    $('#oneStageBuildParam3').change(function() {
+        paramString = $('#oneStageBuildParam3').val();
+        $(".text-972 input").val(paramString);
+    });
+    $('#oneStageBuildParam4').change(function() {
+        paramString = $('#oneStageBuildParam4').val();
+        $(".text-973 input").val(paramString);
+    });
+    $('#oneStageBuildParam5').change(function() {
+        paramString = $('#oneStageBuildParam5').val();
+        $(".text-974 input").val(paramString);
+    });
+    $('#oneStageBuildParam6').change(function() {
+        paramString = $('#oneStageBuildParam6').val();
+        $(".text-975 input").val(paramString);
+    });
+    $('#oneStageBuildParam7').change(function() {
+        paramString = $('#oneStageBuildParam7').val();
+        $(".text-976 input").val(paramString);
+    });
+    $('#oneStageBuildParam8').change(function() {
+        paramString = $('#oneStageBuildParam8').val();
+        $(".text-977 input").val(paramString);
+    });
+    $('#oneStageBuildParam9').change(function() {
+        paramString = $('#oneStageBuildParam9').val();
+        $(".text-978 input").val(paramString);
+    });
+    $('#oneStageBuildParam10').change(function() {
+        paramString = $('#oneStageBuildParam10').val();
+        $(".text-979 input").val(paramString);
+    });
+    $('#oneStageBuildParam11').change(function() {
+        paramString = $('#oneStageBuildParam11').val();
+        $(".text-980 input").val(paramString);
+    });
+    $('#oneStageBuildParam12').change(function() {
+        paramString = $('#oneStageBuildParam12').val();
+        $(".text-981 input").val(paramString);
+    });
+    $('#oneStageBuildParam13').change(function() {
+        paramString = $('#oneStageBuildParam13').val();
+        $(".text-982 input").val(paramString);
+    });
+    $('#oneStageBuildParam14').change(function() {
+        paramString = $('#oneStageBuildParam14').val();
+        $(".text-983 input").val(paramString);
+    });
+
+
+    //******************************* 2 STAGE ************************//
+    $('#twoStageBuildParam0').change(function() {
+        paramString = $('#twoStageBuildParam0').val();
+        $(".text-969 input").val(paramString);
+    });
+    $('#twoStageBuildParam1').change(function() {
+        paramString = $('#twoStageBuildParam1').val();
+        $(".text-970 input").val(paramString);
+    });
+    $('#twoStageBuildParam2').change(function() {
+        paramString = $('#twoStageBuildParam2').val();
+        $(".text-971 input").val(paramString);
+    });
+    $('#twoStageBuildParam3').change(function() {
+        paramString = $('#twoStageBuildParam3').val();
+        $(".text-972 input").val(paramString);
+    });
+    $('#twoStageBuildParam4').change(function() {
+        paramString = $('#twoStageBuildParam4').val();
+        $(".text-973 input").val(paramString);
+    });
+    $('#twoStageBuildParam5').change(function() {
+        paramString = $('#twoStageBuildParam5').val();
+        $(".text-984 input").val(paramString);
+    });
+    $('#twoStageBuildParam6').change(function() {
+        paramString = $('#twoStageBuildParam6').val();
+        $(".text-985 input").val(paramString);
+    });
+    $('#twoStageBuildParam7').change(function() {
+        paramString = $('#twoStageBuildParam7').val();
+        $(".text-986 input").val(paramString);
+    });
+    $('#twoStageBuildParam8').change(function() {
+        paramString = $('#twoStageBuildParam8').val();
+        $(".text-975 input").val(paramString);
+    });
+    $('#twoStageBuildParam9').change(function() {
+        paramString = $('#twoStageBuildParam9').val();
+        $(".text-976 input").val(paramString);
+    });
+    $('#twoStageBuildParam10').change(function() {
+        paramString = $('#twoStageBuildParam10').val();
+        $(".text-977 input").val(paramString);
+    });
+    $('#twoStageBuildParam11').change(function() {
+        paramString = $('#twoStageBuildParam11').val();
+        $(".text-978 input").val(paramString);
+    });
+    $('#twoStageBuildParam12').change(function() {
+        paramString = $('#twoStageBuildParam12').val();
+        $(".text-979 input").val(paramString);
+    });
+    $('#twoStageBuildParam13').change(function() {
+        paramString = $('#twoStageBuildParam13').val();
+        $(".text-980 input").val(paramString);
+    });
+    $('#twoStageBuildParam14').change(function() {
+        paramString = $('#twoStageBuildParam14').val();
+        $(".text-981 input").val(paramString);
+    });
+    $('#twoStageBuildParam15').change(function() {
+        paramString = $('#twoStageBuildParam15').val();
+        $(".text-982 input").val(paramString);
+    });
+    $('#twoStageBuildParam16').change(function() {
+        paramString = $('#twoStageBuildParam16').val();
+        $(".text-983 input").val(paramString);
+    });
+
+    //******************************* 3 STAGE ************************//
+    $('#threeStageBuildParam0').change(function() {
+        paramString = $('#threeStageBuildParam0').val();
+        $(".text-969 input").val(paramString);
+    });
+    $('#threeStageBuildParam1').change(function() {
+        paramString = $('#threeStageBuildParam1').val();
+        $(".text-970 input").val(paramString);
+    });
+    $('#threeStageBuildParam2').change(function() {
+        paramString = $('#threeStageBuildParam2').val();
+        $(".text-971 input").val(paramString);
+    });
+    $('#threeStageBuildParam3').change(function() {
+        paramString = $('#threeStageBuildParam3').val();
+        $(".text-972 input").val(paramString);
+    });
+    $('#threeStageBuildParam4').change(function() {
+        paramString = $('#threeStageBuildParam4').val();
+        $(".text-973 input").val(paramString);
+    });
+    $('#threeStageBuildParam5').change(function() {
+        paramString = $('#threeStageBuildParam5').val();
+        $(".text-984 input").val(paramString);
+    });
+    $('#threeStageBuildParam6').change(function() {
+        paramString = $('#threeStageBuildParam6').val();
+        $(".text-987 input").val(paramString);
+    });
+    $('#threeStageBuildParam7').change(function() {
+        paramString = $('#threeStageBuildParam7').val();
+        $(".text-985 input").val(paramString);
+    });
+    $('#threeStageBuildParam8').change(function() {
+        paramString = $('#threeStageBuildParam8').val();
+        $(".text-986 input").val(paramString);
+    });
+    $('#threeStageBuildParam9').change(function() {
+        paramString = $('#threeStageBuildParam9').val();
+        $(".text-988 input").val(paramString);
+    });
+    $('#threeStageBuildParam10').change(function() {
+        paramString = $('#threeStageBuildParam10').val();
+        $(".text-975 input").val(paramString);
+    });
+    $('#threeStageBuildParam11').change(function() {
+        paramString = $('#threeStageBuildParam11').val();
+        $(".text-976 input").val(paramString);
+    });
+    $('#threeStageBuildParam12').change(function() {
+        paramString = $('#threeStageBuildParam12').val();
+        $(".text-977 input").val(paramString);
+    });
+    $('#threeStageBuildParam13').change(function() {
+        paramString = $('#threeStageBuildParam13').val();
+        $(".text-978 input").val(paramString);
+    });
+    $('#threeStageBuildParam14').change(function() {
+        paramString = $('#threeStageBuildParam14').val();
+        $(".text-979 input").val(paramString);
+    });
+    $('#threeStageBuildParam15').change(function() {
+        paramString = $('#threeStageBuildParam15').val();
+        $(".text-980 input").val(paramString);
+    });
+    $('#threeStageBuildParam16').change(function() {
+        paramString = $('#threeStageBuildParam16').val();
+        $(".text-981 input").val(paramString);
+    });
+    $('#threeStageBuildParam17').change(function() {
+        paramString = $('#threeStageBuildParam17').val();
+        $(".text-982 input").val(paramString);
+    });
+    $('#threeStageBuildParam18').change(function() {
+        paramString = $('#threeStageBuildParam18').val();
+        $(".text-983 input").val(paramString);
+    });
+
+
+    /********************* Screenshot *************************/
+    (function() {
+        var
+        form = $('.form'),
+        cache_width = form.width(),
+            a4 = [640, 900]; // for a4 size paper width and height  
+
+            $('#create_pdf').on('click', function() {
+                $('body').scrollTop(0);
+                createPDF();
+            });
+        //create pdf  
+        function createPDF() {
+            getCanvas().then(function(canvas) {
+                var
+                img = canvas.toDataURL({
+                    format: 'png',
+                    quality: 0.3
+                }),
+                doc = new jsPDF({
+                    unit: 'px',
+                    format: 'a4'
+                });
+                doc.addImage(img, 'PNG', 20, 20);
+                doc.save('screenshot-dimohod.pdf');
+                form.width(cache_width);
+            });
+        }
+
+        // create canvas object  
+        function getCanvas() {
+            // form.width((a4[0] * 1.33333) - 80).css('max-width', 'none');
+            form.width(640).css('max-width', 'none');
+            return html2canvas(form, {
+                imageTimeout: 2000,
+                removeContainer: true
+            });
+        }
+
+    }());
+    (function($) {
+        $.fn.html2canvas = function(options) {
+            var date = new Date(),
+            $message = null,
+            timeoutTimer = false,
+            timer = date.getTime();
+            html2canvas.logging = options && options.logging;
+            html2canvas.Preload(this[0], $.extend({
+                complete: function(images) {
+                    var queue = html2canvas.Parse(this[0], images, options),
+                    $canvas = $(html2canvas.Renderer(queue, options)),
+                    finishTime = new Date();
+
+                    $canvas.css({ position: 'absolute', left: 0, top: 0 }).appendTo(document.body);
+                    $canvas.siblings().toggle();
+
+                    $(window).click(function() {
+                        if (!$canvas.is(':visible')) {
+                            $canvas.toggle().siblings().toggle();
+                            throwMessage("Canvas Render visible");
+                        } else {
+                            $canvas.siblings().toggle();
+                            $canvas.toggle();
+                            throwMessage("Canvas Render hidden");
+                        }
+                    });
+                    throwMessage('Screenshot created in ' + ((finishTime.getTime() - timer) / 1000) + " seconds<br />", 4000);
+                }
+            }, options));
+
+            function throwMessage(msg, duration) {
+                window.clearTimeout(timeoutTimer);
+                timeoutTimer = window.setTimeout(function() {
+                    $message.fadeOut(function() {
+                        $message.remove();
+                    });
+                }, duration || 2000);
+                if ($message)
+                    $message.remove();
+                $message = $('<div ></div>').html(msg).css({
+                    margin: 0,
+                    padding: 10,
+                    background: "#000",
+                    opacity: 0.7,
+                    position: "fixed",
+                    top: 10,
+                    right: 10,
+                    fontFamily: 'Tahoma',
+                    color: '#fff',
+                    fontSize: 12,
+                    borderRadius: 12,
+                    width: '640px',
+                    height: '1000px',
+                    textAlign: 'center',
+                    textDecoration: 'none'
+                }).hide().fadeIn().appendTo('body');
+            }
+        };
+    })(jQuery);
 });
-
-
-//******************************* 1 STAGE ************************//
-$('#oneStageBuildParam0').change(function() {
-    paramString = $('#oneStageBuildParam0').val();
-    $(".text-969 input").val(paramString);
-});
-$('#oneStageBuildParam1').change(function() {
-    paramString = $('#oneStageBuildParam1').val();
-    $(".text-970 input").val(paramString);
-});
-$('#oneStageBuildParam2').change(function() {
-    paramString = $('#oneStageBuildParam2').val();
-    $(".text-971 input").val(paramString);
-});
-$('#oneStageBuildParam3').change(function() {
-    paramString = $('#oneStageBuildParam3').val();
-    $(".text-972 input").val(paramString);
-});
-$('#oneStageBuildParam4').change(function() {
-    paramString = $('#oneStageBuildParam4').val();
-    $(".text-973 input").val(paramString);
-});
-$('#oneStageBuildParam5').change(function() {
-    paramString = $('#oneStageBuildParam5').val();
-    $(".text-974 input").val(paramString);
-});
-$('#oneStageBuildParam6').change(function() {
-    paramString = $('#oneStageBuildParam6').val();
-    $(".text-975 input").val(paramString);
-});
-$('#oneStageBuildParam7').change(function() {
-    paramString = $('#oneStageBuildParam7').val();
-    $(".text-976 input").val(paramString);
-});
-$('#oneStageBuildParam8').change(function() {
-    paramString = $('#oneStageBuildParam8').val();
-    $(".text-977 input").val(paramString);
-});
-$('#oneStageBuildParam9').change(function() {
-    paramString = $('#oneStageBuildParam9').val();
-    $(".text-978 input").val(paramString);
-});
-$('#oneStageBuildParam10').change(function() {
-    paramString = $('#oneStageBuildParam10').val();
-    $(".text-979 input").val(paramString);
-});
-$('#oneStageBuildParam11').change(function() {
-    paramString = $('#oneStageBuildParam11').val();
-    $(".text-980 input").val(paramString);
-});
-$('#oneStageBuildParam12').change(function() {
-    paramString = $('#oneStageBuildParam12').val();
-    $(".text-981 input").val(paramString);
-});
-$('#oneStageBuildParam13').change(function() {
-    paramString = $('#oneStageBuildParam13').val();
-    $(".text-982 input").val(paramString);
-});
-$('#oneStageBuildParam14').change(function() {
-    paramString = $('#oneStageBuildParam14').val();
-    $(".text-983 input").val(paramString);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-});
-
-
-
-
-
-
-
-
-
