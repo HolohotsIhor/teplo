@@ -214,8 +214,8 @@ $(document).ready(function() {
             $(".stage-builder-wrapeer .third-stage, .stage-builder-wrapeer .third-stage img").css("display", "none");
             $(".main-layer").removeClass("two-stage three-stage");
             $(".main-layer").addClass("one-stage");
-            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover").removeClass("three-stage-build");
-            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover").removeClass("two-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover, .sizes-stage-type, .arrow-box").removeClass("three-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover, .sizes-stage-type, .arrow-box").removeClass("two-stage-build");
             $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "none");
             $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3), .first-stage .type-select-box img:nth-child(4), .first-stage .type-select-box img:nth-child(5), .first-stage .type-select-box img:nth-child(6)").css("display", "unset");
         }
@@ -246,8 +246,8 @@ $(document).ready(function() {
             $(".zont-select-box").css("display", "none");
             $(".main-layer").removeClass("one-stage three-stage");
             $(".main-layer").addClass("two-stage");
-            $(".first-stage-type-hover, .first-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover").removeClass("three-stage-build");
-            $(".first-stage-type-hover, .first-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover").addClass("two-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover, .sizes-stage-type, .arrow-box").removeClass("three-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .second-stage-type, .second-stage-type-hover, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .third-stage-type, .third-stage-type-hover, .sizes-stage-type, .arrow-box").addClass("two-stage-build");
             $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3)").css("display", "none");
             $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "unset");
         }
@@ -278,8 +278,8 @@ $(document).ready(function() {
             $(".zont-select-box").css("display", "none");
             $(".main-layer").removeClass("two-stage one-stage");
             $(".main-layer").addClass("three-stage");
-            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .second-stage-type, .second-stage-type-hover, .third-stage-type, .third-stage-type-hover").removeClass("two-stage-build");
-            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .second-stage-type, .second-stage-type-hover, .third-stage-type, .third-stage-type-hover").addClass("three-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .second-stage-type, .second-stage-type-hover, .third-stage-type, .third-stage-type-hover, .sizes-stage-type, .arrow-box").removeClass("two-stage-build");
+            $(".first-stage-type-hover, .first-stage-type, .krisha-stage-type, .krisha-stage-type-hover, .zont-stage-type, .zont-stage-type-hover, .second-stage-type, .second-stage-type-hover, .third-stage-type, .third-stage-type-hover, .sizes-stage-type, .arrow-box").addClass("three-stage-build");
             $(".first-stage .type-select-box img:nth-child(1), .first-stage .type-select-box img:nth-child(2), .first-stage .type-select-box img:nth-child(3)").css("display", "none");
             $(".first-stage .type-select-box img:nth-child(7), .first-stage .type-select-box img:nth-child(8)").css("display", "unset");
         }
@@ -3004,45 +3004,112 @@ $(document).ready(function() {
         paramString = $('#oneStageBuildParam1').val();
         $(".text-970 input").val(paramString);
     });
+    $("#oneStageBuildParam1").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-1.png)");
+    });
+    $("#oneStageBuildParam1").focusout(function() {
+        
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#oneStageBuildParam2').change(function() {
         paramString = $('#oneStageBuildParam2').val();
         $(".text-971 input").val(paramString);
+    });
+    $("#oneStageBuildParam2").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-2.png)");
+    });
+    $("#oneStageBuildParam2").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#oneStageBuildParam3').change(function() {
         paramString = $('#oneStageBuildParam3').val();
         $(".text-972 input").val(paramString);
     });
+    $("#oneStageBuildParam3").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-3.png)");
+    });
+    $("#oneStageBuildParam3").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#oneStageBuildParam4').change(function() {
         paramString = $('#oneStageBuildParam4').val();
         $(".text-973 input").val(paramString);
+    });
+    $("#oneStageBuildParam4").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-4.png)");
+    });
+    $("#oneStageBuildParam4").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#oneStageBuildParam5').change(function() {
         paramString = $('#oneStageBuildParam5').val();
         $(".text-974 input").val(paramString);
     });
+    $("#oneStageBuildParam5").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-7.png)");
+    });
+    $("#oneStageBuildParam5").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#oneStageBuildParam6').change(function() {
         paramString = $('#oneStageBuildParam6').val();
         $(".text-975 input").val(paramString);
+    });
+    $("#oneStageBuildParam6").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-10.png)");
+    });
+    $("#oneStageBuildParam6").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#oneStageBuildParam7').change(function() {
         paramString = $('#oneStageBuildParam7').val();
         $(".text-976 input").val(paramString);
     });
+    $("#oneStageBuildParam7").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-11.png)");
+    });
+    $("#oneStageBuildParam7").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#oneStageBuildParam8').change(function() {
         paramString = $('#oneStageBuildParam8').val();
         $(".text-977 input").val(paramString);
+    });
+    $("#oneStageBuildParam8").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-12.png)");
+    });
+    $("#oneStageBuildParam8").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#oneStageBuildParam9').change(function() {
         paramString = $('#oneStageBuildParam9').val();
         $(".text-978 input").val(paramString);
     });
+    $("#oneStageBuildParam9").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-13.png)");
+    });
+    $("#oneStageBuildParam9").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#oneStageBuildParam10').change(function() {
         paramString = $('#oneStageBuildParam10').val();
         $(".text-979 input").val(paramString);
     });
+    $("#oneStageBuildParam10").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-14.png)");
+    });
+    $("#oneStageBuildParam10").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#oneStageBuildParam11').change(function() {
         paramString = $('#oneStageBuildParam11').val();
         $(".text-980 input").val(paramString);
+    });
+    $("#oneStageBuildParam11").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-15.png)");
+    });
+    $("#oneStageBuildParam11").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#oneStageBuildParam12').change(function() {
         paramString = $('#oneStageBuildParam12').val();
@@ -3067,53 +3134,131 @@ $(document).ready(function() {
         paramString = $('#twoStageBuildParam1').val();
         $(".text-970 input").val(paramString);
     });
+    $("#twoStageBuildParam1").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-1-2stage.png)");
+    });
+    $("#twoStageBuildParam1").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#twoStageBuildParam2').change(function() {
         paramString = $('#twoStageBuildParam2').val();
         $(".text-971 input").val(paramString);
+    });
+    $("#twoStageBuildParam2").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-2-2stage.png)");
+    });
+    $("#twoStageBuildParam2").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#twoStageBuildParam3').change(function() {
         paramString = $('#twoStageBuildParam3').val();
         $(".text-972 input").val(paramString);
     });
+    $('#twoStageBuildParam3').focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-3-2stage.png)");
+    });
+    $("#twoStageBuildParam3").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#twoStageBuildParam4').change(function() {
         paramString = $('#twoStageBuildParam4').val();
         $(".text-973 input").val(paramString);
+    });
+    $("#twoStageBuildParam4").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-4-2stage.png)");
+    });
+    $("#twoStageBuildParam4").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#twoStageBuildParam5').change(function() {
         paramString = $('#twoStageBuildParam5').val();
         $(".text-984 input").val(paramString);
     });
+    $("#twoStageBuildParam5").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-5-2stage.png)");
+    });
+    $("#twoStageBuildParam5").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#twoStageBuildParam6').change(function() {
         paramString = $('#twoStageBuildParam6').val();
         $(".text-985 input").val(paramString);
+    });
+    $("#twoStageBuildParam6").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-7-2stage.png)");
+    });
+    $("#twoStageBuildParam6").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#twoStageBuildParam7').change(function() {
         paramString = $('#twoStageBuildParam7').val();
         $(".text-986 input").val(paramString);
     });
+    $("#twoStageBuildParam7").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-8-2stage.png)");
+    });
+    $("#twoStageBuildParam7").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#twoStageBuildParam8').change(function() {
         paramString = $('#twoStageBuildParam8').val();
         $(".text-975 input").val(paramString);
+    });
+    $("#twoStageBuildParam8").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-10-2stage.png)");
+    });
+    $("#twoStageBuildParam8").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#twoStageBuildParam9').change(function() {
         paramString = $('#twoStageBuildParam9').val();
         $(".text-976 input").val(paramString);
     });
+    $("#twoStageBuildParam9").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-11-2stage.png)");
+    });
+    $("#twoStageBuildParam9").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#twoStageBuildParam10').change(function() {
         paramString = $('#twoStageBuildParam10').val();
         $(".text-977 input").val(paramString);
+    });
+    $("#twoStageBuildParam10").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-12-2stage.png)");
+    });
+    $("#twoStageBuildParam10").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#twoStageBuildParam11').change(function() {
         paramString = $('#twoStageBuildParam11').val();
         $(".text-978 input").val(paramString);
     });
+    $("#twoStageBuildParam11").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-13-2stage.png)");
+    });
+    $("#twoStageBuildParam11").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#twoStageBuildParam12').change(function() {
         paramString = $('#twoStageBuildParam12').val();
         $(".text-979 input").val(paramString);
     });
+    $("#twoStageBuildParam12").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-14-2stage.png)");
+    });
+    $("#twoStageBuildParam12").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#twoStageBuildParam13').change(function() {
         paramString = $('#twoStageBuildParam13').val();
         $(".text-980 input").val(paramString);
+    });
+    $("#twoStageBuildParam13").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-15-2stage.png)");
+    });
+    $("#twoStageBuildParam13").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#twoStageBuildParam14').change(function() {
         paramString = $('#twoStageBuildParam14').val();
@@ -3137,61 +3282,151 @@ $(document).ready(function() {
         paramString = $('#threeStageBuildParam1').val();
         $(".text-970 input").val(paramString);
     });
+    $("#threeStageBuildParam1").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-1-3stage.png)");
+    });
+    $("#threeStageBuildParam1").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#threeStageBuildParam2').change(function() {
         paramString = $('#threeStageBuildParam2').val();
         $(".text-971 input").val(paramString);
+    });
+    $("#threeStageBuildParam2").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-2-3stage.png)");
+    });
+    $("#threeStageBuildParam2").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#threeStageBuildParam3').change(function() {
         paramString = $('#threeStageBuildParam3').val();
         $(".text-972 input").val(paramString);
     });
+    $("#threeStageBuildParam3").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-3-3stage.png)");
+    });
+    $("#threeStageBuildParam3").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#threeStageBuildParam4').change(function() {
         paramString = $('#threeStageBuildParam4').val();
         $(".text-973 input").val(paramString);
+    });
+    $("#threeStageBuildParam4").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-4-3stage.png)");
+    });
+    $("#threeStageBuildParam4").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#threeStageBuildParam5').change(function() {
         paramString = $('#threeStageBuildParam5').val();
         $(".text-984 input").val(paramString);
     });
+    $("#threeStageBuildParam5").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-5-3stage.png)");
+    });
+    $("#threeStageBuildParam5").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#threeStageBuildParam6').change(function() {
         paramString = $('#threeStageBuildParam6').val();
         $(".text-987 input").val(paramString);
+    });
+    $("#threeStageBuildParam6").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-6-3stage.png)");
+    });
+    $("#threeStageBuildParam6").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#threeStageBuildParam7').change(function() {
         paramString = $('#threeStageBuildParam7').val();
         $(".text-985 input").val(paramString);
     });
+    $("#threeStageBuildParam7").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-7-3stage.png)");
+    });
+    $("#threeStageBuildParam7").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#threeStageBuildParam8').change(function() {
         paramString = $('#threeStageBuildParam8').val();
         $(".text-986 input").val(paramString);
+    });
+    $("#threeStageBuildParam8").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-8-3stage.png)");
+    });
+    $("#threeStageBuildParam8").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#threeStageBuildParam9').change(function() {
         paramString = $('#threeStageBuildParam9').val();
         $(".text-988 input").val(paramString);
     });
+    $("#threeStageBuildParam9").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-9-3stage.png)");
+    });
+    $("#threeStageBuildParam9").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#threeStageBuildParam10').change(function() {
         paramString = $('#threeStageBuildParam10').val();
         $(".text-975 input").val(paramString);
+    });
+    $("#threeStageBuildParam10").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-10-3stage.png)");
+    });
+    $("#threeStageBuildParam10").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#threeStageBuildParam11').change(function() {
         paramString = $('#threeStageBuildParam11').val();
         $(".text-976 input").val(paramString);
     });
+    $("#threeStageBuildParam11").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-11-3stage.png)");
+    });
+    $("#threeStageBuildParam11").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#threeStageBuildParam12').change(function() {
         paramString = $('#threeStageBuildParam12').val();
         $(".text-977 input").val(paramString);
+    });
+    $("#threeStageBuildParam12").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-12-3stage.png)");
+    });
+    $("#threeStageBuildParam12").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#threeStageBuildParam13').change(function() {
         paramString = $('#threeStageBuildParam13').val();
         $(".text-978 input").val(paramString);
     });
+    $("#threeStageBuildParam13").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-13-3stage.png)");
+    });
+    $("#threeStageBuildParam13").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#threeStageBuildParam14').change(function() {
         paramString = $('#threeStageBuildParam14').val();
         $(".text-979 input").val(paramString);
     });
+    $("#threeStageBuildParam14").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-14-3stage.png)");
+    });
+    $("#threeStageBuildParam14").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
+    });
     $('#threeStageBuildParam15').change(function() {
         paramString = $('#threeStageBuildParam15').val();
         $(".text-980 input").val(paramString);
+    });
+    $("#threeStageBuildParam15").focus(function() {
+        $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-15-3stage.png)");
+    });
+    $("#threeStageBuildParam15").focusout(function() {
+        $('.arrow-box').css("background-image", "unset");
     });
     $('#threeStageBuildParam16').change(function() {
         paramString = $('#threeStageBuildParam16').val();
@@ -3206,8 +3441,111 @@ $(document).ready(function() {
         $(".text-983 input").val(paramString);
     });
 
-
+    /********************** Sizes focus ***********************/
+    $(".for-one-stage-build input, .for-two-stage-build input, .for-three-stage-build input").focus(function() {
+        $(".sizes-stage-type").css("display", "block");
+    });
+    $(".for-one-stage-build input, .for-two-stage-build input, .for-three-stage-build input").focusout(function() {
+        
+        $(".sizes-stage-type").css("display", "none");
+    });
     /********************* Screenshot *************************/
+    (function() {
+        var
+        form = $('.form'),
+        cache_width = form.width(),
+            a4 = [640, 900]; // for a4 size paper width and height  
 
-  
+            $('#create_pdf').on('click', function() {
+                $('body').scrollTop(0);
+                createPDF();
+            });
+        //create pdf  
+        function createPDF() {
+            getCanvas().then(function(canvas) {
+                var
+                img = canvas.toDataURL({
+                    format: 'png',
+                    quality: 0.3
+                }),
+                doc = new jsPDF({
+                    unit: 'px',
+                    format: 'a4'
+                });
+                doc.addImage(img, 'PNG', 20, 20);
+                doc.save('screenshot-dimohod.pdf');
+                form.width(cache_width);
+            });
+        }
+
+        // create canvas object  
+        function getCanvas() {
+            // form.width((a4[0] * 1.33333) - 80).css('max-width', 'none');
+            form.width(640).css('max-width', 'none');
+            return html2canvas(form, {
+                imageTimeout: 2000,
+                removeContainer: true
+            });
+        }
+
+    }());
+    (function($) {
+        $.fn.html2canvas = function(options) {
+            var date = new Date(),
+            $message = null,
+            timeoutTimer = false,
+            timer = date.getTime();
+            html2canvas.logging = options && options.logging;
+            html2canvas.Preload(this[0], $.extend({
+                complete: function(images) {
+                    var queue = html2canvas.Parse(this[0], images, options),
+                    $canvas = $(html2canvas.Renderer(queue, options)),
+                    finishTime = new Date();
+
+                    $canvas.css({ position: 'absolute', left: 0, top: 0 }).appendTo(document.body);
+                    $canvas.siblings().toggle();
+
+                    $(window).click(function() {
+                        if (!$canvas.is(':visible')) {
+                            $canvas.toggle().siblings().toggle();
+                            throwMessage("Canvas Render visible");
+                        } else {
+                            $canvas.siblings().toggle();
+                            $canvas.toggle();
+                            throwMessage("Canvas Render hidden");
+                        }
+                    });
+                    throwMessage('Screenshot created in ' + ((finishTime.getTime() - timer) / 1000) + " seconds<br />", 4000);
+                }
+            }, options));
+
+            function throwMessage(msg, duration) {
+                window.clearTimeout(timeoutTimer);
+                timeoutTimer = window.setTimeout(function() {
+                    $message.fadeOut(function() {
+                        $message.remove();
+                    });
+                }, duration || 2000);
+                if ($message)
+                    $message.remove();
+                $message = $('<div ></div>').html(msg).css({
+                    margin: 0,
+                    padding: 10,
+                    background: "#000",
+                    opacity: 0.7,
+                    position: "fixed",
+                    top: 10,
+                    right: 10,
+                    fontFamily: 'Tahoma',
+                    color: '#fff',
+                    fontSize: 12,
+                    borderRadius: 12,
+                    width: '640px',
+                    height: '1000px',
+                    textAlign: 'center',
+                    textDecoration: 'none'
+                }).hide().fadeIn().appendTo('body');
+            }
+        };
+    })(jQuery);
 });
