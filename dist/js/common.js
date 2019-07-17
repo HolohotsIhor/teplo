@@ -1507,6 +1507,7 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("first-type-3-stage");
             }
         }
+        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(1)").mouseover(function() {
@@ -1571,6 +1572,7 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("second-type-3-stage");
             }
         }
+        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(2)").mouseover(function() {
@@ -1635,6 +1637,7 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("third-type-3-stage");
             }
         }
+        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(3)").mouseover(function() {
@@ -1762,6 +1765,7 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("fourth-3-stage");
             }
         }
+        doScreenShot();
     });
     $(".zont-select-box .type-select-box img:nth-child(4)").mouseover(function() {
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type");
@@ -1999,6 +2003,7 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("fiveth-3-stage");
             }
         }
+        doScreenShot();
     });
     $(".zont-select-box .type-select-box img:nth-child(5)").mouseover(function() {
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type");
@@ -2231,6 +2236,7 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("sixth-3-stage");
             }
         }
+        doScreenShot();
     });
     $(".zont-select-box .type-select-box img:nth-child(6)").mouseover(function() {
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type");
@@ -2406,6 +2412,7 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("seventh-3-stage");
             }
         }
+        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(7)").mouseover(function() {
@@ -2485,6 +2492,7 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("eighth-3-stage");
             }
         }
+        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(8)").mouseover(function() {
@@ -2563,6 +2571,7 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("nineth-3-stage");
             }
         }
+        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(9)").mouseover(function() {
@@ -3008,7 +3017,7 @@ $(document).ready(function() {
         $('.arrow-box').css("background-image", "url(https://teplo-s.com.ua/wp-content/themes/teplo/img/calculator/arrows/arrow-1.png)");
     });
     $("#oneStageBuildParam1").focusout(function() {
-        
+
         $('.arrow-box').css("background-image", "unset");
     });
     $('#oneStageBuildParam2').change(function() {
@@ -3446,106 +3455,21 @@ $(document).ready(function() {
         $(".sizes-stage-type").css("display", "block");
     });
     $(".for-one-stage-build input, .for-two-stage-build input, .for-three-stage-build input").focusout(function() {
-        
+
         $(".sizes-stage-type").css("display", "none");
     });
-    /********************* Screenshot *************************/
-    (function() {
-        var
-        form = $('.form'),
-        cache_width = form.width(),
-            a4 = [640, 900]; // for a4 size paper width and height  
 
-            $('#create_pdf').on('click', function() {
-                $('body').scrollTop(0);
-                createPDF();
-            });
-        //create pdf  
-        function createPDF() {
-            getCanvas().then(function(canvas) {
-                var
-                img = canvas.toDataURL({
-                    format: 'png',
-                    quality: 0.3
-                }),
-                doc = new jsPDF({
-                    unit: 'px',
-                    format: 'a4'
-                });
-                doc.addImage(img, 'PNG', 20, 20);
-                doc.save('screenshot-dimohod.pdf');
-                form.width(cache_width);
-            });
-        }
 
-        // create canvas object  
-        function getCanvas() {
-            // form.width((a4[0] * 1.33333) - 80).css('max-width', 'none');
-            form.width(640).css('max-width', 'none');
-            return html2canvas(form, {
-                imageTimeout: 2000,
-                removeContainer: true
-            });
-        }
-
-    }());
-    (function($) {
-        $.fn.html2canvas = function(options) {
-            var date = new Date(),
-            $message = null,
-            timeoutTimer = false,
-            timer = date.getTime();
-            html2canvas.logging = options && options.logging;
-            html2canvas.Preload(this[0], $.extend({
-                complete: function(images) {
-                    var queue = html2canvas.Parse(this[0], images, options),
-                    $canvas = $(html2canvas.Renderer(queue, options)),
-                    finishTime = new Date();
-
-                    $canvas.css({ position: 'absolute', left: 0, top: 0 }).appendTo(document.body);
-                    $canvas.siblings().toggle();
-
-                    $(window).click(function() {
-                        if (!$canvas.is(':visible')) {
-                            $canvas.toggle().siblings().toggle();
-                            throwMessage("Canvas Render visible");
-                        } else {
-                            $canvas.siblings().toggle();
-                            $canvas.toggle();
-                            throwMessage("Canvas Render hidden");
-                        }
-                    });
-                    throwMessage('Screenshot created in ' + ((finishTime.getTime() - timer) / 1000) + " seconds<br />", 4000);
-                }
-            }, options));
-
-            function throwMessage(msg, duration) {
-                window.clearTimeout(timeoutTimer);
-                timeoutTimer = window.setTimeout(function() {
-                    $message.fadeOut(function() {
-                        $message.remove();
-                    });
-                }, duration || 2000);
-                if ($message)
-                    $message.remove();
-                $message = $('<div ></div>').html(msg).css({
-                    margin: 0,
-                    padding: 10,
-                    background: "#000",
-                    opacity: 0.7,
-                    position: "fixed",
-                    top: 10,
-                    right: 10,
-                    fontFamily: 'Tahoma',
-                    color: '#fff',
-                    fontSize: 12,
-                    borderRadius: 12,
-                    width: '640px',
-                    height: '1000px',
-                    textAlign: 'center',
-                    textDecoration: 'none'
-                }).hide().fadeIn().appendTo('body');
-            }
-        };
-    })(jQuery);
 });
+/************************** Screenshot ********************************/
+
+function doScreenShot() {
+
+        html2canvas(document.getElementById("content")).then(function(canvas) {
+            var my_screen = canvas;
+            var base64_string = my_screen.toDataURL();
+            $(".text-999 input").val(base64_string);
+        }); 
+    
+}
+

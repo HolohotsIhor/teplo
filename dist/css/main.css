@@ -1544,7 +1544,9 @@ footer {
     font-size: 12px;
     text-align: right;
     border: 0; }
-  .constract .class-form-one-stage, .constract .class-form-two-stage, .constract .class-form-three-stage {
+  .constract .class-form-one-stage,
+  .constract .class-form-two-stage,
+  .constract .class-form-three-stage {
     display: none; }
   .constract .for-one-stage-build,
   .constract .for-two-stage-build,
@@ -1574,7 +1576,7 @@ footer {
   .constract .mobile-buttons {
     display: none;
     position: relative;
-    z-index: 99; }
+    z-index: 2; }
     @media only screen and (max-device-width: 991px) {
       .constract .mobile-buttons {
         display: inline-block; } }
@@ -2917,7 +2919,8 @@ footer {
     .constract .krisha-stage-type-hover,
     .constract .zont-stage-type-hover {
       display: none; } }
-  .constract .sizes-stage-type, .constract .arrow-box {
+  .constract .sizes-stage-type,
+  .constract .arrow-box {
     z-index: 1;
     position: absolute;
     top: 0;
@@ -2925,24 +2928,31 @@ footer {
     height: 480px;
     display: none; }
     @media only screen and (max-device-width: 700px) {
-      .constract .sizes-stage-type, .constract .arrow-box {
+      .constract .sizes-stage-type,
+      .constract .arrow-box {
         width: 320px;
         height: 240px;
         left: unset; } }
-    .constract .sizes-stage-type.two-stage-build, .constract .arrow-box.two-stage-build {
+    .constract .sizes-stage-type.two-stage-build,
+    .constract .arrow-box.two-stage-build {
       height: 692px; }
       @media only screen and (max-device-width: 700px) {
-        .constract .sizes-stage-type.two-stage-build, .constract .arrow-box.two-stage-build {
+        .constract .sizes-stage-type.two-stage-build,
+        .constract .arrow-box.two-stage-build {
           height: 346px; } }
-    .constract .sizes-stage-type.three-stage-build, .constract .arrow-box.three-stage-build {
+    .constract .sizes-stage-type.three-stage-build,
+    .constract .arrow-box.three-stage-build {
       height: 895px; }
       @media only screen and (max-device-width: 700px) {
-        .constract .sizes-stage-type.three-stage-build, .constract .arrow-box.three-stage-build {
+        .constract .sizes-stage-type.three-stage-build,
+        .constract .arrow-box.three-stage-build {
           height: 447.5px; } }
   .constract .sizes-stage-type {
     background: rgba(0, 0, 0, 0.5); }
   .constract .arrow-box {
-    display: block; }
+    display: block;
+    -webkit-background-size: contain;
+            background-size: contain; }
   .constract .text-box .tab-content .tab-pane form {
     margin-top: 20px; }
     .constract .text-box .tab-content .tab-pane form span input {
