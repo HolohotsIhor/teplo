@@ -93,6 +93,16 @@ $(document).ready(function() {
 
 
     /*********** ШАГ 1 **********/
+    /************************** Screenshot ********************************/
+    function doScreenShot() {
+        html2canvas(document.getElementById("content")).then(function(canvas) {
+            var my_screen = canvas;
+            var base64_string = my_screen.toDataURL();
+            $(".textarea-742 textarea").val(base64_string);
+        }); 
+    }
+
+
     //Почистить переменную выхода дымохода
     function vihodNaKrishuTypeDeleted() {
         var vihodNaKrishuType = 0;
@@ -337,7 +347,7 @@ $(document).ready(function() {
         }
     });
 
-    // Контроллер табов TAB 3
+    // Контроллер табов TAB 4
     $(".nav-tabs a:nth-child(4)").click(function() {
 
         $(".class-form-one-stage, .class-form-two-stage, .class-form-tree-stage").css("display", "none");
@@ -353,6 +363,7 @@ $(document).ready(function() {
         if (stage == "3") {
             $(".class-form-three-stage").css("display", "block");
         }
+        doScreenShot();
     });
 
     ///////////////// Сброс /////////////////
@@ -499,6 +510,7 @@ $(document).ready(function() {
         if (stage == "3") {
             $(".class-form-three-stage").css("display", "block");
         }
+        doScreenShot();
     });
 
     ///////////////// Кнопка вперёд к шагу 4 МОБИЛЬНАЯ версия /////////////////
@@ -524,6 +536,7 @@ $(document).ready(function() {
         if (stage == "3") {
             $(".class-form-three-stage").css("display", "block");
         }
+        doScreenShot();
     });
 
     ///////////////// Типдымохода 1 /////////////////
@@ -1507,7 +1520,6 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("first-type-3-stage");
             }
         }
-        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(1)").mouseover(function() {
@@ -1572,7 +1584,6 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("second-type-3-stage");
             }
         }
-        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(2)").mouseover(function() {
@@ -1637,7 +1648,6 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("third-type-3-stage");
             }
         }
-        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(3)").mouseover(function() {
@@ -1765,7 +1775,6 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("fourth-3-stage");
             }
         }
-        doScreenShot();
     });
     $(".zont-select-box .type-select-box img:nth-child(4)").mouseover(function() {
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fourth-type");
@@ -2003,7 +2012,6 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("fiveth-3-stage");
             }
         }
-        doScreenShot();
     });
     $(".zont-select-box .type-select-box img:nth-child(5)").mouseover(function() {
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("fiveth-type");
@@ -2236,7 +2244,6 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("sixth-3-stage");
             }
         }
-        doScreenShot();
     });
     $(".zont-select-box .type-select-box img:nth-child(6)").mouseover(function() {
         $(".calculator-final-look .main-layer .zont-stage-type-hover").addClass("sixth-type");
@@ -2412,7 +2419,6 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("seventh-3-stage");
             }
         }
-        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(7)").mouseover(function() {
@@ -2492,7 +2498,6 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("eighth-3-stage");
             }
         }
-        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(8)").mouseover(function() {
@@ -2571,7 +2576,6 @@ $(document).ready(function() {
                 $(".zont-stage-type").addClass("nineth-3-stage");
             }
         }
-        doScreenShot();
     });
 
     $(".zont-select-box .type-select-box img:nth-child(9)").mouseover(function() {
@@ -3002,8 +3006,19 @@ $(document).ready(function() {
             }
         }
     });
-
-
+    //********************** Основные параметры **********************//
+    $('#exampleFormControlSelect2').change(function() {
+        paramString = $('#exampleFormControlSelect2').val();
+        $(".text-777 input").val(paramString);
+    });
+    $('#exampleFormControlSelect3').change(function() {
+        paramString = $('#exampleFormControlSelect3').val();
+        $(".text-778 input").val(paramString);
+    });
+    $('#exampleFormControlSelect4').change(function() {
+        paramString = $('#exampleFormControlSelect4').val();
+        $(".text-779 input").val(paramString);
+    });
     //******************************* 1 STAGE ************************//
     $('#oneStageBuildParam0').change(function() {
         paramString = $('#oneStageBuildParam0').val();
@@ -3461,15 +3476,4 @@ $(document).ready(function() {
 
 
 });
-/************************** Screenshot ********************************/
-
-function doScreenShot() {
-
-        html2canvas(document.getElementById("content")).then(function(canvas) {
-            var my_screen = canvas;
-            var base64_string = my_screen.toDataURL();
-            $(".text-999 input").val(base64_string);
-        }); 
-    
-}
 

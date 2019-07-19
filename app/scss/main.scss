@@ -1050,8 +1050,6 @@ textarea {
 }
 
 
-
-
 /* 5.  Slider */
 .slider {
     width: 100%;
@@ -2570,26 +2568,16 @@ footer {
 
                 &.two-stage {
                     background: url('../img/calculator/2-stage.jpg') center no-repeat;
-                    width: 640px;
-                    height: 692px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        width: 320px;
-                        height: 346px;
-                        background-size: contain;
-                    }
+                    width: 320px;
+                    height: 346px;
+                    background-size: contain !important;
                 }
 
                 &.three-stage {
                     background: url('../img/calculator/3-stage.jpg') center no-repeat;
-                    width: 640px;
-                    height: 895px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        width: 320px;
-                        height: 447.5px;
-                        background-size: contain;
-                    }
+                    width: 320px;
+                    height: 447.5px;
+                    background-size: contain;
                 }
             }
 
@@ -2671,19 +2659,15 @@ footer {
                 }
 
                 &.two-stage-build {
-                    height: 692px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        height: 346px;
-                    }
+                    width: 320px;
+                    height: 346px;
+                    background-size: contain !important;
                 }
 
                 &.three-stage-build {
-                    height: 895px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        height: 447.5px;
-                    }
+                    width: 320px;
+                    height: 447.5px;
+                    background-size: contain;
                 }
 
                 &.two-stage-build.first-type {
@@ -2766,20 +2750,15 @@ footer {
                 }
 
                 &.two-stage-build {
-                    height: 692px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        width: 320px;
-                        height: 346px;
-                    }
+                    width: 320px;
+                    height: 346px;
+                    background-size: contain !important;
                 }
 
                 &.three-stage-build {
-                    height: 895px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        height: 447.5px;
-                    }
+                    width: 320px;
+                    height: 447.5px;
+                    background-size: contain !important;
                 }
 
                 &.first-type {
@@ -2868,10 +2847,7 @@ footer {
 
                 &.three-stage-build.second-type {
                     background-position: bottom;
-
-                    @media only screen and (max-device-width: 700px) {
-                        background-size: contain;
-                    }
+                    background-size: contain;
                 }
             }
 
@@ -2890,20 +2866,15 @@ footer {
                 }
 
                 &.two-stage-build {
-                    height: 692px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        width: 320px;
-                        height: 346px;
-                    }
+                    width: 320px;
+                    height: 346px;
+                    background-size: contain !important;
                 }
 
                 &.three-stage-build {
-                    height: 895px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        height: 447.5px;
-                    }
+                    width: 320px;
+                    height: 447.5px;
+                    background-size: contain !important;
                 }
 
                 &.first-type {
@@ -3034,19 +3005,15 @@ footer {
 
 
                 &.two-stage-build {
-                    height: 692px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        height: 346px;
-                    }
+                    width: 320px;
+                    height: 346px;
+                    background-size: contain !important;
                 }
 
                 &.three-stage-build {
-                    height: 895px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        height: 447.5px;
-                    }
+                    width: 320px;
+                    height: 447.5px;
+                    background-size: contain !important;
                 }
 
                 &.two-stage-build.first-type {
@@ -3117,6 +3084,7 @@ footer {
             .first-stage-type.three-stage-build,
             .first-stage-type-hover.three-stage-build {
                 background-position: bottom;
+                background-size: contain !important;
             }
 
             .krisha-stage-type,
@@ -3134,19 +3102,15 @@ footer {
                 }
 
                 &.two-stage-build {
-                    height: 692px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        height: 346px;
-                    }
+                    width: 320px;
+                    height: 346px;
+                    background-size: contain !important;
                 }
 
                 &.three-stage-build {
-                    height: 895px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        height: 447.5px;
-                    }
+                    width: 320px;
+                    height: 447.5px;
+                    background-size: contain !important;
                 }
 
                 &.first-type {
@@ -3302,20 +3266,15 @@ footer {
                 }
 
                 &.two-stage-build {
-
-                    height: 692px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        height: 346px;
-                    }
+                    width: 320px;
+                    height: 346px;
+                    background-size: contain !important;
                 }
 
                 &.three-stage-build {
-                    height: 895px;
-
-                    @media only screen and (max-device-width: 700px) {
-                        height: 447.5px;
-                    }
+                    width: 320px;
+                    height: 447.5px;
+                    background-size: contain !important;
                 }
 
                 &.first-type {
@@ -3794,30 +3753,25 @@ footer {
 
         &.two-stage-build {
 
-            height: 692px;
+         width: 320px;
+         height: 346px;
+         background-size: contain !important;
+     }
 
-            @media only screen and (max-device-width: 700px) {
-                height: 346px;
-            }
-        }
-
-        &.three-stage-build {
-            height: 895px;
-
-            @media only screen and (max-device-width: 700px) {
-                height: 447.5px;
-            }
-        }
+     &.three-stage-build {
+        width: 320px;
+        height: 447.5px;
     }
+}
 
-    .sizes-stage-type {
-        background: rgba(0, 0, 0, .5);
-    }
+.sizes-stage-type {
+    background: rgba(0, 0, 0, .5);
+}
 
-    .arrow-box {
-        display: block;
-        background-size: contain;
-    }
+.arrow-box {
+    display: block;
+    background-size: contain;
+}
 
 
     /* 17. Constract form */
