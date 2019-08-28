@@ -17,6 +17,7 @@
 15. Work zone
 16. Constract
 17. Constract form
+18. Constract form
 
 */
 /* 1.  Fonts including */
@@ -98,6 +99,10 @@ p {
       font-size: 15px;
       opacity: 1;
       line-height: 28px; } }
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  width: 40px;
+  height: 40px; }
 
 ._button_push {
   display: inline-block;
@@ -842,9 +847,9 @@ textarea {
             .slider .bd-example .carousel.slide .carousel-inner .carousel-item .carousel-caption.d-none.d-md-block ._button_push {
               background-color: #fff;
               color: #e40a22; }
-              @media only screen and (max-device-width: 521px) {
+              @media only screen and (max-device-width: 547px) {
                 .slider .bd-example .carousel.slide .carousel-inner .carousel-item .carousel-caption.d-none.d-md-block ._button_push {
-                  padding: 17px 35px;
+                  padding: 15px 25px;
                   font-size: 13px; } }
               @media only screen and (max-device-width: 400px) {
                 .slider .bd-example .carousel.slide .carousel-inner .carousel-item .carousel-caption.d-none.d-md-block ._button_push {
@@ -852,7 +857,7 @@ textarea {
                   font-size: 11px; } }
             .slider .bd-example .carousel.slide .carousel-inner .carousel-item .carousel-caption.d-none.d-md-block .constract_button {
               margin-left: 10px; }
-              @media only screen and (max-device-width: 521px) {
+              @media only screen and (max-device-width: 547px) {
                 .slider .bd-example .carousel.slide .carousel-inner .carousel-item .carousel-caption.d-none.d-md-block .constract_button {
                   margin-left: 0px; } }
             .slider .bd-example .carousel.slide .carousel-inner .carousel-item .carousel-caption.d-none.d-md-block h5 {
@@ -1076,7 +1081,7 @@ textarea {
     width: 100%;
     padding: 35% 20px;
     text-align: center;
-    /*background dotted*/
+    line-height: 26px;
     background-color: rgba(0, 0, 0, 0.2);
     -webkit-background-size: 3px 3px;
     background-size: 3px 3px;
@@ -1086,7 +1091,8 @@ textarea {
     -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 1;
-    color: #fff; }
+    color: #fff;
+    font-family: "Open-Sans-Bold", sans-serif, Arial; }
     @media only screen and (max-device-width: 767px) {
       .services .hover-blur a h3 {
         background-color: rgba(0, 0, 0, 0); } }
@@ -1168,7 +1174,8 @@ textarea {
     bottom: -70px; }
     .clients .comment-box .bd-example .carousel-indicators li {
       background-color: #ccc;
-      cursor: pointer; }
+      cursor: pointer;
+      height: 5px; }
     .clients .comment-box .bd-example .carousel-indicators li.active {
       background-color: #3c3f5c; }
   .clients .comment-box .bd-example .photo-box {
@@ -1493,6 +1500,131 @@ footer {
 /* 15. Work zone */
 .work-zone {
   padding-bottom: 0; }
+  .work-zone h1, .work-zone h2, .work-zone h3, .work-zone h4 {
+    margin-top: 30px;
+    margin-bottom: 25px; }
+    @media only screen and (max-device-width: 991px) {
+      .work-zone h1, .work-zone h2, .work-zone h3, .work-zone h4 {
+        margin-top: 30px;
+        margin-bottom: 25px; } }
+    @media only screen and (max-device-width: 767px) {
+      .work-zone h1, .work-zone h2, .work-zone h3, .work-zone h4 {
+        margin-top: 25px;
+        margin-bottom: 20px; } }
+  .work-zone ul li {
+    text-align: left;
+    list-style: inside;
+    padding-left: 20px;
+    margin-bottom: 10px; }
+    @media only screen and (max-device-width: 991px) {
+      .work-zone ul li {
+        padding-left: 10px; } }
+  .work-zone em {
+    font-style: italic; }
+  .work-zone .hover-blur a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 10px 15px 25px 0 rgba(0, 0, 0, 0.5);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: solid 1px #fbd1d6;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+    @media only screen and (max-device-width: 767px) {
+      .work-zone .hover-blur a {
+        margin-bottom: 10px; } }
+    .work-zone .hover-blur a:hover {
+      -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+              box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0); }
+  .work-zone .hover-blur img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-filter: grayscale(100%) contrast(120%);
+            filter: grayscale(100%) contrast(120%); }
+  .work-zone .hover-blur:hover img {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-filter: grayscale(0.6) blur(1px);
+    filter: grayscale(0.6) blur(1px); }
+  .work-zone .hover-blur a h3 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 35% 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    -webkit-background-size: 3px 3px;
+    background-size: 3px 3px;
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 1;
+    color: #fff;
+    font-family: "Open-Sans-Bold", sans-serif, Arial;
+    line-height: 26px; }
+    .work-zone .hover-blur a h3 span {
+      font-size: 24px;
+      line-height: 24px; }
+      @media only screen and (max-device-width: 767px) {
+        .work-zone .hover-blur a h3 span {
+          display: none; } }
+    @media only screen and (max-device-width: 767px) {
+      .work-zone .hover-blur a h3 {
+        background-color: rgba(0, 0, 0, 0); } }
+  .work-zone .hover-blur:hover a h3 {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    background-image: -webkit-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 1px, transparent 1px, transparent 100%);
+    background-image: -o-repeating-radial-gradient(center center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 1px, transparent 1px, transparent 100%);
+    background-image: repeating-radial-gradient(center center, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8) 1px, transparent 1px, transparent 100%); }
+  .work-zone .hover-blur .text-white {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0; }
+  .work-zone .hover-blur:hover .text-white {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=1)";
+    filter: alpha(opacity=1);
+    opacity: 1; }
+  .work-zone .hover-blur h4 {
+    display: none; }
+    @media only screen and (max-device-width: 767px) {
+      .work-zone .hover-blur h4 {
+        display: block;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        font-size: 18px; } }
   @media only screen and (max-device-width: 1199px) {
     .work-zone .container#constructor {
       width: 100%;
@@ -2965,3 +3097,15 @@ footer {
 
 .for-one-stage-build input:focus {
   background-color: #ccc; }
+
+/* 18. Constract form */
+.foogallery.fg-border-thin .fg-item-inner {
+  border-width: 0 !important;
+  -webkit-box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0.2) !important;
+          box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0.2) !important;
+  -webkit-transition: 0.3s !important;
+  -o-transition: 0.3s !important;
+  transition: 0.3s !important; }
+  .foogallery.fg-border-thin .fg-item-inner:hover {
+    -webkit-box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0) !important;
+            box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0) !important; }
