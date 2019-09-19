@@ -1241,6 +1241,8 @@ textarea {
   background-repeat: repeat;
   background-attachment: fixed;
   text-align: center; }
+  .counter-box-main h3, .counter-box-main .article-lines {
+    opacity: 0; }
   .counter-box-main p {
     text-align: center; }
   .counter-box-main .help-box {
@@ -1500,17 +1502,47 @@ footer {
 /* 15. Work zone */
 .work-zone {
   padding-bottom: 0; }
+  .work-zone .work-box {
+    padding: 0; }
+  .work-zone table {
+    width: 48%;
+    float: left;
+    border: solid 1px #ccc; }
+    @media only screen and (max-device-width: 991px) {
+      .work-zone table {
+        width: 100%;
+        word-break: break-word; } }
+    .work-zone table:nth-child(2n) {
+      margin-right: 2%; }
+    .work-zone table tr td strong {
+      font-family: "Open-Sans-Bold", sans-serif, Arial;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      color: #e40a22;
+      line-height: 30px; }
+    .work-zone table tr td span {
+      letter-spacing: 0;
+      color: #e40a22;
+      font-family: "Open-Sans-Bold", sans-serif, Arial;
+      line-height: 22px; }
+    .work-zone table thead tr td {
+      background: #ffedef;
+      line-height: 20px; }
   .work-zone h1, .work-zone h2, .work-zone h3, .work-zone h4 {
     margin-top: 30px;
-    margin-bottom: 25px; }
+    margin-bottom: 15px;
+    font-family: "Open-Sans-Bold", sans-serif, Arial;
+    font-size: 25px;
+    letter-spacing: 0; }
     @media only screen and (max-device-width: 991px) {
       .work-zone h1, .work-zone h2, .work-zone h3, .work-zone h4 {
         margin-top: 30px;
-        margin-bottom: 25px; } }
+        font-size: 16px;
+        padding-left: 15px;
+        padding-right: 15px; } }
     @media only screen and (max-device-width: 767px) {
       .work-zone h1, .work-zone h2, .work-zone h3, .work-zone h4 {
-        margin-top: 25px;
-        margin-bottom: 20px; } }
+        margin-top: 25px; } }
   .work-zone ul li {
     text-align: left;
     list-style: inside;

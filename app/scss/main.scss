@@ -1704,6 +1704,10 @@ textarea {
 	background-attachment: fixed;
 	text-align: center;
 
+	h3, .article-lines{
+		opacity: 0;
+	}
+
 	p {
 		text-align: center;
 	}
@@ -2063,19 +2067,72 @@ footer {
 /* 15. Work zone */
 .work-zone {
 	padding-bottom: 0;
+	
+	.work-box{
+		padding: 0;
+	}
+
+	table{
+		width: 48%;
+		float: left;
+		border: solid 1px #ccc;
+
+		@media only screen and (max-device-width: 991px) {
+			width: 100%;
+			word-break: break-word;
+		}
+
+		&:nth-child(2n){
+			margin-right: 2%;
+		}
+
+		tr{
+
+			td{
+				
+				strong{
+					font-family: "Open-Sans-Bold", sans-serif, Arial;
+					text-transform: uppercase;
+					letter-spacing: 0;
+					color: $red;
+					line-height: 30px;
+				}
+
+				span{
+					letter-spacing: 0;
+					color: $red;
+					font-family: "Open-Sans-Bold", sans-serif, Arial;
+					line-height: 22px;
+				}
+			}
+		}
+
+		thead{
+			tr{
+				td{
+					background: #ffedef;
+					line-height: 20px;
+				}
+			}
+		}
+	}
 
 	h1, h2, h3, h4{
 		margin-top: 30px;
-		margin-bottom: 25px;
+		margin-bottom: 15px;
+		font-family: "Open-Sans-Bold", sans-serif, Arial;
+		font-size: 25px;
+		letter-spacing: 0;
 
 		@media only screen and (max-device-width: 991px) {
 			margin-top: 30px;
-			margin-bottom: 25px;
+			font-size: 16px;
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 
 		@media only screen and (max-device-width: 767px) {
 			margin-top: 25px;
-			margin-bottom: 20px;
 		}
 	}
 
