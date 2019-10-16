@@ -18,6 +18,7 @@
 16. Constract
 17. Constract form
 18. Constract form
+19. Blog
 
 */
 
@@ -4084,5 +4085,21 @@ footer {
 
 	&:hover{
 		box-shadow: 2px 4px 5px 0 rgba(0,0,0, 0)!important;
+	}
+}
+
+
+
+/* 19. Blog */
+.post-box{
+	border-bottom: solid 1px #eee;
+
+	h2{
+		margin-bottom: 0;
+		font-size: 20px;
+
+		a{
+			color: $red;
+		}
 	}
 }
