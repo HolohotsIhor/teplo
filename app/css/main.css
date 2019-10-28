@@ -3145,7 +3145,12 @@ footer {
 
 /* 19. Blog */
 .post-box {
-  border-bottom: solid 1px #eee; }
+  border-bottom: solid 1px #eee;
+  text-align: left; }
+  .post-box a {
+    color: #e40a22; }
+    .post-box a span {
+      color: #e40a22; }
   .post-box h2 {
     margin-bottom: 0;
     font-size: 20px; }

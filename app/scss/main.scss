@@ -4093,6 +4093,15 @@ footer {
 /* 19. Blog */
 .post-box{
 	border-bottom: solid 1px #eee;
+	text-align: left;
+
+	a{
+		color: #e40a22;
+
+		span{
+			color: #e40a22;
+		}
+	}
 
 	h2{
 		margin-bottom: 0;
