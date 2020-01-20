@@ -1567,7 +1567,7 @@ textarea {
     .help-box {
     	width: 100%;
     	height: 161px;
-    	background: url("../img/slide_layer_white.png");
+    	background: url("../img/slide_layer_white.webp");
     	background-size: cover;
     	z-index: 0;
     	margin-top: 150px;
@@ -1593,7 +1593,7 @@ textarea {
 			margin-top: -270px;
 			color: $red;
 			box-shadow: 0 0 50px rgba(0, 0, 0, .3);
-			background: url(../img/slide-bg.png) top center no-repeat;
+			background: url(../img/slide-bg.webp) top center no-repeat;
 
 			@media only screen and (max-device-width: 991px) {
 				margin-top: 0;
@@ -1716,7 +1716,7 @@ textarea {
 	.help-box {
 		width: 100%;
 		height: 161px;
-		background: url("../img/slide_layer_reverse_white.png");
+		background: url("../img/slide_layer_reverse_white.webp");
 		background-size: cover;
 		z-index: 0;
 		margin-top: -150px;
@@ -1736,7 +1736,7 @@ textarea {
 	.help-box-bot {
 		width: 100%;
 		height: 161px;
-		background: url("../img/slide_layer_white.png");
+		background: url("../img/slide_layer_white.webp");
 		background-size: cover;
 		z-index: 0;
 		margin-top: 150px;
@@ -1853,7 +1853,7 @@ textarea {
 	.help-box {
 		width: 100%;
 		height: 161px;
-		background: url("../img/slide_layer_white.png");
+		background: url("../img/slide_layer_white.webp");
 		background-size: cover;
 		z-index: 0;
 		margin-top: 150px;
@@ -1972,7 +1972,7 @@ textarea {
 	.help-box {
 		width: 100%;
 		height: 161px;
-		background: url("../img/slide_layer_reverse_white.png");
+		background: url("../img/slide_layer_reverse_white.webp");
 		background-size: cover;
 		position: relative;
 		top: 0;
@@ -2829,7 +2829,7 @@ footer {
 				}
 
 				&.first-type {
-					background: url('../img/calculator/1-stage-1-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-1-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2837,7 +2837,7 @@ footer {
 				}
 
 				&.second-type {
-					background: url('../img/calculator/1-stage-2-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-2-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2845,7 +2845,7 @@ footer {
 				}
 
 				&.third-type {
-					background: url('../img/calculator/1-stage-3-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-3-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2853,7 +2853,7 @@ footer {
 				}
 
 				&.fourth-type {
-					background: url('../img/calculator/1-stage-4-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-4-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2861,7 +2861,7 @@ footer {
 				}
 
 				&.fifth-type {
-					background: url('../img/calculator/1-stage-5-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-5-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2869,7 +2869,7 @@ footer {
 				}
 
 				&.sixth-type {
-					background: url('../img/calculator/1-stage-6-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-6-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2877,7 +2877,7 @@ footer {
 				}
 
 				&.seventh-type {
-					background: url('../img/calculator/1-stage-7-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-7-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2885,7 +2885,7 @@ footer {
 				}
 
 				&.eighth-type {
-					background: url('../img/calculator/1-stage-8-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-8-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2905,7 +2905,7 @@ footer {
 				}
 
 				&.two-stage-build.first-type {
-					background: url('../img/calculator/2-stage-1-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-1-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2913,7 +2913,7 @@ footer {
 				}
 
 				&.two-stage-build.second-type {
-					background: url('../img/calculator/2-stage-2-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-2-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2921,7 +2921,7 @@ footer {
 				}
 
 				&.two-stage-build.third-type {
-					background: url('../img/calculator/2-stage-3-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-3-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2929,7 +2929,7 @@ footer {
 				}
 
 				&.two-stage-build.fourth-type {
-					background: url('../img/calculator/2-stage-4-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-4-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2937,7 +2937,7 @@ footer {
 				}
 
 				&.two-stage-build.fifth-type {
-					background: url('../img/calculator/2-stage-5-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-5-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2945,7 +2945,7 @@ footer {
 				}
 
 				&.two-stage-build.sixth-type {
-					background: url('../img/calculator/2-stage-6-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-6-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2953,7 +2953,7 @@ footer {
 				}
 
 				&.two-stage-build.seventh-type {
-					background: url('../img/calculator/2-stage-7-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-7-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2961,7 +2961,7 @@ footer {
 				}
 
 				&.two-stage-build.eighth-type {
-					background: url('../img/calculator/2-stage-8-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-8-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -2996,7 +2996,7 @@ footer {
 				}
 
 				&.first-type {
-					background: url('../img/calculator/2-stage-1-type-look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-1-type-look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3004,7 +3004,7 @@ footer {
 				}
 
 				&.second-type {
-					background: url('../img/calculator/2-stage-2-type-look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-2-type-look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3012,7 +3012,7 @@ footer {
 				}
 
 				&.second-type-3-stage {
-					background: url('../img/calculator/2-stage-2-type-look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-2-type-look.webp') center no-repeat;
 					background-position: bottom;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3021,7 +3021,7 @@ footer {
 				}
 
 				&.third-type {
-					background: url('../img/calculator/2-stage-3-type-look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-3-type-look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3029,7 +3029,7 @@ footer {
 				}
 
 				&.fourth-type {
-					background: url('../img/calculator/2-stage-4-type-look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-4-type-look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3037,7 +3037,7 @@ footer {
 				}
 
 				&.fourth-type-3-stage {
-					background: url('../img/calculator/2-stage-4-type-look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-4-type-look.webp') center no-repeat;
 					background-position: bottom;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3046,7 +3046,7 @@ footer {
 				}
 
 				&.third-type-2-stage {
-					background: url('../img/calculator/2-stage-3-type-look-full.png') center no-repeat;
+					background: url('../img/calculator/2-stage-3-type-look-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3054,7 +3054,7 @@ footer {
 				}
 
 				&.third-type-2-stage-special {
-					background: url('../img/calculator/2-stage-3-type-look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-3-type-look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3063,7 +3063,7 @@ footer {
 				}
 
 				&.third-type-3-stage {
-					background: url('../img/calculator/2-stage-3-type-look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-3-type-look.webp') center no-repeat;
 					background-position: bottom;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3072,7 +3072,7 @@ footer {
 				}
 
 				&.third-type-3-stage-special {
-					background: url('../img/calculator/2-stage-3-type-look-1full.png') center no-repeat;
+					background: url('../img/calculator/2-stage-3-type-look-1full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3112,7 +3112,7 @@ footer {
 				}
 
 				&.first-type {
-					background: url('../img/calculator/3-stage-1-type.png') center no-repeat;
+					background: url('../img/calculator/3-stage-1-type.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3120,7 +3120,7 @@ footer {
 				}
 
 				&.third-type-two {
-					background: url('../img/calculator/3-stage-two-type.png') center no-repeat;
+					background: url('../img/calculator/3-stage-two-type.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3128,7 +3128,7 @@ footer {
 				}
 
 				&.third-type {
-					background: url('../img/calculator/3-stage-3-type.png') center no-repeat;
+					background: url('../img/calculator/3-stage-3-type.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3136,7 +3136,7 @@ footer {
 				}
 
 				&.third-type-special {
-					background: url('../img/calculator/3-type-3-stage-special.png') center no-repeat;
+					background: url('../img/calculator/3-type-3-stage-special.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3144,7 +3144,7 @@ footer {
 				}
 
 				&.fourth-type {
-					background: url('../img/calculator/4-type-3-stage.png') center no-repeat;
+					background: url('../img/calculator/4-type-3-stage.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3166,7 +3166,7 @@ footer {
 				}
 
 				&.first-type {
-					background: url('../img/calculator/1-stage-1-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-1-type-1look.webp') center no-repeat;
 					visibility: unset;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3175,7 +3175,7 @@ footer {
 				}
 
 				&.second-type {
-					background: url('../img/calculator/1-stage-2-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-2-type-1look.webp') center no-repeat;
 					visibility: unset;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3184,7 +3184,7 @@ footer {
 				}
 
 				&.third-type {
-					background: url('../img/calculator/1-stage-3-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-3-type-1look.webp') center no-repeat;
 					visibility: unset;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3193,7 +3193,7 @@ footer {
 				}
 
 				&.fourth-type {
-					background: url('../img/calculator/1-stage-4-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-4-type-1look.webp') center no-repeat;
 					visibility: unset;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3202,7 +3202,7 @@ footer {
 				}
 
 				&.fifth-type {
-					background: url('../img/calculator/1-stage-5-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-5-type-1look.webp') center no-repeat;
 					visibility: unset;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3211,7 +3211,7 @@ footer {
 				}
 
 				&.sixth-type {
-					background: url('../img/calculator/1-stage-6-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-6-type-1look.webp') center no-repeat;
 					visibility: unset;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3220,7 +3220,7 @@ footer {
 				}
 
 				&.seventh-type {
-					background: url('../img/calculator/1-stage-7-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-7-type-1look.webp') center no-repeat;
 					visibility: unset;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3229,7 +3229,7 @@ footer {
 				}
 
 				&.eighth-type {
-					background: url('../img/calculator/1-stage-8-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-8-type-1look.webp') center no-repeat;
 					visibility: unset;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3251,7 +3251,7 @@ footer {
 				}
 
 				&.two-stage-build.first-type {
-					background: url('../img/calculator/2-stage-1-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-1-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3259,7 +3259,7 @@ footer {
 				}
 
 				&.two-stage-build.second-type {
-					background: url('../img/calculator/2-stage-2-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-2-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3267,7 +3267,7 @@ footer {
 				}
 
 				&.two-stage-build.third-type {
-					background: url('../img/calculator/2-stage-3-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-3-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3275,7 +3275,7 @@ footer {
 				}
 
 				&.two-stage-build.fourth-type {
-					background: url('../img/calculator/2-stage-4-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-4-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3283,7 +3283,7 @@ footer {
 				}
 
 				&.two-stage-build.fifth-type {
-					background: url('../img/calculator/2-stage-5-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-5-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3291,7 +3291,7 @@ footer {
 				}
 
 				&.two-stage-build.sixth-type {
-					background: url('../img/calculator/2-stage-6-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-6-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3299,7 +3299,7 @@ footer {
 				}
 
 				&.two-stage-build.seventh-type {
-					background: url('../img/calculator/2-stage-7-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-7-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3307,7 +3307,7 @@ footer {
 				}
 
 				&.two-stage-build.eighth-type {
-					background: url('../img/calculator/2-stage-8-type-2look.png') center no-repeat;
+					background: url('../img/calculator/2-stage-8-type-2look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3348,7 +3348,7 @@ footer {
 				}
 
 				&.first-type {
-					background: url('../img/calculator/1-stage-krisha-7-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-7-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3356,7 +3356,7 @@ footer {
 				}
 
 				&.second-type {
-					background: url('../img/calculator/1-stage-krisha-8-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-8-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3364,7 +3364,7 @@ footer {
 				}
 
 				&.third-type {
-					background: url('../img/calculator/1-stage-krisha-9-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-9-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3372,7 +3372,7 @@ footer {
 				}
 
 				&.fourth-type {
-					background: url('../img/calculator/1-stage-krisha-10-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-10-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3380,7 +3380,7 @@ footer {
 				}
 
 				&.fiveth-type {
-					background: url('../img/calculator/1-stage-krisha-14-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-14-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3388,7 +3388,7 @@ footer {
 				}
 
 				&.sixth-type {
-					background: url('../img/calculator/1-stage-krisha-15-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-15-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3396,7 +3396,7 @@ footer {
 				}
 
 				&.seventh-type {
-					background: url('../img/calculator/1-stage-krisha-16-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-16-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3404,7 +3404,7 @@ footer {
 				}
 
 				&.fiveth-2-stage-type {
-					background: url('../img/calculator/1-stage-krisha-22-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-22-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3413,7 +3413,7 @@ footer {
 				}
 
 				&.eighth-type {
-					background: url('../img/calculator/1-stage-krisha-23-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-23-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3421,7 +3421,7 @@ footer {
 				}
 
 				&.first-type-3-stage {
-					background: url('../img/calculator/first-type-3-stage-vivod.png') center no-repeat;
+					background: url('../img/calculator/first-type-3-stage-vivod.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3429,7 +3429,7 @@ footer {
 				}
 
 				&.second-type-3-stage {
-					background: url('../img/calculator/second-type-3-stage-vivod.png') center no-repeat;
+					background: url('../img/calculator/second-type-3-stage-vivod.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3437,7 +3437,7 @@ footer {
 				}
 
 				&.third-type-3-stage {
-					background: url('../img/calculator/third-type-3-stage-vivod.png') center no-repeat;
+					background: url('../img/calculator/third-type-3-stage-vivod.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3445,7 +3445,7 @@ footer {
 				}
 
 				&.last-type {
-					background: url('../img/calculator/vivod-3-stage-last.png') center no-repeat;
+					background: url('../img/calculator/vivod-3-stage-last.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3453,7 +3453,7 @@ footer {
 				}
 
 				&.sixth-type-3-stage {
-					background: url('../img/calculator/6-type-stage-3.png') center no-repeat;
+					background: url('../img/calculator/6-type-stage-3.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3461,7 +3461,7 @@ footer {
 				}
 
 				&.sixth-type-3-stage-special {
-					background: url('../img/calculator/6-type-stage-3-special.png') center no-repeat;
+					background: url('../img/calculator/6-type-stage-3-special.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3469,7 +3469,7 @@ footer {
 				}
 
 				&.seventh-type-3-stage {
-					background: url('../img/calculator/3-stage-krisha-16.png') center no-repeat;
+					background: url('../img/calculator/3-stage-krisha-16.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3477,7 +3477,7 @@ footer {
 				}
 
 				&.last-type-special {
-					background: url('../img/calculator/3-stage-krisha-16.png') center no-repeat;
+					background: url('../img/calculator/3-stage-krisha-16.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3512,7 +3512,7 @@ footer {
 				}
 
 				&.first-type {
-					background: url('../img/calculator/1-stage-krisha-1-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-1-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3520,7 +3520,7 @@ footer {
 				}
 
 				&.first-2-stage-type {
-					background: url('../img/calculator/1-stage-krisha-1-type-1look-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-1-type-1look-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3528,7 +3528,7 @@ footer {
 				}
 
 				&.second-type {
-					background: url('../img/calculator/1-stage-krisha-2-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-2-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3536,7 +3536,7 @@ footer {
 				}
 
 				&.second-2-stage-type {
-					background: url('../img/calculator/1-stage-krisha-2-type-1look-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-2-type-1look-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3544,7 +3544,7 @@ footer {
 				}
 
 				&.third-type {
-					background: url('../img/calculator/1-stage-krisha-3-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-3-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3552,7 +3552,7 @@ footer {
 				}
 
 				&.third-2-stage-type {
-					background: url('../img/calculator/1-stage-krisha-3-type-1look-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-3-type-1look-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3560,7 +3560,7 @@ footer {
 				}
 
 				&.fourth-type {
-					background: url('../img/calculator/1-stage-krisha-4-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-4-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3568,7 +3568,7 @@ footer {
 				}
 
 				&.fiveth-type {
-					background: url('../img/calculator/1-stage-krisha-5-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-5-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3576,7 +3576,7 @@ footer {
 				}
 
 				&.sixth-type {
-					background: url('../img/calculator/1-stage-krisha-6-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-6-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3584,7 +3584,7 @@ footer {
 				}
 
 				&.fourth-type-svihodom {
-					background: url('../img/calculator/1-stage-krisha-4-type-1look-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-4-type-1look-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3592,7 +3592,7 @@ footer {
 				}
 
 				&.fiveth-type-svihodom {
-					background: url('../img/calculator/1-stage-krisha-5-type-1look-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-5-type-1look-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3600,7 +3600,7 @@ footer {
 				}
 
 				&.sixth-type-svihodom {
-					background: url('../img/calculator/1-stage-krisha-6-type-1look-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-6-type-1look-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3608,7 +3608,7 @@ footer {
 				}
 
 				&.fourth-zont-2-svihodom {
-					background: url('../img/calculator/1-stage-krisha-4-type-look-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-4-type-look-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3616,7 +3616,7 @@ footer {
 				}
 
 				&.fiveth-zont-2-svihodom {
-					background: url('../img/calculator/1-stage-krisha-5-type-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-5-type-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3624,7 +3624,7 @@ footer {
 				}
 
 				&.sixth-zont-2-svihodom {
-					background: url('../img/calculator/1-stage-krisha-6-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-6-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3632,7 +3632,7 @@ footer {
 				}
 
 				&.fourth-zont-4-svihodom {
-					background: url('../img/calculator/1-stage-krisha-4-type-look-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-4-type-look-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3640,7 +3640,7 @@ footer {
 				}
 
 				&.fiveth-zont-4-svihodom {
-					background: url('../img/calculator/1-stage-krisha-5-type-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-5-type-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3648,7 +3648,7 @@ footer {
 				}
 
 				&.sixth-zont-4-svihodom {
-					background: url('../img/calculator/1-stage-krisha-6-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-6-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3656,7 +3656,7 @@ footer {
 				}
 
 				&.seventh-zont-3-svihodom {
-					background: url('../img/calculator/1-stage-krisha-11-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-11-type-1look.webp') center no-repeat;
 					top: 0px;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3666,7 +3666,7 @@ footer {
 				}
 
 				&.eighth-zont-3-svihodom {
-					background: url('../img/calculator/1-stage-krisha-12-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-12-type-1look.webp') center no-repeat;
 					top: 0px;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3676,7 +3676,7 @@ footer {
 				}
 
 				&.nineth-zont-3-svihodom {
-					background: url('../img/calculator/1-stage-krisha-13-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-13-type-1look.webp') center no-repeat;
 					top: 0px;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3686,7 +3686,7 @@ footer {
 				}
 
 				&.seventh-stage-2-zont-3-svihodom {
-					background: url('../img/calculator/1-stage-krisha-19-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-19-type-1look.webp') center no-repeat;
 					top: 0px;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3696,7 +3696,7 @@ footer {
 				}
 
 				&.eighth-stage-2-zont-3-svihodom {
-					background: url('../img/calculator/1-stage-krisha-17-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-17-type-1look.webp') center no-repeat;
 					top: 0px;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3706,7 +3706,7 @@ footer {
 				}
 
 				&.nineth-stage-2-zont-3-svihodom {
-					background: url('../img/calculator/1-stage-krisha-18-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-18-type-1look.webp') center no-repeat;
 					top: 0px;
 
 					@media only screen and (max-device-width: 700px) {
@@ -3716,7 +3716,7 @@ footer {
 				}
 
 				&.fourth-2-stage-zont-4-svihodom {
-					background: url('../img/calculator/1-stage-krisha-4-type-1full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-4-type-1full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3724,7 +3724,7 @@ footer {
 				}
 
 				&.fiveth-2-stage-zont-4-svihodom {
-					background: url('../img/calculator/1-stage-krisha-5-type-1full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-5-type-1full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3732,7 +3732,7 @@ footer {
 				}
 
 				&.sixth-2-stage-zont-4-svihodom {
-					background: url('../img/calculator/1-stage-krisha-6-type-1full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-6-type-1full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3740,7 +3740,7 @@ footer {
 				}
 
 				&.fourth-2-stage-zont-5-svihodom {
-					background: url('../img/calculator/1-stage-krisha-4-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-4-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3748,7 +3748,7 @@ footer {
 				}
 
 				&.fourth-2-stage-zont-5-2svihodom {
-					background: url('../img/calculator/1-stage-krisha-4-type-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-4-type-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3756,7 +3756,7 @@ footer {
 				}
 
 				&.fiveth-zont-5-svihodom {
-					background: url('../img/calculator/1-stage-krisha-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3764,7 +3764,7 @@ footer {
 				}
 
 				&.fiveth-zont-5-2svihodom {
-					background: url('../img/calculator/1-stage-krisha-5-1type-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-5-1type-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3773,7 +3773,7 @@ footer {
 				}
 
 				&.sixth-zont-5-svihodom {
-					background: url('../img/calculator/1-stage-krisha-6-type-full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-6-type-full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3781,7 +3781,7 @@ footer {
 				}
 
 				&.sixth-zont-5-2svihodom {
-					background: url('../img/calculator/1-stage-krisha-6-1type-1full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-6-1type-1full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3789,7 +3789,7 @@ footer {
 				}
 
 				&.eighth-type-2-stage {
-					background: url('../img/calculator/1-stage-krisha-4-type-1look-1full.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-4-type-1look-1full.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3797,7 +3797,7 @@ footer {
 				}
 
 				&.fiveth-type-2-stage {
-					background: url('../img/calculator/1-stage-krisha-5-typefull-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-5-typefull-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3805,7 +3805,7 @@ footer {
 				}
 
 				&.sixth-type-2-stage {
-					background: url('../img/calculator/1-stage-krisha-full-6-type-1look.png') center no-repeat;
+					background: url('../img/calculator/1-stage-krisha-full-6-type-1look.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3813,7 +3813,7 @@ footer {
 				}
 
 				&.seventh-3-stage {
-					background: url('../img/calculator/seventh-3-stage.png') center no-repeat;
+					background: url('../img/calculator/seventh-3-stage.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3821,7 +3821,7 @@ footer {
 				}
 
 				&.eighth-3-stage {
-					background: url('../img/calculator/eighth-3-stage.png') center no-repeat;
+					background: url('../img/calculator/eighth-3-stage.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3829,7 +3829,7 @@ footer {
 				}
 
 				&.nineth-3-stage {
-					background: url('../img/calculator/nineth-3-stage.png') center no-repeat;
+					background: url('../img/calculator/nineth-3-stage.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3837,7 +3837,7 @@ footer {
 				}
 
 				&.fourth-3-stage {
-					background: url('../img/calculator/fourth-3-stage.png') center no-repeat;
+					background: url('../img/calculator/fourth-3-stage.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3845,7 +3845,7 @@ footer {
 				}
 
 				&.fiveth-3-stage {
-					background: url('../img/calculator/fiveth-3-stage.png') center no-repeat;
+					background: url('../img/calculator/fiveth-3-stage.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3853,7 +3853,7 @@ footer {
 				}
 
 				&.sixth-3-stage {
-					background: url('../img/calculator/sixth-3-stage.png') center no-repeat;
+					background: url('../img/calculator/sixth-3-stage.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3861,7 +3861,7 @@ footer {
 				}
 
 				&.fourth-3-stage-final {
-					background: url('../img/calculator/fourth-3-stage-final.png') center no-repeat;
+					background: url('../img/calculator/fourth-3-stage-final.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3869,7 +3869,7 @@ footer {
 				}
 
 				&.fiveth-3-stage-final {
-					background: url('../img/calculator/fiveth-3-stage-final.png') center no-repeat;
+					background: url('../img/calculator/fiveth-3-stage-final.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3877,7 +3877,7 @@ footer {
 				}
 
 				&.sixth-3-stage-final {
-					background: url('../img/calculator/sixth-3-stage-final.png') center no-repeat;
+					background: url('../img/calculator/sixth-3-stage-final.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3885,7 +3885,7 @@ footer {
 				}
 
 				&.first-type-3-stage {
-					background: url('../img/calculator/first-type-3-stage.png') center no-repeat;
+					background: url('../img/calculator/first-type-3-stage.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3893,7 +3893,7 @@ footer {
 				}
 
 				&.second-type-3-stage {
-					background: url('../img/calculator/second-type-3-stage.png') center no-repeat;
+					background: url('../img/calculator/second-type-3-stage.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3901,7 +3901,7 @@ footer {
 				}
 
 				&.third-type-3-stage {
-					background: url('../img/calculator/third-type-3-stage.png') center no-repeat;
+					background: url('../img/calculator/third-type-3-stage.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3909,7 +3909,7 @@ footer {
 				}
 
 				&.fourth-3-stage-last {
-					background: url('../img/calculator/fourth-3-stage-last.png') center no-repeat;
+					background: url('../img/calculator/fourth-3-stage-last.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3917,7 +3917,7 @@ footer {
 				}
 
 				&.fiveth-3-stage-last {
-					background: url('../img/calculator/fiveth-3-stage-last.png') center no-repeat;
+					background: url('../img/calculator/fiveth-3-stage-last.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3925,7 +3925,7 @@ footer {
 				}
 
 				&.sixth-3-stage-last {
-					background: url('../img/calculator/sixth-3-stage-last.png') center no-repeat;
+					background: url('../img/calculator/sixth-3-stage-last.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3933,7 +3933,7 @@ footer {
 				}
 
 				&.fourth-3-stage-main {
-					background: url('../img/calculator/fourth-3-stage-main.png') center no-repeat;
+					background: url('../img/calculator/fourth-3-stage-main.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3941,7 +3941,7 @@ footer {
 				}
 
 				&.fiveth-3-stage-main {
-					background: url('../img/calculator/fiveth-3-stage-main.png') center no-repeat;
+					background: url('../img/calculator/fiveth-3-stage-main.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
@@ -3949,7 +3949,7 @@ footer {
 				}
 
 				&.sixth-3-stage-main {
-					background: url('../img/calculator/sixth-3-stage-main.png') center no-repeat;
+					background: url('../img/calculator/sixth-3-stage-main.webp') center no-repeat;
 
 					@media only screen and (max-device-width: 700px) {
 						background-size: contain;
