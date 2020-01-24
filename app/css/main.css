@@ -101,7 +101,8 @@ p {
       opacity: 1;
       line-height: 28px; } }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
   width: 40px;
   height: 40px; }
 
@@ -1134,6 +1135,24 @@ textarea {
       .services .help-box {
         margin-top: 0px; } }
 
+/* 6.  Services */
+.services .help-box {
+  width: 100%;
+  height: 161px;
+  background: url("../img/slide_layer_white.webp");
+  background-size: cover;
+  z-index: 0;
+  margin-top: 150px; }
+  @media only screen and (max-device-width: 767px) {
+    .services .help-box {
+      margin-top: 0px; } }
+
+.no-webp .services .help-box {
+  background: url("../img/slide_layer_white.png"); }
+
+.webp .services .help-box {
+  background: url("../img/slide_layer_white.webp"); }
+
 /* 7.  Clients */
 @media only screen and (max-device-width: 767px) {
   .clients {
@@ -1216,6 +1235,12 @@ textarea {
         padding-left: 0px;
         text-align: center; } }
 
+.no-webp .clients .comment-box .bd-example {
+  background: url(../img/slide-bg.png) top center no-repeat; }
+
+.webp .clients .comment-box .bd-example {
+  background: url(../img/slide-bg.webp) top center no-repeat; }
+
 /* 8.  Counter */
 .counter-box-main {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(251, 209, 214, 0.6)), to(#fbd1d6)), url("../img/bg-counter.jpg");
@@ -1224,7 +1249,8 @@ textarea {
   background-repeat: repeat;
   background-attachment: fixed;
   text-align: center; }
-  .counter-box-main h3, .counter-box-main .article-lines {
+  .counter-box-main h3,
+  .counter-box-main .article-lines {
     opacity: 0; }
   .counter-box-main p {
     text-align: center; }
@@ -1286,6 +1312,18 @@ textarea {
       @media only screen and (max-device-width: 767px) {
         .counter-box-main .counter-box .text-box .event {
           font-size: 18px; } }
+
+.no-webp .counter-box-main .help-box {
+  background: url(../img/slide_layer_reverse_white.png); }
+
+.webp .counter-box-main .help-box {
+  background: url(../img/slide_layer_reverse_white.webp); }
+
+.no-webp .counter-box-main .help-box-bot {
+  background: url(../img/slide_layer_white.png); }
+
+.webp .counter-box-main .help-box-bot {
+  background: url(../img/slide_layer_white.webp); }
 
 /* 9.  About-our */
 .about-our {
@@ -1360,6 +1398,12 @@ textarea {
     margin-top: 35px;
     opacity: 0; }
 
+.no-webp .constructor .help-box {
+  background: url(../img/slide_layer_whitee.png); }
+
+.webp .constructor .help-box {
+  background: url(../img/slide_layer_white.webp); }
+
 /* 11. Feedbackform */
 .feedback-form {
   padding-bottom: 20px; }
@@ -1411,6 +1455,12 @@ textarea {
     left: 0; }
   .map iframe {
     margin-top: -161px; }
+
+.no-webp .map .help-box {
+  background: url(../img/slide_layer_reverse_white.png); }
+
+.webp .map .help-box {
+  background: url(../img/slide_layer_reverse_white.webp); }
 
 /* 13. Footer */
 footer {
@@ -1504,20 +1554,29 @@ footer {
     .work-zone table thead tr td {
       background: #ffedef;
       line-height: 20px; }
-  .work-zone h1, .work-zone h2, .work-zone h3, .work-zone h4 {
+  .work-zone h1,
+  .work-zone h2,
+  .work-zone h3,
+  .work-zone h4 {
     margin-top: 30px;
     margin-bottom: 15px;
     font-family: "Open-Sans-Bold", sans-serif, Arial;
     font-size: 25px;
     letter-spacing: 0; }
     @media only screen and (max-device-width: 991px) {
-      .work-zone h1, .work-zone h2, .work-zone h3, .work-zone h4 {
+      .work-zone h1,
+      .work-zone h2,
+      .work-zone h3,
+      .work-zone h4 {
         margin-top: 30px;
         font-size: 16px;
         padding-left: 15px;
         padding-right: 15px; } }
     @media only screen and (max-device-width: 767px) {
-      .work-zone h1, .work-zone h2, .work-zone h3, .work-zone h4 {
+      .work-zone h1,
+      .work-zone h2,
+      .work-zone h3,
+      .work-zone h4 {
         margin-top: 25px; } }
   .work-zone ul li {
     text-align: left;
@@ -2970,9 +3029,9 @@ footer {
   border-width: 0 !important;
   -webkit-box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0.2) !important;
           box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0.2) !important;
-  -webkit-transition: 0.3s !important;
-  -o-transition: 0.3s !important;
-  transition: 0.3s !important; }
+  -webkit-transition: .3s !important;
+  -o-transition: .3s !important;
+  transition: .3s !important; }
   .foogallery.fg-border-thin .fg-item-inner:hover {
     -webkit-box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0) !important;
             box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0) !important; }
