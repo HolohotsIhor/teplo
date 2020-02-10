@@ -4911,3 +4911,13 @@ footer {
     font-size: 20px; }
     .post-box h2 a {
       color: #e40a22; }
+
+figure.wp-block-video {
+  float: left;
+  margin-right: 20px;
+  margin-top: 20px; }
+  figure.wp-block-video video {
+    height: 250px; }
+    @media only screen and (max-device-width: 767px) {
+      figure.wp-block-video video {
+        width: 100%; } }
