@@ -29,6 +29,7 @@
     font-style: normal;
     font-weight: bold;
     src: url("../fonts/OpenSansLight/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansLight/OpenSans-Light.woff") format("woff"), url("../fonts/OpenSansLight/OpenSans-Light.ttf") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
@@ -36,6 +37,7 @@
     font-style: normal;
     font-weight: bold;
     src: url("../fonts/OpenSansRegular/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansRegular/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSansRegular/OpenSans-Regular.ttf") format("truetype");
+    font-display: swap;
 }
 
 @font-face {
@@ -43,6 +45,7 @@
     font-style: normal;
     font-weight: bold;
     src: url("../fonts/OpenSansSemiBold/OpenSans-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSansSemiBold/OpenSans-SemiBold.woff") format("woff"), url("../fonts/OpenSansSemiBold/OpenSans-SemiBold.ttf") format("truetype");
+    font-display: swap;
 }
 
 /* 2.  General styles */

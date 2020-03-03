@@ -99,6 +99,7 @@ $(document).ready(function() {
             var my_screen = canvas;
             var base64_string = my_screen.toDataURL();
             $(".textarea-742 textarea").val(base64_string);
+            $(".textarea-743 textarea").val(text+'.png');
         }); 
     }
 
